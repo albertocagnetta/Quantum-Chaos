@@ -1,0 +1,291 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% - TEXT COMMANDS
+%%%%%% some useful commands
+
+%comando virgolette
+\newcommand{\virg}[1]{
+\textquotedblleft #1\textquotedblright
+}
+%\renewcommand{\bm}[1]{\boldsymbol{#1}}
+\newcommand{\boldsf}[1]{{\usefont{T1}{lmss}{bx}{n}#1}}
+\newcommand{\Wlog}{\textsf{wlog}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\HRule}{\rule{.9\linewidth}{0.5mm}} % New command to make the lines in the title page
+%\newcommand{\HRule}{\rule{\linewidth}{0.35mm}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Operatori matematici
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Id}{Id}  
+\DeclareMathOperator{\In}{\mathcal{U}}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\ctg}{ctg}
+\DeclareMathOperator{\arctg}{arctg}
+\DeclareMathOperator{\arcctg}{arcctg}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\mcd}{mcd}
+\DeclareMathOperator{\mcm}{mcm}
+
+
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\Div}{div}
+\DeclareMathOperator{\Lapl}{\Delta}
+\DeclareMathOperator{\Diff}{D} % differenziale
+
+
+
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\one}{\mathds{1}} %funzione caratteristica o vettore di tutti 1
+\newlength{\dhatheight}
+\newcommand{\doublehat}[1]{%
+    \settoheight{\dhatheight}{\ensuremath{\hat{#1}}}%
+    \addtolength{\dhatheight}{-0.35ex}%
+    \hat{\vphantom{\rule{1pt}{\dhatheight}}%
+    \smash{\hat{#1}}}}
+
+
+\newcommand{\Hex}{\nabla^{2}}
+%\newcommand{\cupdot}{\mathbin{\mathaccent\cdot\cup}}
+%\newcommand{\bigcupdot}{\mathbin{\mathaccent\cdot\bigcup}}
+\newcommand{\cupdot}{\dot{\cup}}
+\newcommand{\bigcupdot}{\dot{\bigcup}}
+\newcommand{\sumdot}{\dot{\sum}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\S}{\mathbb{S}}
+%\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\X}{\chi}
+%\newcommand{\=}{\stackrel{\text{def}}{=}}
+
+
+
+% nuove variabili
+
+\newcommand{\dd}{\mathop{}\!\mathrm{d}} %differenziale
+\newcommand{\vphi}{\varphi}
+\newcommand{\veps}{\varepsilon}
+\newcommand{\eps}{\epsilon}
+\newcommand{\vtheta}{\vartheta}
+
+
+
+
+\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\newcommand{\fractional}[1]{\left\lbrace #1\right\rbrace}
+%\newcommand{\dif}{\,\text{d}} % differenziale
+%\renewcommand{\d}{\,\text{d}} % differenziale
+\newcommand{\dff}{\coloneqq}
+\newcommand{\df}{\displaystyle\frac} 
+\newcommand{\measure}{\mathfrak{m}}
+\newcommand{\abs}[1]{\left| #1\right|}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\pscl}[2]{\left< #1,#2\right>} 
+\newcommand{\cpscl}[2]{\left(#1\,\middle|\,#2\right)} % prod scalare complesso
+\newcommand{\spn}[1]{\left< #1\right>} %spanned
+\newcommand{\vect}[1]{
+\begin{pmatrix}
+#1
+\end{pmatrix}
+}
+\newcommand{\vv}[1]{\bm{#1}} %%comando stile vettori%
+%%%%%
+
+
+%%%%%%%%%%%%%%%%
+% - MATRICES
+%%%%%%%%%%%%%%%%
+
+\newcommand{\Matrix}[1]{
+\begin{pmatrix}
+#1
+\end{pmatrix}
+}
+\newcommand{\Qmatrix}[1]{
+\begin{bmatrix}
+#1
+\end{bmatrix}
+} % matrice quadrata  
+
+\newcommand{\Smallmatrix}[1]{
+  \left(\begin{smallmatrix}
+  #1
+  \end{smallmatrix}\right)
+  }   
+  
+\newcommand{\SmallQmatrix}[1]{
+  \left[\begin{smallmatrix}
+  #1
+  \end{smallmatrix}\right]
+  }  
+
+
+
+
+
+
+%%%%%%%%%%%%%%% 
+% - SPECIFICAL COMMANDS 
+%%%%%%%%%%%%%%%
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Mand}{\mathcal{M}}
+\DeclareMathOperator{\Cov}{Cov}
+%\newcommand{\v}[1]{\bm{#1}}
+
+
+
+
+
+\DeclareMathOperator{\Lip}{Lip} %Spazio delle funz. lipschitz
+%\DeclareMathOperator{\Id}{Id} 
+\DeclareMathOperator{\GL}{GL} 
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Oo}{O}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\U}{U}
+\DeclareMathOperator{\SU}{SU}
+\DeclareMathOperator{\PSO}{PSO}
+\DeclareMathOperator{\PSU}{PSU}     
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\PSL}{PSL}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\End}{End}
+
+
+\DeclareMathOperator{\Proj}{\mathbb{P}} %Projective of a space
+\DeclareMathOperator{\MaxSpec}{MaxSpec}
+\DeclareMathOperator{\GO}{GO} %grande orbita
+\DeclareMathOperator{\Cob}{Cob} %cobordo
+\DeclareMathOperator{\Fsum}{\oplus_{F}}
+\DeclareMathOperator{\eval}{eval}
+\newcommand{\verteq}{\rotatebox{90}{$=$}}
+
+\DeclareMathOperator{\Distr}{\mathcal{D}}
+\DeclareMathOperator{\Dif}{Diff}
+\DeclareMathOperator{\trsp}{\mathtt{T}}
+
+
+
+
+
+\newcommand{\compl}{\complement}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% - Billiards
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\BunStd}{\mathtt{Bun}}
+\newcommand{\BarnStd}{\mathttt{Barn}}
+\newcommand{\CycStd}{\mathtt{Cyc}}
+
+\DeclareMathOperator{\BS}{\mathcal{BS}}
+\DeclareMathOperator{\BarS}{\mathcal{BNS}}
+\DeclareMathOperator{\CS}{\mathcal{CS}}
+\DeclareMathOperator{\COS}{\mathcal{COS}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% - Physical definitions
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\planck}{h}
+\newcommand{\schwarz}{\mathcal{S}}
+\DeclareMathOperator{\Op}{Op}
+\DeclareMathOperator{\PDO}{\psi DO}
+\DeclareMathOperator{\Wprd}{\otimes_{W}}
+\DeclareMathOperator{\Fourier}{\mathcal{F}}
+\DeclareMathOperator{\SelT}{\mathcal{S}}
+\newcommand{\Four}[1]{\hat{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% - Hyperbolic definitions
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Hmetr}{\mathrm{g}}
+\newcommand{\Isom}{\mathrm{Isom}}
+\newcommand{\Disk}{\mathcal{D}}
+\newcommand{\Dmetr}{\mathrm{h}}
+\newcommand{\Cayley}{C}
+\newcommand{\Fucs}{\Gamma}
+\newcommand{\Lie}[1]{\mathfrak{#1}}
+\newcommand{\Xtree}{\mathfrak{X}}
+
+\newcommand{\kernel}{\kappa}
+
+
+\newcommand{\triang}{\bigtriangleup}
+\newcommand{\ClsdGeod}[1]{\mathcal{G}\left(#1\right)}
+\newcommand{\CG}[1]{\mathcal{CG}\left(#1\right)}
+
+
+%%%%%%%%%%%%%%
+% - UNITS
+%%%%%%%%%%%%%%
+\newcommand{\imi}{\mathrm{i}}
+\newcommand{\imj}{\mathrm{j}}
+\newcommand{\imk}{\mathrm{k}}
+\newcommand{\e}{\mathrm{e}}
+
+
+%%%%%%%%%%%%%
+% - TERMINOLOGY
+%%%%%%%%%%%%%
+\newcommand{\HO}{\textsc{HO}\,}
+\newcommand{\QM}{\textsc{QM}\,}
+\newcommand{\QE}{\textsc{QE}\,}
+\newcommand{\QUE}{\textsc{QUE}\,}
+\newcommand{\RMT}{\textsc{RMT}\,}
+\newcommand{\NNSD}{\textsc{NNSD}\,}
+\newcommand{\GOE}{\textsc{GOE}\,}
+\newcommand{\GUE}{\textsc{GUE}\,}
+\newcommand{\GSE}{\textsc{GSE}\,}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Area}{\mathtt{Area}}
+\DeclareMathOperator{\Vol}{\mathtt{Vol}}
+
+
+\DeclareMathOperator{\Ham}{\xi}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

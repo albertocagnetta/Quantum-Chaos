@@ -1,0 +1,243 @@
+%%%%% some useful environment
+
+%comandi per enunciati
+
+
+%\theoremstyle{plain}
+\theorembodyfont{\normalfont}
+\theoremheaderfont{\bfseries}
+\theorempreskipamount\topsep
+\theorempostskipamount\topsep
+\theoremsymbol{$\clubsuit$}
+%stile roman
+\newtheorem{ex}{Esercizio}[section]
+\newtheorem{ese}[ex]{Esempio} 
+\newtheorem{eseex}[ex]{Es./Ex.} %definizione ambiente esempio/esercizio
+
+\theoremsymbol{}
+
+\theorembodyfont{\slshape}
+\newtheorem{teo}{Teorema}[section] %definizione ambiente teorema
+\newtheorem{teodef}[teo]{Thm./Def.} %definizione ambiente teorema
+\newtheorem{prop}[teo]{Proposizione}    %definizione ambiente proposizione
+\newtheorem{cor}[teo]{Corollario}       %definizione ambiente corollario
+\newtheorem{defin}[teo]{Definizione}%definizione ambiente definizione 
+\newtheorem{lem}[teo]{Lemma}           %definizione ambiente lemma 
+\newtheorem{prob}[teo]{Problema}           %definizione ambiente lemma 
+
+%\newenvironment{prf}{\begin{proof}{\textsl{Dimostrazione}}}{\end{proof}} % dimostrazioni con stile cambiato
+
+% svolgimento
+\theoremstyle{nonumberplain}
+\theoremheaderfont{\slshape}
+\theorembodyfont{\normalfont}
+\theoremseparator{.\,}
+\theoremsymbol{$\circledS$}
+\newtheorem{svolg}{Svolgimento}
+%
+
+% dimostrazione
+\theoremstyle{nonumberplain}
+\theoremheaderfont{\slshape}
+\theorembodyfont{\normalfont}
+\theoremseparator{.\,}
+\theoremsymbol{$\blacksquare$}
+\newtheorem{prf}{Dimostrazione}
+%
+
+
+%Osservazione
+\theoremstyle{plain}
+\theoremheaderfont{\bfseries}
+\theorembodyfont{\normalfont}
+%\theoremseparator{.\,}
+\theoremsymbol{}
+\newtheorem{oss}[teo]{Osservazione}
+%
+%%%%%%%%
+
+
+
+%comando teoremi importanti impTeo
+
+
+%% the following is commaon for all examples in mdframed manual
+%\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
+%%% up to here
+\colorlet{ColimpTeo}{myroyal1}
+
+
+\newenvironment{impTeo}[1][]{%
+\refstepcounter{teo}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,draw=ColimpTeo, fill=white, line width=1mm]
+{\strut Teorema~\theteo};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,draw=ColimpTeo, fill=white, line width=1mm]
+{\strut Teorema~\theteo:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=ColimpTeo,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+}{\end{mdframed}}
+
+
+
+
+
+
+%\newenvironment{impTeo}[1][]{%
+%\refstepcounter{teo}%
+%%\setcounter{impTeo}{teo}%
+%\ifstrempty{#1}%
+% {\mdfsetup{%
+%   frametitle={%
+%    \tikz[baseline=(current bounding box.east),outer sep=0pt]
+%    \node[anchor=east,rectangle,fill=blue!40]
+%         {\strut Teorema~\theteo};}}
+% }%
+%{\mdfsetup{%
+%  frametitle={%
+%   \tikz[baseline=(current bounding box.east),outer sep=0pt]
+%   \node[anchor=east,rectangle,fill=blue!40]
+%        {\strut Teorema~\theteo:~#1};}}%
+% }%
+%\mdfsetup{innertopmargin=10pt,
+%linecolor=blue!40,%
+%       linewidth=2pt
+%       ,topline=true
+%       ,frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+%       }
+%   \begin{mdframed}[]\relax%
+%}
+%{\end{mdframed}}
+
+
+
+
+%% important Lemma 
+
+\colorlet{ColimpLem}{myroyal1}
+
+\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
+%%% upto here
+\newenvironment{impLem}[1][]{%
+\refstepcounter{teo}%
+\ifstrempty{#1}%
+ {\mdfsetup{%
+   frametitle={%
+    \tikz[baseline=(current bounding box.east),outer sep=0pt]
+    \node[anchor=east,rectangle,draw=ColimpLem, fill=white, line width=1mm]
+         {\strut Lemma~\theteo};}}
+ }%
+{\mdfsetup{%
+  frametitle={%
+   \tikz[baseline=(current bounding box.east),outer sep=0pt]
+   \node[anchor=east,rectangle,draw=ColimpLem, fill=white, line width=1mm]
+        {\strut Lemma~\theteo:~#1};}}%
+ }%
+\mdfsetup{innertopmargin=10pt,linecolor=ColimpLem,%
+       linewidth=2pt,topline=true,
+       frametitleaboveskip=\dimexpr-\ht\strutbox\relax,}
+   \begin{mdframed}[]\relax%
+}
+{\end{mdframed}}
+
+
+
+
+
+
+%%%%%% some useful commands
+
+%comando virgolette
+\newcommand{\virg}[1]{
+\textquotedblleft #1\textquotedblright
+}
+%\renewcommand{\bm}[1]{\boldsymbol{#1}}
+
+
+
+%\newcommand{\HRule}{\rule{\linewidth}{0.35mm}}
+
+% Operatori matematici
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Id}{Id}  
+\DeclareMathOperator{\In}{\mathcal{U}}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\ctg}{ctg}
+\DeclareMathOperator{\arctg}{arctg}
+\DeclareMathOperator{\arcctg}{arcctg}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\mcd}{mcd}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\one}{\mathds{1}} %funzione caratteristica o vettore di tutti 1
+\newcommand{\Hex}{\nabla^{2}}
+%\newcommand{\cupdot}{\mathbin{\mathaccent\cdot\cup}}
+%\newcommand{\bigcupdot}{\mathbin{\mathaccent\cdot\bigcup}}
+\newcommand{\cupdot}{\dot{\cup}}
+\newcommand{\bigcupdot}{\dot{\bigcup}}
+\newcommand{\sumdot}{\dot{\sum}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+%\renewcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\X}{\chi}
+%\newcommand{\=}{\stackrel{\text{def}}{=}}
+
+
+
+% nuove variabili
+\renewcommand{\i}{\mathbf{i}}
+\renewcommand{\j}{\mathbf{j}}
+\renewcommand{\k}{\mathbf{k}}
+\newcommand{\D}{\,\text{d}} %differenziale
+\newcommand{\vphi}{\varphi}
+\newcommand{\veps}{\varepsilon}
+\newcommand{\eps}{\epsilon}
+\newcommand{\vtheta}{\vartheta}
+
+
+
+
+%\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+%\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+%\DeclarePairedDelimiter\fractional{\lbrace}{\rbrace}
+\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\newcommand{\fractional}[1]{\left\lbrace #1\right\rbrace}
+%\newcommand{\dif}{\,\text{d}} % differenziale
+%\renewcommand{\d}{\,\text{d}} % differenziale
+\newcommand{\dff}{\coloneqq}
+\newcommand{\df}{\displaystyle\frac} 
+\newcommand{\measure}{\mathfrak{m}}
+\newcommand{\abs}[1]{\left| #1\right|}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\pscl}[2]{\left< #1,#2\right>} 
+\newcommand{\cpscl}[2]{\left(#1\,\middle|\,#2\right)} % prod scalare complesso
+\newcommand{\spn}[1]{\left< #1\right>} %spanned
+\newcommand{\vect}[1]{
+\begin{pmatrix}
+#1
+\end{pmatrix}
+}
+\newcommand{\vv}[1]{\bm{#1}} %%comando stile vettori%
+%%%%%

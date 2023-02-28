@@ -1,0 +1,63 @@
+% Appendix Template
+
+%\chapter{Source Code for Figures and Numerical Simulations} % Main appendix title
+
+\label{App:codes} % Change X to a consecutive letter; for referencing this appendix elsewhere, use \ref{AppendixX}
+
+
+\lstlistoflistings
+
+\section{Python codes}
+
+\subsection{Billiards}
+
+Put your Codes here.
+
+\lstinputlisting[language=Python, caption={Billiard simulation in Bunimovich stadium},label={pycode:image_bunimov}, mathescape=true]{codes_thesis/Python/image_stadium_billiard.py}
+
+%\begin{lstlisting}[language=Python, caption={Stadium},label={pycode:stadium},mathescape=true, breaklines=true]
+%
+%def getTragectory(p,v): # p is the position, v is the velocity vector
+%    #xc=x+y*m
+%    return [p,v] #[xc,0,math.sqrt((xc-x)**2+y**2)]
+%
+%def bounce_circle(direction, b_point, center):
+%    """
+%    Calculate the new direction after a bouncing with a circled wall
+%    """
+%    F1 = [[b_point[0]-center[0], b_point[1]-center[1]], [b_point[1]-center[1], center[0]-b_point[0]]]
+%    F2 = [[-1, 0], [0, 1]]
+%    F3 = [[center[0]-b_point[0],center[1]-b_point[1]],[-(b_point[1]-center[1]),b_point[0]-center[0]]]
+%    #F3 = [[b_point[0]-center[0],b_point[1]-center[1]],[-b_point[1]+center[1],-b_point[0]+center[0]]]
+%    F3 = -np.dot(1/((b_point[0]-center[0])**2+(b_point[1]-center[1])**2), F3)
+%    return np.dot(np.matmul(np.matmul(F1, F2), F3), direction)
+%
+%#print("prova:", np.dot([[0,1],[-1,0]],[2,3]))
+%#print("nuova direzione", bounce_circle([1,1],[np.sqrt(Radius)+WIDTH/2,np.sqrt(Radius)],[WIDTH/2,0]))
+%
+%
+%def upper_wall_intersection(p,v,Radius):
+%    l, r = 0, INF
+%    while r-l > EPS:
+%        m = (l+r)/2
+%        if p[1]+m*v[1] > Radius:
+%            r = m
+%        else:
+%            l = m
+%    return l
+%
+%
+%\end{lstlisting}
+
+
+\subsection{Quantum eigenfunctions}
+
+
+
+\section{FreeFem++}
+
+
+\lstinputlisting[language=freefem++, caption={Eigenfunctions of modular surface},label={FreeFem:modular_eig_D}, mathescape=true]{codes_thesis/FreeFem++/modular.edp}
+
+
+

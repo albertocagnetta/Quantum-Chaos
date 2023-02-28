@@ -1,0 +1,462 @@
+% Chapter Template
+
+\chapter{Arithmetic Quantum Unique Ergodicity} % Main chapter title
+
+\label{Chapter5} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+\thispagestyle{empty}
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Lindenstrauss' result}
+
+Let $M=\Gamma\setminus\Hilb$ be a \underline{finite area hyperbolic surface}. What we will say is true for $\Gamma$ being an \emph{arithmetical lattice}, but for the sake of clarity we fix $\Gamma=\PSL_{2}\Z$, which is a good example. We could do the same with Bolza surface \ref{ese:bolza_surface}. Moreover, we have mentioned that, if $M$ is compact, then $L^{2}(M)$ has an orthonormal basis of Laplacian eigenfunctions, but $M=\PSL_{2}\Z\setminus\Hilb$ is not compact. So we suppose that this is true even in this case (see \cite{EinTW:AQUE} and last section for details).\\
+
+As mentioned in chapter \ref{Chapter05}, the main result due to Lindenstrauss relies on the arithmetical structures of arithmetic surfaces, encoded in Hecke operators. We will define them in this chapter.
+
+\begin{impTeo}{Lindenstrauss, Arithemtic \QUE}{lind_que}
+If we assume that the Laplacian eigenfunctions $\vphi_{j}$ on $M$ are also eigenfunctions for a Hecke operator, then the only possible quantum limit is the Liouville measure. 
+\end{impTeo}
+
+
+Using the additional symmetries, Lindenstrauss was able to prove the \QUE conjecture for a Hecke basis of eigenfunctions on compact arithmetic surfaces. He and Brooks \cite{Linden:main_art} extended result to the above statement, regarding any joint basis of
+the Laplacian and a single Hecke operator. \\
+Up to date, it is still an open question whether \QUE holds for every orthonormal basis of eigenfunctions of just the Laplacian (which might not be a Hecke basis). For details \cite{Semyov:around_new}.
+
+The result of Lindenstrauss is a consequence of the following result, which is the main tool developed by Lindenstrauss to tackle the problem. We will assume that $M$ is compact. 
+
+\begin{nteo}[Lindenstrauss' measure rigidity theorem]
+Let $\Gamma$ be an arithmetic lattice in $\PSL_{2}\R$ and let $\mu$ be a probability measure on $X=\Gamma\setminus\PSL_{2}\R$. Moreover, $\mu$ is such that:
+\begin{compactitem}
+\item $\mu$ is invariant under the geodesic flow;
+\item $\mu$ is $p$-Hecke recurrent for a prime number $p$;
+\item $\mu$ has positive entropy on every ergodic component;
+\end{compactitem}
+We these assumptions, $\mu$ is the normalized Liouville measure (Haar measure) on $X$.
+\end{nteo}
+
+We will not go in depth into this problem, but we make some observations. By Egorov's theorem, the distributions $I_{\vphi_{j}}$ are invariant under the geodesic flow. If $M$ is compact as we have supposed, every possible quantum limit is an invariant probability measure. If $M$ is not compact, there could be some \emph{escape of mass} at infinity such that the limit has still mass $1$. This possibility was excluded by Soundararajan, see \cite{Sound:article},\cite{Sound:QUE_notes}. We will now check that these quantum limits of $I_{\vphi_{j}}$ are $p$-Hecke recurrent. For the other point, we refer to \cite{EinTW:AQUE}.
+
+
+
+\subsection{Microlocal lift revised}
+
+
+We will re-write what developed in section \ref{sec:que_intro}, in this planar hyperbolic context, in particular regarding Wigner measures. In this framework, the \emph{microlocal lift} of an eigenfunction $\vphi$ for the (hyperbolic) Laplacian $\Lapl$ is presented with some slight differences. As mentioned in chapter \ref{Chapter1}, the unit tangent space $T^{1}\Hilb$ is equivalent to the group $G=\SL_{2}\R$, and so it convenient to fully exploit its structure as \emph{Lie algebra}.
+
+\begin{defin}[Lie algebra of $\SL_{2}\R$]
+The Lie algebra of $\SL_{2}\R$ is given by
+\[
+\Lie{G}=\left\{
+X\in M_{2\times 2}(\R)\colon\,\forall t\in\R\;\exp(tX)\in\SL_{2}\R
+\right\}.
+\]
+\end{defin}
+Using the formula $\det(\exp(X))=\exp(\tr X)$, we get that $\Lie{G}$ coincides with the set of $2\times2$ matrices with null trace. The differentiation in the direction $X\in\Lie{G}$, on the point $g\in G$ is given by
+\[
+D_{x}\colon C^{\infty}(G)\to C^{\infty}(G),\quad D_{X} f(g)=\left.\frac{\dd}{\dd t}f(g\exp(tX))\right|_{t=0}
+\]
+With this, it is possible to view a generic flow on $T^{1}\Hilb$ choosing a particular direction $X$:
+\begin{compactitem}
+\item \emph{geodesic flow}: $X=A_{1}=\Smallmatrix{1/2&\\&-1/2}$
+\item \emph{stable horocycle flow}: $X=U^{+}=\Smallmatrix{&1\\&}$
+\item \emph{unstable horocycle flow}: $X=U^{-}=\Smallmatrix{&\\1&}$
+\end{compactitem}
+
+
+We define the \emph{Casimir operator} as 
+\[
+\Omega=\Diff_{A_{1}}\Diff_{A_{1}}+\frac{1}{2}\Diff_{U^{+}}\Diff_{U^{-}}+\frac{1}{2}\Diff_{U^{-}}\Diff_{U^{+}}
+\]
+which has the followings properties.
+\begin{lem}
+\item The Casimir operator commutes with all differential operators.
+\item Recalling $\Hilb\times\S^{1}\simeq\PSL_{2}\R$, the restriction of $\Omega$ to $S^{1}$-invariant functions coincides with the Laplacian $\Lapl$ on $\Hilb$. 
+\end{lem}
+
+For $S^{1}$-invariant functions we mean that following. Let 
+\[
+R_{\theta}=\Matrix{\cos\theta&-\sin\theta\\
+\sin\theta&\cos\theta},
+\]
+we define the space of $S^{1}$-eigenfunctions of weight $2n$ as 
+\[
+K_{2n}=\left\{
+f\in C^{\infty}(\Gamma\setminus G)\colon f(gR_{\theta}=\e^{2\imi n\theta}f(g))
+\right\},
+\]
+so that the space of $S^{1}$-invariant functions is the space $K_{0}$. By Fourier decomposition it can be seen that it holds the decomposition in direct sum
+\[
+\overline{\bigoplus_{n\in\Z}A_{2n}}=C^{\infty}(\Gamma\setminus G).
+\]
+A function $f$ is called $S^{1}$-finite if there exists an $N\in\N$ such that 
+\[
+f\in\bigoplus_{n=-N}^{N}A_{2n}.
+\]
+Finally, we define the \emph{raising} and \emph{lowering operators} $E^{+}$ and $E^{-}$ as
+\[
+E^{+}\coloneqq\frac{1}{2}\Matrix{1&\imi\\imi&-1},\quad
+E^{-}\coloneqq\frac{1}{2}\Matrix{1&-\imi\\-imi&1}.
+\]
+Now, we fix an $L^{2}$-normalised eigenfunction $\vphi$ of the Laplacian, of eigenvalue $\lambda=\frac{1}{4}+t^{2}$. As mentioned before, $\vphi$ can be seen as a $S^{1}$-invariant function. In this context, the lift is constructed in the following way. We define inductively the functions $\psi_{n}(g)$ on $G=\PSL_{2}\Z$ as
+\begin{align*}
+\psi_{0}(g)&=\psi(gS^{1})\in A_{0}\\
+\psi_{2n-2}&=\frac{1}{\imi t+\frac{1}{2}+n}E^{+}\vphi_{2n},\quad n\leq0\\
+\psi_{2n+2}&=\frac{1}{\imi t+\frac{1}{2}-n}E^{-}\vphi_{2n},\quad n\geq0 
+\end{align*}
+It can be shown that each one of the eigenfunctions $\psi_{2n}$ is a $\Omega$-eigenfunction, corrisponding to the eigenvalue $\lambda$, i.e. $\Omega\psi_{2n}=\lambda\psi_{2n}$.\\ 
+We can define the \emph{microlocal lift} as 
+\[
+I_{\vphi}(f)\coloneqq\pscl{f\sum_{n\in\Z}\psi_{2n},\psi_{0}}.
+\]
+It can be shown (\cite{Zeld:article}) that this definition indeed coincides with one given in section \ref{sec:que_intro} arising from the Weyl-quantization procedure and Wigner measures, i.e.
+\[
+I_{\vphi}(f)=\int_{M}f\abs{\vphi}^{2}\dd\mu.
+\]
+In this framework, the \QE theorem \ref{teo:QE_Zeld_zwors} reads as follows (remember that the semiclassical limit $\planck\to0$ can be read as $\lambda\to\infty$).
+
+\begin{impTeo}{\QE on hyperbolic surfaces}{qe_hyp}
+For any $K$-finite function $f\in C^{\infty}(\Gamma\setminus\Lie{G})$ and any $l>0$,
+\[
+\frac{1}{N(L,l)}\sum_{j\colon\abs{\lambda_{j}-L}<\veps}\abs{
+I_{\vphi_{j}}(f)-\frac{1}{\abs{\Gamma\setminus\Lie{G}}\int_{\Gamma\setminus\Lie{G}}f(g)\dd g}^{2}\to0,
+}
+\]
+when $L\to\infty$ and $N(L,\veps)=\#\left\{j\colon\abs{\lambda_{j}-L}<l\right\}$
+\end{impTeo}
+
+The immediate corollary is the following (see also example \ref{ese:equidis} for comparison)
+
+\begin{ncor}
+There exists a diverging subsequence of eigenvalues $\lambda_{j_{k}}$ of density $1$ so that for any $K$-finite function $f$ it holds the limit
+\[
+\lim_{k\to\infty}I_{\vphi_{j_{k}}}(f)\to\frac{1}{\abs{\Gamma\setminus\Lie{G}}}\int_{\Gamma\setminus\Lie{G}}f(g)\dd g.
+\]
+In particular, 
+\[
+\abs{\vphi_{j_{k}}}^{2}\dd\mu_{\Hilb}\rightharpoonup\dd\mu_{\Hilb}
+\]
+where the convergence is weakly.
+\end{ncor}
+
+
+
+
+\section{Hecke recurrence}
+
+\subsection{The $p$-adic extension of $\Gamma\setminus\PSL_{2}\R$}
+
+\label{sec:p_adic_ext}
+
+
+Our aim is to build up, for each point in $X=\PGL_{2}\Z\setminus\PGL_{2}\R$ a set of points with a tree structure.\\
+
+We recall some basic informations about $p$-adic numbers. We refer to \cite{Queva:p-adic} for details. The $p$-adic numbers, for a fixed prime number $p$, are another way to complete\footnote{Actually the real line $\R$ and $\Q_{p}$ are the only two ways to complete $Q$, see Ostrowski theorem.} the field $\Q$ to the set $\Q_{p}$. Their construction follows. For $r\in\Q$, we can write $r=p^{k}\frac{m}{n}$ with $p\not|mn$ ($k\in\Z$ can be negative). We define the \emph{$p$-adic norm} as
+\[
+\abs{r}_{p}\coloneqq r^{-k}.
+\]
+The field $\Q_{p}$ is the completion of $\Q$ with respect to the $p$-adic norm $\abs{\cdot}_{p}$. To have a manageble expression at hand, we can observe that every $p$-adic number $x$ has an infinite expansion
+\[
+x=\sum_{k=-m}^{\infty}x_{k}p^{k},\quad 0\leq x_{k}<p.
+\]
+We define the set of $p$-adic integers as
+\[
+\Z_{p}=\left\{
+x\in\Q_{p}\colon\abs{x}_{p}\leq 1
+\right\},
+\]
+which can be also viewed as $p$-adic number with an infinite expansion with powers $p^{k}$ with $k\geq0$. The set
+\[
+\Z\left[
+\frac{1}{p}\right]\coloneqq\left\{
+x=\pm\sum_{k=-m}^{n}x_{k}p^{k}\colon mn,\in\N\text{ and }0\leq x_{k}<p
+\right\}
+\]
+is a ring and it is dense in both $\Q_{p}$ and $\R$.
+
+\begin{defin}[General $\PGL$ group]
+For a ring $R$, with $R^{\ast}$ be the group of units, we define 
+\[
+\PGL_{2} R=\left\{
+\gamma\in\Smallmatrix{a&b\\c&d}\colon a,b,c,d\in R,\;\det \gamma \in R^{\ast}
+\right\}.
+\]
+\end{defin}
+Now we need the following decomposition.
+
+\begin{nprop}
+\label{prop:decompos_matrix__groups}
+The diagonal embedding $\PGL_{2}(\Z[1/p])$ is a lattice and it gives the isomorphism
+\[
+\PGL_{2}\Z\setminus\PGL_{2}\R\simeq\left(
+\PGL_{2}\Z[1/p]\setminus\PGL_{2}\R
+\right)\times\left(
+\PGL_{2}\Q_{p}/\PGL_{2}\Z_{p}
+\right)
+\]
+\end{nprop}
+\begin{prf}
+CITA APPENDICI, DA SISTEMARE
+\end{prf}
+
+The ratio behind this result is the main diagonal embedding 
+\[
+\Z[1/p]\hookrightarrow\R\times\Q_{p}
+\]
+given by $x\mapsto(x,x)$ which is discrete and co-compact. Setting,
+\begin{align*}
+G=\PGL_{2}\R,&\quad\Gamma=\PGL_{2}\Z\\
+G_{p}=\PGL_{2}\Q_{p},\quad H_{p}&=\PGL_{2}\Z_{p},\quad\Gamma_{p}=\PGL_{2}\Z[1/p]
+\end{align*}
+proposition \ref{prop:decompos_matrix__groups} gives
+\[
+\Gamma\setminus G\simeq \Gamma_{p}\setminus G\times G_{p}/H_{p}.
+\]
+We can consider a point $\Gamma g\in\Gamma\setminus G$. By the above proposition it is identified with a point
+\[
+\Gamma_{p}(g,e)H_{p}\in\Gamma_{p}\setminus G\times G_{p}/\Gamma_{p}.
+\]
+Now, the orbit of this point under the action of $G_{p}$ is given by
+\[
+\left\{
+\Gamma_{p}(g,h)H_{p}\colon h\in G_{p}
+\right\}
+\]
+can be identified to $G_{p}/H_{p}$, as the stabilizer is 
+\[
+\Stab_{\Gamma_{p}(g,e)H_{p}}=H_{p}.
+\]
+In the end we have built a foilation of $\Gamma\setminus G$ where the leaves are these orbits. Now the following main result shows that the leaves $G_{p}/H_{p}$ have a tree structure.
+
+A lattice in $\Q_{p}^{2}$ is a discrete subgroup $L\subset\Q_{p}^{2}$ of the form $L=\Z_{p}v_{1}+\Z_{p}v_{2}$ where $\{v_{1},v_{2}\}$ is a basis of $\Q_{p}^{2}$. We define an equivalence relation $\sim$ between lattices by
+\begin{equation}
+\label{eq:rel_equiv_lattice}
+L_{1}\sim L_{2}\Leftrightarrow L_{1}=\alpha L_{2},\alpha\in\Q_{p}\setminus\{0\}.
+\end{equation}
+Essentially, we are identifying lattices where one is a scaling of the other one. We define $X_{p}$ as the collection of all equivalence classes $[L]$ in $\Q_{p}^{2}$. We will now introduce the structure of a graph to $X_{p}$, where its points (equivalence classes) are vertices. Two vertices $[L_{1},L_{2}]$ are \emph{adjacent} if for some representatives $L_{1},L_{2}$ we have
+\[
+pL_{1}\subset L_{2}\subset L_{1}.
+\]
+By $p$-multiplication, we see that this condition is symmetric. An equivalent definition of \emph{adjacency} is to require that, given two representatives $L_{1},L_{2}$, we have
+\[
+[L_{1}\colon L_{2}]=p.
+\]
+Indeed, if $pL_{1}\subset L_{2}\subset L_{1}$, taking the quotient by $pL_{1}$ we get
+\[
+\{0\}\subset L_{2}/pL_{1}\subset L_{1}/pL_{1}\simeq(\Z_{p}/p\Z_{p})^{2}\simeq(\Z/p\Z)^{2}.
+\]
+Thus, there is a bijection between subgroups $L_{2}$ such that $pL_{1}\subsetneq L_{2}\subsetneq L_{1}$ and subgroups $H$ such that $\{0\}\subsetneq H\subsetneq(\Z/p\Z)^{2}$, both ($L_{2}$ and $H$) of index $p$. However, there are $p+1$ subgroups of index $p$ in $(\Z/p\Z)^{2}$, thus $X_{p}$ is a $p+1$ regular graph, as each one of its vertices has $p+1$ adjacent vertices. However, the following stronger statement holds.
+
+
+\begin{nprop}
+\label{prop:tree_structure}
+$X_{p}=\PGL_{2}\Q_{p}/\PGL_{2}\Z_{p}$ is a $p+1$ regular tree.
+\end{nprop}
+\begin{prf}
+See \cite{bergeron:spectrum},\cite{EinTW:AQUE}.
+\end{prf}
+
+One way to see this is to use Cartan decomposition.
+
+\begin{nprop}[Cartan decomposition]
+\label{prop:cartan_decom}
+It holds
+\[
+\GL_{2}\Q=\GL_{2}\Z_{p}\left\{
+\Matrix{p^{m}&\\&p^{n}}\colon m,n\in\Z,m\leq n
+\right\}
+\GL_{2}\Z_{p}.
+\]
+\end{nprop}
+\begin{prf}
+We first start from a matrix $g=\Smallmatrix{a&b\\c&d}$. First, we can multiply from the right by $\Smallmatrix{0&1\\1&0}\in\GL_{2}\Z_{p}$ to assume that $\abs{a}_{p}\geq\abs{b}_{p}$, in particular $b/a\in\Z_{p}$. Hence we can multiply from the right by $\Smallmatrix{1&-b/a\\0&1}$ to get a matrix $\Smallmatrix{a&0\\c&d'}$. We now multiply from the left by $\Smallmatrix{1&0\\\alpha&1}$, for $\alpha\in\Z[1/p]$, getting $\Smallmatrix{a&0\\c'&d'}$, with $c'=a\alpha+c$. By density (in $\Q_{p}$) of $\Z[1/p]$, we choose $\alpha\in\Z[1/p]$ \virg{near} $-c/a$ such that $\abs{c'}_{p}$ is small, hence ensuring $\abs{c'}_{p}\leq \abs{d'}_{p}$. Like before, we multiply (from the left) by the matrix $\Smallmatrix{1&0\\-c'/d'&1}\in\GL_{2}\Z_{p}$, thus getting a diagonal form $\Smallmatrix{a&0\\0&d'}$.\\
+We conclude observing that each $a\in\Q_{p}$ can be written as $a=\alpha p^{n}$, with $\alpha\in\Z_{p}^{\ast}$, form $n\in\Z$.
+\end{prf}
+
+Using this result, recalling $X_{p}=G_{p}/H_{p}=\PGL_{2}\Q_{p}/\PGL_{2}\Z_{p}$, we have 
+\[
+X_{p}=G_{p}/H_{p}=\PGL_{2}\Z_{p}\left\{
+\Matrix{p&\\&p^{n}}\colon n\in\N
+\right\}.
+\]
+The vertices of distance $n$ in the tree from the origin $[\Z_{p}^{2}]$ are the classes
+\[
+\left[
+h\SmallQmatrix{1&\\&p^{n}}\Z_{p}^{2}
+\right],\quad\forall h\in\PGL_{2}\Z_{p}.
+\]
+
+
+
+
+\subsection{Hecke operators}
+
+
+Now we will introduce the Hecke operators. Thanks to the previous section, for each point $x\in X=\PGL_{2}\Z\setminus\PGL_{2}\R$, we can define the set $\Xtree_{p}\subset X$ with a tree structure, called the \emph{Hecke tree}. A remarkable points is that it is possible to given a general definition for a Laplacian operator on graphs: under this general definition, the Hecke operator is indeed a Laplacian (\cite{EinTW:AQUE}).\\
+We denote the distance of two points $x_{1},x_{2}\in\Xtree_{p}(x)$ with $d_{p}(x_{1},x_{2})$, such that $d_{p}(x_{1},x_{2})=1$ iff $x_{1,2}$ are neighbours in $\Xtree_{p}(x)$. Now let $\Xtree_{p}^{n}(x)$ be
+\begin{equation}
+\label{eq:Xp_decomp_cartan}
+\Xtree_{p}^{n}(x)\coloneqq \left\{
+y\in\Xtree_{p}(x)\colon d_{p}(x,y)=n
+\right\}.
+\end{equation}
+So, we can define the \emph{Hecke operators} $T_{p^{n}}$ for any $n\geq1$ as 
+\[
+T_{p^{n}}f(x)=\sum_{y\in\Xtree_{p}^{n}}f(y),
+\]
+for any function $f\colon X\to\mathbb{C}$. The following relations hold.
+
+\begin{nlem}
+\label{lem:hecke_prop}
+\begin{compactitem}
+\item $T_{p}^{2}=T_{p^{2}}+(p+1) I$;
+\item $T_{p}T_{p^{n}}=T_{p}$;
+\item $T_{p^{n}}$ is self adjont for $n\geq1$;
+\item $T_{p^{n}}$ commutes with the action of $\PSL_{2}\R$ and hence we all differential operators.
+\end{compactitem}
+\end{nlem}
+% pag 
+%Using the isomorphism 
+%\[
+%\Gamma\setminus G\simeq\Gamma_{p}\setminus G\times G_{p}/H_{p}
+%\]
+%and the expression of $X_{p}$ \eqref{eq:Xp_decomp_cartan} we can write Hecke operators in the following way. Let $\mu_{p}$ the Haar measure on $G_{p}$, such that $\mu_{p}(H_{p})=1$. For $f\colon X\to\mathbb{C}$, we have
+%\[
+%T_{p^{n}}f(\Gamma g)=\int_{B_{n}}f(\Gamma_{p}(g,h)K_{p})\dd\mu_{p}(h)
+%\]
+%where $B_{n}$ is the set
+%\[
+%B_{n}=H_{p}\SmallQmatrix{1&\\&p^{n}}H_{p}
+%\]
+We can now give an explicit formula for $T_{p}$ in the case of the modular surface. The neighbours of the origin $[\Z_{p}^{2}]$ are of the form
+\[
+\left[
+h\SmallQmatrix{1&\\&p^{n}}\Z_{p}^{2}
+\right],\quad\forall h\in\PGL_{2}\Z_{p}.
+\]
+There are only $p+1$ possible classes, corrisponding to index $p$ subgroups of $\Z_{p}^{2}$. These classes are of the form $[g\Z_{p}^{2}]$, where $g$ is one of the $p+1$ matrices
+\[
+\Qmatrix{1&\\&p},\quad\Qmatrix{p&-b\\&1},\quad\text{with }0\leq b<p
+\]
+which corrisponds to possible remainder classes in the division by $p$, plus the diagonal subgroup. The final formula 
+for $f\colon\PSL_{2}\Z\setminus\PSL_{2}\R\simeq\Gamma\setminus\Hilb\to\mathbb{C}$ is 
+\begin{equation}
+\label{eq:hecke_operator}
+T_{p}f(z)=f(pz)+\sum_{b=0}^{p-1}f\left(\frac{z+b}{p}\right)
+\end{equation}
+
+
+\subsection{Hecke invariance}
+
+
+The Hecke operator $T_{p}$ can be seen as the analog of the Laplacian on the $p+1$-regular tree previously described. The first step is the following abstract result, of which we will give only a sketch of the proof.
+
+\begin{nprop}
+\label{prop:eign_on_tree}
+Let $f$ be a function on a $p+1$-regular tree, and $T_{p}$ be the operator defined by
+\[
+T_{p}f(z)=\sum_{y\colon d_{p}(x,y)=1}f(y),
+\]
+with $d_{p}$ being the distance of $x,y$ on the tree. If $T_{p}f=\lambda f$, then there exist a constant $c>0$ such that
+\[
+\sum_{y\colon d_{p}(x,y)\leq n}\abs{f(y)}^{2}\geq c n\abs{f(x)}^{2},\quad\forall n\geq1.
+\]
+\end{nprop}
+\begin{prf}
+By Cauchy-Schwarz inequality we have 
+\begin{align*}
+\abs{\sum_{i=0}^{n}T_{p^{i}}f(x)}&=\abs{\sum_{y\colon d_{p}(x,y)\leq n}f(y)}\leq\left(\sum_{y\colon d_{p}(x,y)\leq n}\abs{f(y)}^{2}\right)^{1/2}
+\#\{y\colon d_{p}(x,y)\leq n\}^{1/2}
+\\
+&\leq C p^{n/2}\left(\sum_{y\colon d_{p}(x,y)\leq n}\abs{f(y)}^{2}\right)^{1/2},
+\end{align*}
+where $C$ is a constant of proportionality for the \virg{sphere} $\{y\colon d_{p}(x,y)\leq n\}$. By lemma \ref{lem:hecke_prop}, $f$ is an eigenfunction of $T_{p^{i}}$, for all $i\geq1$, with respect to eigenvalues $\lambda_{i}$ defined inductively by
+\[
+\lambda_{1}=\lambda,\;\lambda_{2}=\lambda^{2}-p-1,\;\lambda_{i+1}=\lambda\lambda_{i}-p\lambda_{i-1}\;\forall i\geq3.
+\]
+We note that 
+\[
+\abs{\sum_{i=0}^{n}T_{p^{i}}f(x)}=\abs{\sum_{i=0}^{n}\lambda_{i}}\abs{f(x)}
+\]
+and so we need to estimate $\abs{\sum_{i=0}^{n}\lambda_{i}}$. Using standard techinques for recurrence sequences, we can observe that, if $c_{1,2}=\frac{\lambda+\sqrt{\Delta}}{2}$ are the two solutions of equation $t^{2}-t\lambda+p=0$, then 
+\[
+\lambda_{i}=a c_{1}^{i}+bc_{2}^{i}
+\] 
+with 
+\[
+a=\frac{4}{-p\sqrt{\Delta}}\left(p\left(c_{2}-\frac{\lambda}{4}\right)+c_{2}\right),\;b=\frac{4}{-p\sqrt{\Delta}}\left(p\left(\frac{\lambda}{4}-c_{1}\right)-c_{1}\right).
+\]
+In case $\abs{\lambda}>2\sqrt{p}$ (\emph{non-tempered case}), both $c_{1},c_{2}$ are real and it is possible to given a straightforward estimation, while in the other case $\abs{\lambda}<2\sqrt{p}$ (\emph{tempered case}) the computation require much more attention and it is more involved. We refer to \cite{EinTW:AQUE}, proposition 3.22 for the details. In both cases, the estimation gives the thesis.
+\end{prf}
+
+
+\begin{defin}[Hecke recurrence]
+A measure $\nu$ on $X$ is called Hecke-recurrent if for every $\nu$-measurable set $B\subset X$ and $\nu$-a.e. $x\in B$ it holds
+\[
+\Xtree_{p}^{n}(x)\cap B\neq \emptyset,
+\]
+for infinitely many $n\in\N$.
+\end{defin}
+
+The next theorem can be applied to the microlocal lifts $I_{\vphi_{j}}$ of joint eigenfunctions of the Laplacian and the Hecke operator $T_{p}$, for some prime $p$. This justify Lindenstrauss assumption regarding Hecke recurrence.
+
+\begin{nteo}
+\label{teo:Hecke_recurrence}
+Let $\{\vphi_{k}\}_{k\geq0}$ be a sequence of eigenfunctions of $T_{p}$, such that $\norm{\vphi}_{2}=1$ for all $k$. If $\dd\mu_{k}=\abs{\vphi(g)}^{2}\dd g$, the any weak limit $\nu$ of $\mu_{k}$ is Hecke recurrent. 
+\end{nteo}
+\begin{prf}
+From proposition \ref{prop:eign_on_tree} and using the fact that $T_{p}$ is seld-adjoint, we have
+\[
+\pscl{\sum_{i=0}^{n}T_{p^{i}}f}{\abs{\vphi}^{2}}=\pscl{f}{\sum_{i=0}^{n}T_{p^{i}}\abs{\vphi}^{2}}\geq Cn\pscl{f}{\abs{\vphi}^{2}}
+\]
+for a certain constant $C$. Making $k\to\infty$, we get
+\[
+\int_{X}\left(\sum_{i=0}^{n}T_{p^{i}}f\right)\dd\nu\geq Cn\int_{X}f\dd\nu.
+\]
+As smooth functions are dense in the set of $L^{2}$-measurable functions, this last inequality holds for every measurable function $f\geq0$. Now let $B\subset X$ be a measurable set. We define 
+\[
+B_{k}=\left\{
+x\in B\colon B\cap\Xtree_{p}^{k}(x)=\emptyset
+\right\}
+\]
+and
+\[
+C_{h}=\bigcap_{k\geq h}B_{k}.
+\]
+Then $\bigcup_{h\geq1}C_{h}$ is the set of points in $B$ such that, after some times, do not come back to $B$ ever again. We will show that this set is of null-measure.\\
+We fix a $h$. For any $z\in X$ the set $Xtree_{p}(z)\cap C_{h}$ contains at most $(p+1)\cdot p^{h-1}$ vertices ($p+1$ points for each level). Hence,
+\[
+\sum_{i=0}^{\infty}T_{p^{i}}\one_{C_{h}}\leq(p+1)p^{h-1}
+\]
+We now apply the previous inequality for the (measurable) function $\one_{C_{h}}$, getting
+\[
+C n \nu(C_{h})\leq \int_{X}\left(\sum_{i=0}^{n}T_{p^{i}}f\right)\dd\nu\leq (p+1)p^{h-1}\nu(C_{h}).
+\]
+As this should hold for all $n$, we have $\nu(C_{h})=0$ and then, by sud-additivity
+\[
+\nu\left(\bigcup_{h\geq1}C_{h}\right)\leq \sum_{h\geq1}\nu(C_{h})=0,
+\]
+and we are done.
+\end{prf}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 2
+%----------------------------------------------------------------------------------------
+
+\section{Existence}
+
+The existence problem of Maass forms for the modular surface is by no means a problem of easy solution and this task has been taken seriously. The starting point is the Weyl's law. As mentioned in chapter \ref{Chapter3}, this result can be generalized to Riemannian manifolds of any dimensions, but we restrict ourselves to the finite-area non-compact case.\\
+The main difference between the compact and the non-compact case is that the latter has also a \emph{continuos spectrum}, which \virg{hide} the interesting discrete part. The continuos spectrum can be, however, ruled out, via theory of Eisenstein series and their analytical continuation \cite{Shimura:book}. In particular, for general hyperbolic surfaces $X_{\Gamma}=\Gamma\setminus\Hilb$, the spectra consist of the interval $[1/4,\infty)$ with multiplicity the number of cusps of $X_{\Gamma}$.\\
+
+In the Hilbert space $L^{2}(X_{\Gamma})$ the orthogonal complement to the continuos (and residual) spectrum of $X_{\Gamma}$ is the so-called cuspidal space $L^{2}_{\text{cusp}}(X_{\Gamma})$. A maass form which lie in $L^{2}_{\text{cusp}}(X_{\Gamma})$ is called \emph{\textbf{Maass cusp form}}. Coming back to the case $\Gamma=X(N)$, the existence of Maass cusp forms is tied with the dimension of the cuspidal space $L^{2}_{\text{cusp}}(X(1))$.\\
+Another remarkable accomplishment of the trace formula for $\PSL_{2}\Z$ was actually the proof that modular surfaces $X(N)$ are endowed of an abundance of Maass cusp forms.
+In \cite{Sarnak:review}, it is shown that for $X(N)$ holds the limit
+\[
+N_{\Gamma(N)}^{\text{cusp}}(\lambda)\sim \frac{\Area(X(N))}{4\pi}\lambda
+\]
+which is the usually form of Weyl's law. Thus, in the end, solutions to the problem \ref{eq:lapl_eingev_probl_hyp_surface} exist and there are many of them. A surface $X$ for which this asymptotic law holds is called \emph{essentially cuspidal}.
+
+
+
+
+

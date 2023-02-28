@@ -1,0 +1,758 @@
+% Chapter Template
+
+\chapter{Seldberg trace formula} % Main chapter title
+
+\label{Chapter4} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+\thispagestyle{empty}
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+Trace formulas, in general, establish a connection between geometrical quantities with the spectra of a differential operator. Thus, they have the following form
+\[
+\sum\left\{
+\text{spectral terms}
+\right\}
+=
+\sum\left\{
+\text{geometrical terms}
+\right\}.
+\]
+We will now consider an introductive example, taken from \cite{Markloff:article}, to introduce this subject.
+
+\section{Trace formula on $\S^{1}$}
+
+
+\label{sec:intro_trace_for_s1}
+A first example of a trace formula can be derived from the famous \emph{Poisson summation formula}
+
+\begin{equation}
+\label{eq:poisson_summation_formula}
+\sum_{m\in\Z}h(m)=\sum_{n\in\Z}\int_{\R}h(t)\e^{2\pi\imi nt}\dd t=\sum_{n\in\Z}\Four{h}(n)
+\end{equation}
+which holds for $h\colon\R\to\mathbb{C}$ of class $C^{2}$ and such that $\abs{h(t)}$ is of \virg{rapid decay} (as in the Schwarz space $\schwarz$). Usually, it is used to derived the functional equation of Riemann's zeta function. We can now read this formula as a \emph{trace formula}.\\
+
+Consider the Laplacian $-\Lapl$ on the unit circle $\S^{1}$. This ammounts on studying the equation
+\[
+-\Lapl u=\lambda u,\; u(0)=u(2\pi)
+\]
+which has solutions of the form $\vphi_{n}(x)=(2\pi)^{-1/2}\e^{\imi nx}$ with $\lambda=n^{2}$. Considering the linear operator $L$ acting on $2\pi$-periodic functions and defined by
+\[
+[Lf](x)\coloneqq \int_{0}^{2\pi}k(x,y)f(y)\dd y
+\]
+where the integral kernel $k(x,y)$ is given by
+\[
+k(x,y)=\sum_{m\in\Z}h(m)\vphi_{m}(x)\overline{\vphi}_{m}(y).
+\]
+Then, due to the orthogonality in $L^{2}([0,2\pi])$ of eigenfunctions $\vphi_{n}(x)$, we have 
+\[
+L\vphi_{n}=h(n)\vphi_{n}
+\]
+and hence the left hand side of equation \eqref{eq:poisson_summation_formula} can be read as a \virg{spectral sum} over eigenvalues. In particular, it holds
+\[
+\tr L=\sum_{n\in\Z}\int_{\R}h(t)\e^{2\pi\imi nt}\dd t.
+\]
+The right hand is of this last equation has an immediate geometric interpretation, as sum over all geodesics (in $S^{1}$) of length $2\abs{n}$.\\
+Now, we choose the function $h(t)=(\lambda^{2}-t^{2})^{-1}$, which appears dealing with the resolvent operator of the Laplacian $(\Lapl+\lambda^{2})$. For further details we refer to \cite{Markloff:article}. Poisson summation formula gives
+\[
+\sum_{m\in\Z}\frac{1}{\lambda^{2}-m^{2}}=\sum_{n\in\Z}\int_{\R}\frac{\e^{2\pi\imi nt}}{\lambda^{2}-t^{2}}\dd t.
+\]
+The integral term can be rewritten as follows. If $n$ is non-positive, then 
+\[
+\int_{\R}\frac{\e^{2\pi\imi nt}}{\lambda^{2}-t^{2}}\dd t=\int_{\R}\frac{\e^{-2\pi\imi\abs{n}t}}{\lambda^{2}-t^{2}}\dd t
+\]
+while in the other case, with the substitution $t\mapsto-t$,
+\[
+\int_{\R}-\frac{\e^{-2\pi\imi nt}}{\lambda^{2}-(-t)^{2}}\dd t=\int_{\R}\frac{\e^{-2\pi\imi\abs{n}t}}{\lambda^{2}-t^{2}}\dd t
+\]
+In conclusion, 
+\[
+\sum_{m\in\Z}\frac{1}{\lambda^{2}-m^{2}}=\int_{\R}\frac{\e^{-2\pi\imi\abs{n}t}}{\lambda^{2}-t^{2}}\dd t
+\]
+Considering the rectangle 
+\[
+\gamma = \{t\}\cup\{M+\imi(t+M)\}\cup\{-t+2M\imi\}\cup\{-M+\imi(M-t)\} = \gamma_{1}\cup\gamma_{2}\cup\gamma_{3}\cup\gamma_{4},\quad \forall t\in[-M,M]
+\]
+with $M>0$ and using the Residue Theorem to compute the integral of $f(t)=\frac{\e^{-2\pi\imi\abs{n}t}}{\lambda^{2}-t^{2}}$ along $\gamma$ (clockwise) we get
+\[
+\int_{[-M,M]}\frac{\e^{-2\pi\imi\abs{n}t}}{\lambda^{2}-t^{2}}\dd t=\int_{\gamma_{2}\cup\gamma_{3}\cup\gamma_{4}}\frac{\e^{-2\pi\imi\abs{n}z}}{\lambda^{2}-t^{2}}\dd z+2\pi\imi\Res(f,\lambda).
+\]
+It can be shown with simple standard bounding techniques that the integral over the complex segments $\gamma_{2}\cup\gamma_{3}\cup\gamma_{4}$ vanishes for $M\to\infty$. Hence we get 
+\[
+\int_{\R}\frac{\e^{-2\pi\imi\abs{n}t}}{\lambda^{2}-t^{2}}\dd t=2\pi\imi\Res(f,\lambda)=2\pi\imi\frac{\e^{-2\pi\imi\abs{n}\lambda}}{2\lambda}=\frac{\pi\imi}{\lambda}\e^{-2\pi\imi\abs{n}\lambda}.
+\]
+So,
+\[
+\sum_{m\in\Z}\frac{1}{\lambda^{2}-m^{2}}=\frac{\pi\imi}{\lambda}\sum_{n\in\Z}\e^{-2\pi\imi\abs{n}\lambda}.
+\]
+The right hand side is linked to $\cot z$ function on the half plane $\Im(z)<0$, as
+\[
+\cot z=\frac{\cos z}{\sin z}=\imi\frac{1+\e^{-2\imi z}}{1-\e^{-2\imi z}}=\imi(1+\e^{-2\imi z})\sum_{n=0}^{\infty}\e^{-2\imi n z}=\imi\sum_{n\in\Z}\e^{-2\imi\abs{z}}.
+\]
+In the end it is proved 
+\[
+\sum_{m\in\Z}\frac{1}{\lambda^{2}-m^{2}}=\frac{\pi}{\lambda}\cot(\pi\lambda)
+\]
+We will now go deeper in trace formula for hyperbolic surfaces, regarding Laplacian eigenfunctions. This form resembles the general structure of a trace formula, where often trigonometric and hyperbolic functions are present. In the general case for $h$ the final formula is the following. 
+
+\begin{nteo}
+Let $h\colon\mathbb{C}\to\mathbb{C}$ a function which is analytic for $\abs{\Im(z)}\leq \sigma$, for a certain $\sigma>0$. Moreover, suppose that $h(z)$ is such that
+\[
+\abs{h(z)}\ll(1+\abs{\Re(z)})^{-1-\delta}
+\]
+for some $\delta>0$, uniformly for all $z$ in the strip $\abs{\Im z}\leq \sigma$.
+\end{nteo}
+
+Its proof follows verbatim the previous reasonings. 
+
+
+\section{Laplacian operator}
+
+Driven by the previous example, we now approach the Seldeberg trace formula for the case of interest. In this situation, as foretold before, our differential operator will be the Laplacian. On the main reasons for the importance of Laplace-Beltrami operator (for brevity, Laplace or Laplacian) is that it's the unique (up to scalar multiplication) second order differential operator that commutes with actions of the isometry group.\\
+Thinking about homogeneity and isotropy in physics, this can help explaining its widespread presence in most of partial differential equations (Schr{\"o}dinger equation, wave equation ecc.)
+At first, in this chapter, we will introduce main properties of Laplacian on hyperbolic surfaces and will develop, without going in details however, notions of harmonic analysis for this context. The final aim will be to explore the connection between eigen-spectrum of the Laplacian and the dynamical properties of hyperbolic surfaces, namely the Seldberg trace formula.
+
+Explicity, the Laplace operator on a Riemannian manifold with metric $g$ is given in local coordinate by
+\[
+\Lapl f = \frac{1}{\sqrt{\abs{g}}}\partial_{i}\left(\sqrt{\abs{\Hmetr}}\Hmetr^{ij}\partial_{j}f\right)
+\]
+where $\abs{\Hmetr}$ is the determinant of metric tensor $\Hmetr$ and $\Hmetr^{ij}$ are the components of inverse metric tensor $\Hmetr^{-1}$. In the euclidian case we get the usual Laplacian, but in the hyperbolic case (upper-half plane model $\Hilb$)
+\[
+\Hmetr_{ij}=\frac{\delta_{ij}}{y^{2}}
+\]
+In this case, $\Hmetr^{ij}=y^{2}\delta^{ij}$ and $\sqrt{\abs{\Hmetr}}=y^{-2}$. Then with easy computations,
+\[
+\Lapl f=y^{2}(\partial_{xx}f+\partial_{yy}f).
+\]
+The Laplacian can be seen as a differential operator on any hyperbolic surface $M=\Gamma\setminus\Hilb$. However, for simplicity, we will assume $M$ \underline{compact} and we fix a fundamental domain $D$ for $M$. In this sense, any $f\colon D\to\mathbb{C}$ can be seen as a $\Gamma$-invariant function on $\Hilb$ and its integral over $D$ is given by $\int_{D}f\dd\mu$.
+
+\begin{nlem}
+If $A\in\PSL_{2}\R$ and $T_{A}(f)=f(A^{-1}z)$ for $f\in C^{\infty}(\Hilb)$, then 
+\[
+\Lapl T_{A}=T_{A}\Lapl.
+\]
+\end{nlem}
+\begin{prf}
+It's sufficient to check the property in case $A=\SmallQmatrix{0&-1\\1&0}$ or $A=\SmallQmatrix{1&x\\0&1}$, for some $x\in\R$, as these two matrices generates all $\PSL_{2}\R$.
+\end{prf}
+
+\begin{remark}
+Very often, it's considered as the Laplacian the operator $-\Delta$, because in this way the eigenvalues are positive, see the following result.
+\end{remark}
+
+\begin{nteo}
+\label{teo:spectra_laplace}
+There exists a sequence $\{\vphi_{j}\}_{j\in\N}$ of $L^{2}(M)$ of Laplacian-eigenfunctions
+\[
+\Delta\vphi_{j}=\lambda_{j}\vphi_{j}
+\]
+with corrisponding (positive) eigenvalues $\lambda_{j}$ such that $\{\lambda_{j}\}_{j}$ is a increasing and diverging sequence of positive real numbers and $\{\vphi_{j}\}_{j\in\N}$ form a orthonormal basis of $L^{2}(M)$.
+\end{nteo}
+\begin{prf}
+See \cite{Masson:aque_everything}.
+\end{prf}
+
+The proof of this theorem is based on the use of spectral decomposition theorem for compact operators. However, as the Laplacian is not compact, it is necessary to use some approximating compact operators (\emph{heat kernel}), showing that the share the same spectrum of the Laplacian. Here are some general properties for the Laplacian.
+
+\begin{nprop}
+The followings hold.
+\begin{compactitem}
+\item $\Lapl$ is a symmetric operator, i.e. $\pscl{\Lapl f}{g}=\pscl{f}{\Lapl g}$ for any $f,g\in C^{\infty}(M)$.
+\item If $f\in C^{\infty}(M)$ is not constant, then $\pscl{\Lapl f}{f}$ is positive.
+\end{compactitem}
+\end{nprop}
+
+
+
+\subsection{A brief journey across harmonic analysis on the hyperbolic plane}
+
+\label{subsec:harmonic_analysis_hyperbolic}
+
+
+To prove, in the subsequent sections, the Seldberg trace formula, we will now some notions taken from the field of harmonical analysis (see \cite{Evans:book},\cite{Horm:book1})\\
+
+DA FINIRE IL DISCORSO\\
+
+The starting point is the definition of the \emph{invariant kernel}.
+
+\begin{defin}
+\label{def:invariant_kernel}
+An invariant kernel is a function $\kernel\colon\Hilb\times\Hilb\to\mathbb{C}$ with the following characteristics:
+\begin{compactenum}
+\item $\kernel(\gamma z,\gamma w)=\kernel(z,w)$ for all $\gamma\in\Isom(\Hilb)=\PSL_{2}\R$ and for all $(z,w)\in\Hilb\times\Hilb$;
+\item $\kernel(\cdot,\cdot)$ is symmetric in its arguments.
+\end{compactenum}
+\end{defin}
+
+Such a kernel carries with it an \emph{invariant integral operator} $I$ defined by
+\[
+If(z)=\int_{\Hilb}\kernel(z,w)f(w)\dd\mu(w).
+\]
+with $f$ that must satisfy appropriate conditions. This induces an operator on the quotient surface $M=\Gamma\setminus\Hilb$, in particular for $f$ $\Gamma$-invariant:
+\[
+If(z)=\sum_{\gamma\in\Gamma}\int_{D}\kernel(z,\gamma w)f(w)\dd\mu(w).
+\]
+with $D$ fundamental domain for $\Gamma$.\\
+We will consider invariant kernels of the form 
+\[
+\kernel(d(z,w))
+\]
+where $\kernel\colon\R\to\mathbb{C}$ is an even function. With abuse of notation, we will use $\kernel(z,w)$ for complex $z,w$ or $\kernel(l)$ for real $l$ indifferently, instead of $\kernel(d(z,w))$.
+
+\begin{nprop}
+\label{prop:eig_Lapl_is_eig_operator}
+If $f$ is an eigenfunction of the Laplacian of eigenvalue $\lambda$, then it is also an eigenfunction of the invariant integral operator $I_{\kernel}$ relative to $\kernel$. Hence, there exists a function $h\colon\R\to\mathbb{C}$ such that 
+\[
+I_{\kernel}f(z)=\int\kernel(d(z,w))f(w)\dd\mu(w)=h(\lambda)f(z).
+\]
+\end{nprop}
+\begin{prf}
+Let $f$ be an eigenfunction of the Laplacian of eigenvalue $\lambda$. We define the corrisponding radial function 
+\[
+F_{z}(w)=\int_{S_{z}}f(Mw)\dd M
+\]
+where $S_{z}=\Stab_{z}$ and $\dd M$ is the normalised Haar measure on $S_{z}$. It is a radial eigenfunction and, by the subsequent lemma \ref{lem:techincal} we know that
+\[
+F_{z}(w)=\vphi_{\lambda}(z,w)f(z).
+\]
+So we have
+\begin{align*}
+\int_{\Hilb}\kernel(z,w)f(w)\dd\mu(w)&=\int_{S_{z}}\int_{\Hilb}\kernel(z,M^{-1}w)f(w)\dd\mu(w)\dd M\\
+&=\int_{S_{z}}\int_{\Hilb}\kernel(z,w)f(Mw)\dd\mu(w)\dd M\\
+&=\int_{\Hilb}\kernel(z,w)F_{z}(w)\dd\mu(w).
+\end{align*}
+Hence
+\[
+\int_{\Hilb}\kernel(z,w)f(w)\dd\mu(w)=h(\lambda)f(z),
+\]
+where the \virg{eigenvalue} $h(\lambda)$ is given by
+\[
+h(\lambda)=\int_{\Hilb}\kernel(z,w)\vphi_{\lambda}(z,w)\dd\mu(w).
+\]
+What remains to be proved is that $h(\lambda)$ is indipendent of $z$ and for any $g\in\PSL_{2}\R$:
+\begin{align*}
+\int_{\Hilb}(gz,w)\vphi_{\lambda}(gz,w)\dd\mu(w)&=\int_{\Hilb}\kernel(z,g^{-1}w)\vphi_{\lambda}(z,g^{-1}w)\dd\mu(w)=\\
+&=\int_{\Hilb}\kernel(z,w)\vphi_{\lambda}(z,w)\dd\mu(w).
+\end{align*}
+This concludes the proof.
+\end{prf}
+
+
+\begin{nlem}
+\label{lem:techincal}
+For any $\lambda\in\mathbb{C}$ and $z$ in the upper-half plane, there exists a unique function $w\mapsto\vphi_{\lambda}(z,w)$, with radial symmetry centered in $z$, such that
+\begin{compactenum}
+\item $\vphi_{\lambda}(z,z)=1$;
+\item $\Lapl_{\Hmetr}\vphi_{\lambda}(z,w)=\lambda\vphi_{\lambda}(z,w)$.
+\end{compactenum} 
+\end{nlem}
+\begin{prf}
+Omitted (\cite{Masson:aque_everything}).
+\end{prf}
+
+We define the Seldberg transform $\SelT(k)$ of a radiant kernel $\kernel$ as %pg25 from basics to aque...
+\begin{equation}
+\label{eq:def_seldberg_transform}
+\SelT(\kernel)(\lambda)=h(\lambda)=\int_{\Hilb}\kernel(d(\imi,w))\vphi_{\lambda}(\imi,w)\dd\mu(w).
+\end{equation}
+We will use the re-parametrisation $\lambda=s(1-s)=1/4+r^{2}$, with $r\in\mathbb{C}$ we will write indifferently, with abuse of notation, $\SelT(\kernel)(r)$ and $\SelT(\kernel)(\lambda)$.
+
+\begin{nprop}
+\label{prop:seld_transform_formula}
+The Seldberg transform $\SelT(\kernel)$ of a radian kernel $\kernel$ can be computed with the Fourier transform of the function
+\[
+g(u)=\frac{1}{\sqrt{2}}\int_{\abs{u}}^{\infty}\frac{\kernel(\rho)\sinh\rho}{\sqrt{\cosh\rho-\cosh u}}\dd\rho
+\]
+so that 
+\[
+\SelT(\kernel)(r)=\Fourier(g)(x).
+\]
+\end{nprop}
+\begin{prf}
+Let $f\colon\mathbb{C}\to\mathbb{C}$ defined by $f(z)=y^{1/2+\imi r}$, for $z=x+\imi y$ and fixed $r$. We have that
+\[
+-\Lapl_{\Hmetr}f(z)=y^{2}\cdot\left((1/4+ r^{2}) y^{1/2-2+\imi r}\right)=f(z)
+\]
+so it is an eigenfunction of the Laplacian with eigenvalue
+\[
+\lambda=\frac{1}{4}+r^{2}=s(1-s)
+\]
+for a certain $s\in\mathbb{C}$. With abuse of notation, we will write $h(r)=h(\lambda)$, instead of $h(\lambda(r))$. By proposition \ref{prop:eig_Lapl_is_eig_operator}, we have that
+\[
+h(r)=\int\kernel(d(\imi,z))\Im(z)^{1/2+\imi r}.
+\]
+Let $U(\cosh\rho)=\kernel(\rho)$ so that, using formula for hyperbolic distance
+\[
+U\left(
+1+\frac{\abs{z-w}^{2}}{2\Im(z)\Im(w)}
+\right)=\kernel(d(z,w)).
+\]
+Hence we have 
+\[
+h(r)=\int_{-\infty}^{\infty}\int_{0}^{\infty}U\left(
+\frac{1+x^{2}+y^{2}}{2y}
+\right)y^{1/2+\imi r}\frac{\dd y}{y^{2}}\dd x.
+\]
+Letting $\cosh\rho=(1+x^{2}+y^{2})/2y$ (substitution with respect to variable $x$) and $y=\e^{u}$, we have
+\[
+x=\pm\sqrt{2\e^{u}\cosh\rho-1-\e^{2u}},\quad \sinh\rho\dd\rho=\frac{x}{y}\dd x,\quad \e^{u}\dd u=\dd y
+\]
+and then\footnote{The minimum value of $\cosh\rho$ is $\frac{1+\e^{2u}}{2\e^{u}}=\cosh u$ and so $\rho\geq\abs{u}$.}
+\[
+h(r)=\int_{-\infty}^{\infty}\int_{\abs{u}}^{\infty}\frac{U(\cosh\rho)}{\e^{2u}}\cdot\left(\e^{u}\right)^{1/2+\imi r}\cdot\frac{y\sinh\rho}{x} \e^{u}\dd \rho\dd u=\frac{1}{\sqrt{2}}\int_{-\infty}^{\infty}\int_{\abs{u}}^{\infty}\frac{\kernel(\rho)\sinh\rho}{\sqrt{\cosh\rho-\cosh u}}\cdot \e^{\imi r}\dd \rho\dd u.
+\]
+The result is proved.
+\end{prf}
+
+It can be also shown that it is possible to revert the Seldberg transform also using Fourier inversion formula, with a different \virg{weight function}.
+
+\begin{nprop}
+\label{prop:inverse_seld_transform}
+For a function $h\colon\R\to\mathbb{C}$, the Seldberg transform is inverted using the inverse Fourier transform
+\[
+g(u)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\e^{-\imi ru}h(r)\dd r
+\]
+with 
+\[
+\kernel(\rho)=-\frac{1}{\sqrt{2}\pi}\int_{\rho}^{\infty}\frac{g'(u)}{\sqrt{\cosh u-\cosh\rho}}\dd u.
+\]
+\end{nprop}
+\begin{prf}
+Omitted.
+\end{prf}
+
+
+\section{Periodic geodesics}
+
+\label{sec:period_geodesics}
+
+
+The trace formula is a bridge between spectral property of a system, namely the spectrum of the Laplacian, and its geometrical charateristics, i.e. the set of lengths of closed geodesics.\\
+Let $M=\Gamma\setminus\Hilb$ be a \underline{compact hyperbolic surface}, so that $\Gamma$ does not contain any parabolic element. We further assume that $M$ can be considered as a regular Riemann surface, hence $\Gamma$ has not elliptic elements either.\\
+The spectrum of the Laplacian is denoted by 
+\[
+\lambda_{j}=\frac{1}{4}+\rho_{j}^{2}
+\]
+and, as $\lambda_{j}\in\R$, we have that $\abs{\Im(\rho_{j})}\leq1/2$.
+
+
+\begin{defin}
+\label{def:closed_geod}
+A \emph{periodic} or \emph{closed geodesic} in $M$ is a geodesic $\gamma\colon\R\to M $ such that $\exists T>0$
+\[
+(\gamma(t+T),\gamma'(t+T))=(\gamma(t),\gamma'(t)),\;\forall t\in\R.
+\] 
+The set of closed geodesic in $M$ will be denoted by $\ClsdGeod{M}$. The smallest $T>0$ for which this is true, is denoted by $\ell(\gamma)$ and it's called the \emph{period or length} of the geodesic $\gamma$. 
+\end{defin}
+
+As we said in section METTI SEZIONE, for every hyperbolic element $A\in\Gamma$, there is one and only geodesic invariant with respect to the action of $A$, namely the \emph{axis} of $A$, see \eqref{eq:invar_geodes_hyperb}. It's possible to prove the following result.
+
+
+
+\begin{nlem}
+% konstantine
+If $M=\Gamma\setminus\Hilb$ is an hyperbolic compact surface, then for every hyperbolic element $g\in\Gamma$ the projection of the axis $\gamma$ of $g$ in $M$ is a closed geodesic of length $\ell_{g}$.
+\end{nlem} 
+\begin{prf}
+CITA KONSTANTINE
+\end{prf}
+
+It's interesting to see how the length $\ell_{g}$ is linked to the matrix $g$. If 
+\[
+g=\Qmatrix{
+a&b\\c&d
+}
+\]
+then this matrix it's similar to 
+\[
+A_{\ell}=\Qmatrix{\exp(\ell/2)&\\&\exp(-\ell/2)}
+\]
+for a certain $\ell>0$. We have that $d(z,Az)=\ell$ and hence this is still true for $g$, so $\ell$ it's exactly the length of the axis of $g$. In particular we have that
+\[
+2\cosh\ell=\abs{\tr g}.
+\]
+This relation can be restated with eigenvalues of $g$: if $1<\lambda$ and $\lambda^{-1}$ are $g$'s eigenvalues, than this equation rewrites as
+\[
+\ell_{g}=\log\lambda^{2}.
+\]
+
+\begin{defin}
+\label{def:prim_elem}
+An element $\gamma\in\Gamma$ is called \emph{primitive} iff it cannot be expressed in the form $\delta^{k}$, with $k\geq2$ and $\delta$ is another elemento of $\Gamma$.  
+\end{defin}
+
+\begin{nprop}
+\label{prop:hyp_elements_classes}
+The set $\ClsdGeod{M}$ can be identified with the set of conjugacy classes in $\Gamma$ of primitive hyperbolic elements.
+\end{nprop}
+\begin{prf}
+Let $\rho\in\ClsdGeod{M}$ and let $C_{\rho}$ be the class of geodesics of $\Hilb$ that project on $\rho$. Let $\gamma$ be a representative of this class. The stabilizer $\Stab_{\gamma}$ of $\gamma$ in $\PSL_{2}\R$ is the set of hyperbolic transformations fixing $\gamma$. It is conjugate to the diagonal subgroup (see METTI REFERENZA)
+\[
+\left\{
+\Qmatrix{\exp(t/2)&\\&\exp(-t/2)},\; t\in\R
+\right\}.
+\]
+In particular $\Stab_{\gamma}\simeq\R$. Hence, the subgroup $\Stab_{\gamma}\cap\Gamma$ is homomorphic to a discrete subgroup of $\R$, being $\Gamma$ a discrete subgroup, and so it's cyclic. Let $\delta\in\Gamma$ such that 
+\[
+\Stab_{\gamma}\cap\Gamma=\spn{\delta}.
+\]
+Obviously, $\delta$ must be primitive. Any other representative $\hat{\gamma}$ of $C_{\rho}$ is obtained as $\hat{\gamma}=g\gamma$, with $g\in\Gamma$, and so 
+\[
+\Stab_{\hat{\gamma}}\cap\Gamma=\spn{g\delta g^{-1}}.
+\]
+Let $C_{\delta}$ be the conjugacy class of $\delta$ in $\Gamma$. Then, we have built a map $\rho\mapsto(C_{\gamma}\mapsto C_{\delta})$ associating a conjugacy class in $\Gamma$ of primitive hyperbolic elements to a periodic geodesic, which is one-to-one.
+\end{prf}
+
+At this point, we can establish the approximate growth for the number of closed geodesic (not necessary primitive) with length at most $L$.
+
+\begin{nprop}
+\label{prop:numb_geod_growth}
+Let $X=\Gamma\setminus\Hilb$ be an hyperbolic compact surface. Then the number of closed geodesics $c_{X}(L)$ on $X$ with length at most $L$ is $O(\e^{L})$.
+\end{nprop}
+\begin{prf}
+Let $x\in X$ be a point on the surface and let $w$ be the corrispondent point on $\Hilb$, so that $\pi(w)=x$. Let $D_{w}$ be the Dirichlet domain of center $w$ for $\Gamma$. If $\gamma$  is a closed geodesic on $X$ of length at most $L$, then let $\gamma'$ be its lifting on $\Hilb$, passing through a point $q\in D_{w}$. This curve $\gamma'$ is a geodesic on $\Hilb$ and it is fixed (as geodesic) by an hyperbolic element $G\in\Gamma$. Let $d$ be the diameter of the domain $D_{w}$, which is finite as $X$ is compact. Then we get
+\[
+d(w,Gw)\leq d(w,q)+d(q,Gq)+d(Gq,Gw)\leq L+2d.
+\] 
+Hence, for each geodesic of length at most $L$, there exist an element $G\in\Gamma$ such that $w$ is sent inside a (hyperbolic) ball of center $w$ and ray $L+2d$. Hence, $c_{X}(L)$ is bounded by the number of images of the domain $D_{w}$ which are distant at most $L+2d+d$ from $w$. For $L$ \virg{big enough}, thus the following estimate hold
+\[
+c_{X}(L)\simeq\frac{\mu_{\Hilb}(B(w,L+3d))}{\mu_{\Hilb}(D_{w})}.
+\]
+Using the Poincaré disk model, a hyperbolic ball of hyperbolic radius of $R=L+3d$, centered in $0$, can be seen as an Euclidian disk with radius $\tanh(R/2)$. Thus, the area is given by
+\begin{align*}
+\mu_{\Hilb}(B(w,R))&=\mu_{\Disk}(B(0,R))=\iint_{B(0,R)}\frac{4}{(1-\abs{z}^{2})}\dd x\dd y\stackrel{z=r^{e^{\imi\theta}}}{=}\int_{0}^{2\pi}\int_{0}^{\tanh(R/2)}\frac{4r}{(1-r^{2})^{2}}\dd r\dd \theta\\
+&=4\pi\left[\frac{1}{1-r^{2}}\right]_{0}^{\tanh(R/2)}=4\pi\cosh^{2}(R/2)
+\end{align*}
+and this gives what desired.
+\end{prf}
+
+
+
+\section{Pretrace formula}
+
+The general form of Seldberg is the following: for any \virg{admissible function}\footnote{In the following will be more precise.} $h$,
+\[
+\sum_{j=0}^{\infty}h(r_{j})=\frac{\Area(M)}{4\pi}\int_{-\infty}^{+\infty}h(r) r \tanh(\pi r)\dd r+\sum_{\gamma\in} 
+\]
+where, as in the previous secion, $\mathcal{G}(M)$ the set of periodic geodesics of $M$. 
+
+
+Let $\{\vphi_{j}\}_{j\in\N}$ be a orthonormal basis of (real) eigenfunctions of $\Delta$ on $L^{2}(M)$, as in theorem \ref{teo:spectra_laplace}.
+
+\begin{nprop}
+\label{prop:pretrace_formula}
+Let $h$ be the Seldberg transform of radial kernel $\kernel$, we have
+\[
+\sum_{j=0}^{\infty}h(r_{j})\vphi_{j}(z)\vphi_{j}(w)=\sum_{\gamma\in\Gamma}\kernel(z,\gamma w),
+\]
+where the convergence is absolute and uniform. When $z=w$, we get 
+\begin{equation}
+\label{eq:pretrace}
+\sum_{j=0}^{\infty}h(r_{j})\abs{\vphi_{j}(z)}^{2}=\frac{1}{4\pi}\int_{-\infty}^{\infty}h(x)\tanh(\pi x)x\dd x+\sum_{\gamma\in\Gamma\setminus\{e\}}\kernel(z,\gamma z).
+\end{equation}
+\end{nprop}
+\begin{prf}
+The eigenfunctions $\vphi_{j}$ are $\Gamma$-invariant functions on $\Hilb$, hence by definition of Seldberg transform we have
+\[
+\int_{\Hilb}\kernel(z,w)\vphi_{j}\vphi_{j}(w)\dd\mu(w) = h(r_{j})\vphi_{j}(z).
+\]
+At the same time 
+\[
+\int_{\Hilb}\kernel(z,w)\vphi_{j}(w)\dd\mu(w)=\int_{D}\sum_{\gamma\in\Gamma}k(z,\gamma w)\vphi_{j}(w)\dd\mu(w).
+\]
+The sequence $\{\vphi_{j}\}_{j\geq0}$ form a basis, so 
+\[
+\sum_{\gamma\in\Gamma}k(z,\gamma w)=\sum_{j\in\N}\left(
+\int_{D}\sum_{\gamma\in\Gamma}k(z,\gamma z')\vphi_{j}(z')\dd\mu(z')
+\right)\vphi_{j}(w)=
+\sum_{j\in\N}h(r_{j})\vphi_{j}(z)\vphi_{j}(w),
+\]
+where the series converge in $L^{2}$. In \cite{Hejhal:seld_trace}, Hejhal proved that the series converge absolutely and uniformly in $z,w$.\\
+To get \eqref{eq:pretrace}, we first prove that
+\[
+\kernel(z,z)=\frac{1}{4}\int_{-\infty}^{\infty}h(x)\tanh(\pi x)x\dd x.
+\]
+We start by writing the inverse Seldberg transform\footnote{See \ref{prop:inverse_seld_transform}}
+\[
+\kernel(z,z)=\kernel(d(z,z))=\kernel(0)=-\frac{1}{\pi\sqrt{2}}\int_{0}^{\infty}\frac{g'(u)}{\sqrt{\cosh u-1}}\dd u=-\frac{1}{2}\int_{0}^{\infty}\frac{g'(u)}{\sinh(u/2)}\dd u
+\]
+where $g(u)$ is the inverse Fourier transform
+\[
+g(u)=\frac{1}{2\pi}\int_{-\infty}^{\infty}h(r)\e^{-\imi u\rho}\dd\rho.
+\]
+Substituting and using Fubini theorem (thanks to rapid decay condition of $h$), we get 
+\begin{align*}
+\kernel(z,z)&=\frac{1}{4\pi^{2}}\int_{0}^{\infty}\int_{-\infty}^{\infty}h(\rho)\frac{\sin(u\rho)}{\sinh(u/2)}\rho\dd\rho\dd u\\
+&=\frac{1}{4\pi^{2}}\int_{-\infty}^{\infty}h(\rho)\left(
+\int_{0}^{\infty}\frac{\sin(u\rho)}{\sinh(u/2)}\dd u
+\right)\rho\dd\rho.
+\end{align*}
+We now rewrite the term $1/\sinh(u/2)$ as a series
+\[
+\frac{1}{\sinh(u/2)}=\frac{2}{\e^{u/2}(1-\e^{-u})}=2\e^{-u/2}\sum_{n=0}^{\infty}\e^{-nu}
+\]
+and using its absolute convergence, we can interchange integration and summation
+\begin{align*}
+\int_{0}^{\infty}\frac{\sin(u\rho)}{\sinh(u/2)}\dd u&=2\sum_{n\geq0}\int_{0}^{\infty}\e^{-(2n+1)u/2}\sin(u\rho)\dd u\\
+&=2\sum_{n\geq0}\frac{4\rho}{4\rho^{2}+(2n+1)^{2}}=\sum_{n\in\Z}\frac{4\rho}{4\rho^{2}+(2n+1)^{2}}.
+\end{align*}
+Moreover, we have the Fourier correspondence
+\[
+\int_{-\infty}^{\infty}\e^{-2\pi\imi x\zeta}\frac{2\rho}{\rho^{2}+\zeta^{2}}\dd\zeta= 2\pi \e^{-2\pi\rho\abs{x}}
+\]
+and we can use Poisson summation formula \eqref{eq:poisson_summation_formula}
+\[
+\sum_{n\in\Z}f(n)=\sum_{n\in\Z}\int_{-\infty}^{\infty}\e^{-2\pi\imi n\xi}f(\xi)\dd\xi
+\]
+finally getting
+\[
+\sum_{n\in\Z}\frac{\rho}{\rho^{2}+(n+1/2)^{2}}=
+\pi\sum_{n\in\Z}\e^{\imi\pi n}\e^{-2\pi \rho\abs{n}}=\pi\frac{1-\e^{-2\pi \rho}}{1+\e^{-2\pi\rho}}=\pi\tanh(\pi \rho).
+\]
+To sum up, we have obtained that
+\[
+\int_{0}^{\infty}\frac{\sin(u\rho)}{\sinh(u/2)}\dd u=\pi\tanh(\pi\rho)
+\]
+and so the proof is complete.
+\end{prf}
+
+\begin{remark}
+Even if Poisson summation formula could have appear to be a \virg{fictitious} tool to introduce Seldberg trace formula in section \ref{sec:intro_trace_for_s1}, in this proof one can see that these two subjects actually are linked together.
+\end{remark}
+
+
+To prove the complete version of Seldberg trace formula, it is necessary to integrate equation \eqref{eq:pretrace} over a fundamental domain $D$ (for example, a Dirichlet domain). We have 
+\[
+\sum_{j=0}^{\infty}h(r_{j})\abs{\vphi_{j}(z)}^{2}=\frac{\Area(M)}{4\pi}\int_{-\infty}^{\infty}h(x)\tanh(\pi x)x\dd x+\sum_{\gamma\in\Gamma\setminus\{e\}}\int_{D}\kernel(z,\gamma z)\dd\mu(z).
+\]
+We would like to rewrite the last term as a sum over closed geodesics. To this, we will group the terms by conjugacy classes $[\gamma]$, with $\gamma\in\Gamma$. If $\gamma_{0}\in [\gamma]$, then there exist a $g\in\Gamma$ such that $\gamma_{0}=g^{-1}\gamma g$. So
+\begin{align*}
+\int_{D}\kernel(z,\gamma_{0} z)\dd\mu(z)&=\int_{D}\kernel(z,g^{-1}\gamma g z)\dd\mu(z)=\int_{D}\kernel(gz,\gamma gz)\dd\mu(z)\\
+&=\int_{gD}\kernel(z,\gamma z)\dd\mu(z).
+\end{align*}
+Hence we have
+\[
+\sum_{\gamma\in\Gamma\setminus\{e\}}\int_{D}\kernel(z,\gamma z)\dd\mu(z)=\sum_{[\gamma]\neq[e]}\int_{D_{\gamma}}\kernel(z,\gamma z)\dd\mu(z),
+\]
+where 
+\[
+D_{\gamma}=\bigcup_{g\in C_{\gamma,\Gamma}\setminus\Gamma} gD
+\]
+with $C_{\gamma,\Gamma}$ being the centralizer of $\gamma$ in $\Gamma$, i.e. the set 
+\begin{equation}
+\label{eq:centralizer}
+C_{\gamma,\Gamma}=\left\{
+g\in\Gamma\colon g\gamma=\gamma g
+\right\}
+\end{equation}
+We are now ready to prove the following result.
+
+\begin{nlem}
+\label{lem:centr_is_cyclic}
+Given $\gamma\in\Gamma$, it does exist a unique primitive element $\delta\in\Gamma$ such that $\gamma^{n}=\gamma$ for some $k\geq1$, and moreover the centralizer is $C_{\gamma,\Gamma}=\spn{\delta}$.
+\end{nlem}
+\begin{prf}
+The last part of the result is an immediate consequence of the first part, so we will only prove this one.\\
+In the proof of proposition \ref{prop:hyp_elements_classes} we have seen that the subgroup of $\Gamma$ fixing the axis $a_{\gamma}$ is cyclic and generated by a primitive element $\delta$, so $\gamma=\delta^{n}$. Any other primitive element $\delta'$ such that $\gamma=\delta'^{k}$, has the same axis of $\gamma$. Hence it is in the subgroup $\spn{\delta}$, but $\delta$ and $\delta'$ are both primitive, so $\delta=\delta'$.
+\end{prf}
+Using lemma \ref{lem:centr_is_cyclic}, it is possible to decompose the summation over conjugacy classes of
+primitive elements, which corrispond to element of $\ClsdGeod{M}$ in view of proposition \ref{prop:hyp_elements_classes}. In the end
+\[
+\sum_{[\gamma]\neq e}\int_{D_{\gamma}}\kernel(z,\gamma z)\dd\mu(z) = \sum_{\gamma\in\ClsdGeod{M}}\sum_{n}^{\infty}\int_{D_{\gamma}}\kernel(z,\gamma^{n}z)\dd\mu(z).
+\]
+It should be noticed that the set $D_{\gamma}$ is nothing than the fundamental domain for the hyperbolic cylinder $C_{\gamma,\Gamma}\setminus\Hilb$.
+
+
+\subsection{Hyperbolic terms}
+
+We now fix a primitive element $\gamma\in\Gamma$. Up to a conjugation by an isometry, which does not change the value of the integral we are considering, we can suppose \textsc{wlog} that 
+\[
+\gamma= A_{\ell},
+\]
+where $\ell=\ell_{\gamma}$ is the length of the isometry. A fundamental domain for the quotient $C_{\gamma,\Gamma}\setminus\Gamma$ is given by the strip 
+\[
+\left\{
+z\in\Hilb\colon 1\leq \Im(z)<\e^{\ell}
+\right\}
+\]
+We now use the function $U(\cosh \rho)\coloneqq\kernel(\rho)$, where $\rho=d(\cdot,\cdot)$. For $z'=\e^{n\ell} z$, by using lemma \ref{lem:hyp_distance_formula}, we have
+\[
+\cosh d(z,\gamma^{n}z')=1+\frac{\abs{z-z'}^{2}}{2\Im(z)\Im(z')}=1+2\frac{\abs{z}^{2}\sinh^{2}(n\ell/2)}{y^{2}}
+\]
+so that ($z=x+\imi y$)
+\begin{align*}
+\int_{D_{\gamma}}\kernel(z,\gamma^{n}z)\dd\mu(z)&=\int_{1}^{\e^{\ell}}\int_{-\infty}^{\infty}U(1+2\sinh^{2}(n\ell/2)\left(1+\frac{x^{2}}{y^{2}}\right)\frac{\dd x\dd y}{y^{2}}\\
+&\stackrel{q=x/y}{=}\int_{1}^{\e^{\ell}}\frac{1}{y}\dd y\int_{-\infty}^{\infty}U(1+2\sinh^{2}(n\ell/2)(1+q^{2}))\dd q\\
+&\stackrel{\star_{1}}{=}\frac{\ell}{\sinh(n\ell/2)}\int_{\sinh(n\ell/2)}^{+\infty}\frac{U(1+2u)}{\sqrt{u-\sinh^{2}(n\ell/2)}}\dd u\\
+&\stackrel{\star_{2}}{=}\frac{\ell}{\sinh(n\ell/2)\sqrt{2}}\int_{n\ell}^{+\infty}\frac{\kernel(\rho)\sinh\rho}{\sqrt{\cosh\rho-\cosh(n\ell)}}\dd \rho
+\end{align*}
+where $\star_{1}$ is true for the substitution $u=\sinh^{2}(n\ell/2)(1+q^{2})$ and $\star_{2}$ for the hyperbolic duplication formula $1+2\sinh^{2}(t/2)=\cosh(t)$ for $t=n\ell$. We thus have proved, in view of subsection \ref{subsec:harmonic_analysis_hyperbolic},
+\[
+\int_{D_{\gamma}}k(z,\gamma^{n}z)\dd\mu(z)=\frac{\ell g(n\ell)}{2\sinh(n\ell/2)},
+\]
+where $g$ is the \virg{kernel} of Seldberg transform \ref{prop:seld_transform_formula}. Putting all together, we thus have proved
+\begin{align*}
+\sum_{j\in\N}h(r_{j})&=\frac{\Area(M)}{4\pi}\int_{-\infty}^{\infty}h(\rho)\tanh(\pi\rho)\rho\dd\rho+\sum_{\gamma\in\ClsdGeod{M}}\sum_{n=1}^{\infty}\frac{\ell g(n\ell)}{2\sinh(n\ell/2)},
+\end{align*}
+which is the desired form of Seldeberg trace formula.
+
+
+\section{An application: Weyl's law}
+
+
+For our interest, we will see one main consequence of the Seldberg trace formula is the Weyl's law, in the hyperbolic context, already mentioned in chapter \ref{Chapter3} for the Euclidian case.
+
+
+\begin{nteo}[Weyl law, hyperbolic case]
+\label{teo:weyl_law_hyp}
+Let $N(\lambda)=\#\left\{j\in\N\colon\lambda_{j}\leq\lambda\right\}$ be the number of eigenvalues smaller than $\lambda$. We have the asymptotic law 
+\[
+N(\lambda)\sim\frac{\Area(M)}{4\pi}\lambda
+\]
+when $\lambda\to+\infty$.
+\end{nteo}
+
+In order to prove this result, we need the following lemmas, which are just two result of the greater framework of Tauberian theorems (\cite{Korevaar:TauberianBookHistory}).
+
+\begin{nlem}[Karamata]
+\label{lem:taub_karamata}
+Let $\{a_{n}\}_{n\geq0}$ be a divergent sequence of positive real numbers such that
+\[
+\lim_{r\to0}\sum_{n=0}^{\infty}\e^{-r a_{n}}=\frac{c}{r}.
+\]
+Then it holds
+\[
+\lim_{n\to\infty}\frac{\#\left\{n\colon a_{n}\leq N\right\}}{N}=c.
+\]
+\end{nlem}
+\begin{prf}
+Omitted. See CITA
+\end{prf}
+
+
+\begin{nlem}[tauberian lemma]
+\label{lem:tauber2}
+Let $\{a_{n}\}_{n\geq0}$ be a divergent non-decreasing sequence of positive real numbers, such that the number
+\[
+\left\{
+n\colon a_{n}\leq N
+\right\}
+\]
+has an exponential growth, i.e. $O(\e^{L})$. Then the serie
+\[
+\sum_{n=0}^{\infty}\frac{a_{n}}{\e^{(1+\veps)a_{n}}-\e^{\veps a_{n}}}
+\]
+converges $\forall\veps>0$.
+\end{nlem}
+\begin{prf}
+Omitted. See
+\end{prf}
+
+The proof of theorem \ref{teo:weyl_law_hyp} is then.
+
+\begin{prf} 
+We apply Seldberg formula 
+\[
+\sum_{j\in\N}h(r_{j})=\frac{\Area(M)}{4\pi}\int_{-\infty}^{\infty}h(\rho)\tanh(\pi\rho)\rho\dd\rho+\sum_{\gamma\in\ClsdGeod{M}}\sum_{n=1}^{\infty}\frac{\ell g(n\ell)}{2\sinh(n\ell/2)},
+\]
+to the function of rapid decay $h(r)=\e^{-\veps r^{2}}$. We have that
+\[
+g(u)=\frac{1}{\sqrt{4\pi\veps}}\e^{-u^{2}/(2\veps)}.
+\]
+We get that
+\[
+\sum_{n=0}^{\infty}\e^{-\veps r_{n}^{2}}=\frac{\Area(M)}{4\pi}\int_{-\infty}^{\infty}r\e^{-\veps r^{2}}\tanh(\pi r)\dd r+\frac{1}{\sqrt{4\pi\veps}}\sum_{\gamma\in\ClsdGeod{M}}\sum_{n=1}^{\infty}\frac{\ell_{\gamma}}{\e^{n\ell_{\gamma}/2}-\e^{-\ell_{n\gamma}}}\e^{-\frac{(n\ell_{\gamma})^{2}}{4\veps}}
+\]
+The last term on the right side could appear different from the one of before, but it is just the expansion of function $\sinh(x)$. It can be, moreover, re-written as 
+\[
+\sum_{\gamma\in\CG{M}}\frac{\ell_{\delta}}{\e^{\ell_{\gamma}/2}-\e^{-\ell_{\gamma}/2}}\e^{-\frac{\ell_{\gamma}^{2}}{4\veps}}
+\]
+if $\CG{M}$ is the set of closed geodesic (not necessarily primitive) and $\delta$ is the primitive element such that $\gamma=\delta^{n}$. We will now show that the second term will decay to zero, for $\veps\to0$. Let $\ell_{0}$ be the shortest geodesic on $X$ ($\ell_{0}>0$ because $M$ is compact). We can observe that, if we choose $\veps<\ell_{0}/8$, then
+\[
+\frac{\ell_{\gamma}^{2}}{4\veps}=\frac{\ell_{\gamma}^{2}}{8\veps}+\frac{\ell_{\gamma}^{2}}{8\veps}\geq \frac{\ell_{\gamma}^{2}}{8\veps} +\frac{\ell_{0}}{8\veps}\ell_{\gamma}\geq \frac{\ell_{0}}{8\veps}+\ell_{\gamma}.
+\]
+Hence we have that
+\[
+\frac{1}{\sqrt{4\pi\veps}}\sum_{\gamma\in\CG{M}}\frac{\ell_{\delta}}{e^{\ell_{\gamma}/2}-e^{-\ell_{\gamma}^{2}/2}}e^{-\frac{\ell_{\gamma}^{2}}{4\veps}}\leq \frac{1}{\sqrt{4\pi\veps}}e^{-\frac{\ell_{0}}{4\veps}}\sum_{\gamma\in \CG{M}}\frac{\ell_{\delta}}{e^{\ell_{\gamma}/2}-e^{-\ell_{\gamma}^{2}/2}}e^{-\ell_{\gamma}}.
+\]
+If $\veps$ approaches zero, the quantity 
+\[
+\frac{1}{\sqrt{4\pi\veps}}e^{-\frac{\ell_{0}}{4\veps}}
+\]
+goes to zero, hence it is enough proving that the series converges. We have 
+\[
+\sum_{\gamma\in \CG{M}}\frac{\ell_{\delta}}{e^{\ell_{\gamma}/2}-e^{-\ell_{\gamma}^{2}/2}}e^{-\ell_{\gamma}}\leq \sum_{\gamma\in \CG{M}}\frac{\ell_{\gamma}}{e^{\ell_{\gamma}/2}-e^{-\ell_{\gamma}^{2}/2}}e^{-\ell_{\gamma}}
+\]
+as $\gamma=\delta^{n}$. In \ref{prop:numb_geod_growth} we have proved that the number of closed geodesics in $X$ of length at most $L$ is approximately $O(\e^{L})$. Then we are done with lemma \ref{lem:tauber2}, with $\veps=1/2$.\\ 
+Now we focus on the first term. Integrating by parts, we get 
+\[
+\int_{-\infty}^{\infty}r e^{-\veps r^{2}}\tanh(\pi r)\dd r=\frac{1}{\veps}\int_{-\infty}^{\infty}e^{-\veps r^{2}}\frac{\pi}{2\cosh(\pi r)^{2}}\dd r.
+\]
+Using the series expansion of exponential function and exchaning integral and sum symbols due to monotone convergence theorem, we get
+\begin{align*}
+\int_{-\infty}^{\infty}\sum_{n=0}^{\infty}\frac{(-\veps r^{2})^{n}}{n!}\frac{\pi}{2\cosh(\pi r)^{2}}\dd r&=\sum_{n=0}^{\infty}\int_{-\infty}^{\infty}\frac{(-\veps r^{2})^{n}}{n!}\frac{\pi}{2\cosh(\pi r)^{2}}\dd r\\
+&=\int_{-\infty}^{\infty}\frac{\pi}{2\cosh(\pi r)^{2}}\dd r+\sum_{n=1}^{\infty}\int_{-\infty}^{\infty}\frac{(-\veps r^{2})^{n}}{n!}\frac{\pi}{2\cosh(\pi r)^{2}}\dd r\\
+&=\underbrace{\left.\frac{\tanh(\pi r)}{2}\right|_{-\infty}^{\infty}}_{=1}-\veps\int_{-\infty}^{\infty}\sum_{n=1}^{\infty}\frac{(-\veps)^{n-1} r^{2n}}{n!}\frac{\pi}{2\cosh(\pi r)^{2}}\dd r.
+\end{align*}
+For the second term of this last equality
+\begin{align*}
+0&\leq \int_{-\infty}^{\infty}\sum_{n=1}^{\infty}\frac{(-\veps)^{n-1} r^{2n}}{n!}\frac{\pi}{2\cosh(\pi r)^{2}}\dd r\leq \int_{-\infty}^{\infty}r^{2}\frac{\pi}{2\cosh(\pi r)^{2}}\sum_{n=1}^{\infty}\frac{(-\veps)^{n-1} r^{2(n-1)}}{n!}\dd r\\
+& = \int_{-\infty}^{\infty}r^{2}\frac{\pi}{2\cosh(\pi r)^{2}}e^{-\veps r^{2}}\dd r=\int_{-\infty}^{\infty}\underbrace{r^{2}e^{-\veps r^{2}}}_{\leq 1}\frac{\pi}{2\cosh(\pi r)^{2}}\dd r \leq 1
+\end{align*}
+and so 
+\[
+\int_{-\infty}^{\infty}e^{-\veps r^{2}}r^{2}\frac{\pi}{2\cosh(\pi r)^{2}}\dd r=1+O(\veps)
+\]
+from which
+\[
+\int_{-\infty}^{\infty}r e^{-\veps r^{2}}\tanh(\pi r)\dd r=\frac{1}{\veps}(1+O(\veps)).
+\]
+We can conclude that
+\[
+\sum_{n=0}^{\infty}e^{-\veps r_{n}^{2}}=\frac{\Area(X)}{4\pi\veps}\left(1+O(1)\right)
+\]
+and now we are done again with lemma \ref{lem:taub_karamata}.
+\end{prf}
+
+
+
+
+
+
+%-----------------------------------
+%	SUBSECTION 1
+%-----------------------------------
+\section{The case of $\PSL_{2}\Z$}
+
+As mentioned before, the trace formula just proved holds only for compact groups, in particular it does not apply to $\PSL_{2}\Z$. In fact, the difference is that this group has indeed elliptic elements (it does have cusps). As proved in \cite{Sarnak:article} and \cite{Gutz:book}, the trace formula for $X(1)$ has a more complex form the one presented. For $X(1)$, if $g\in C_{c}^{\infty}(\R)$ is an even smooth function of compact support and $h(\xi)=\Four{g}(\xi/2\pi)$ is the anti-Fourier transform of $h$ ($h$ is an entire function), the trace formula reads as follow ($\lambda_{j}=1/4+t^{2}_{j}$):
+\begin{align}
+\label{eq:trace_formula_extended}
+&\sum_{j\in\N}h(t_{j})-\frac{1}{2\pi}\int_{-\infty}^{\infty}h(t)\left(\frac{\vphi'}{\vphi}\right)\left(\frac{1}{2}+\imi t\right)\dd t=\\
+&= \frac{\Area(X(1))}{2\pi}\int_{-\infty}^{\infty}h(r)\tanh(\pi r)r\dd r-\frac{1}{\pi}\int_{-\infty}^{\infty}h(r)\left(\frac{\Gamma'}{\Gamma}\right)\left(1+\imi t\right)\dd r-2\ln(2g(0))+h(0)  \nonumber\\
+&+\sum_{[\delta]}\sum_{1\leq\nu\leq m-1}\frac{2}{m\sin(\pi\nu/m)}\int_{-\infty}^{\infty}\frac{h(r)\e^{-\frac{\pi\nu}{m}r}}{1+\e^{-2\pi r}}\dd r+\sum_{}+\sum_{\gamma\in\ClsdGeod{X(1)}}\sum_{n=1}^{\infty}\frac{\ell g(n\ell)}{2\sinh(n\ell/2)} \nonumber
+\end{align}
+where $\Gamma$ is the Euler's function and $\vphi(s)=\Lambda(2s-1)/\Lambda(2s)$ with
+\[
+\Lambda(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s)=\Lambda(1-s)
+\]
+is the function which gives birth to the functional equation of the Riemann zeta function. We will now describe the formula.\\
+The term on the left hand side, next to the term of the standard Seldberg trace formula (\cite{Gutz:book}), is the \virg{winding number} of function $\vphi$ (this function is the eigenfunction relative to the the eigenvalue $1/4$) and does take into account the continuos spectrum. On the right hand side the new sum is over the elliptic conjugacy classes $[\delta]$ of which, in $X(1)$, there are two (one of order $2$ and one of order $3$).\\
+
+The trace formula \eqref{eq:trace_formula_extended} has, on the left hand side, the sum over the discrete and continuos spectrum, while on the other side there is the geometric side. The fact that the latter side is explicit is at the heart of many modern applications of the general trace formula, one strategy being that one computes explicitly the geometric
+sides for quotients $\Gamma\setminus G$ and $\Gamma'\setminus G'$. In particular, corrispondence of geometrical sides implies the same for the spectrum.\\
+Considering the special case, it is possible to use the formula \eqref{eq:trace_formula_extended} for $h(t)=H(t/T)$, where $H$ is a fixed function and $T$ will go to infinity. It is possible to prove that, for $T\to\infty$, the contribution coming from first term on the right hand side is leading hence we get
+\[
+\sum_{j\in\N}H(t_{j}/T)-\frac{1}{2\pi}\int_{-\infty}^{\infty}H(t/T)\left(\frac{\vphi'}{\vphi}\right)\left(\frac{1}{2}+\imi t\right)\dd t\sim \frac{\Area(X(1))}{2\pi}\int_{-\infty}^{\infty}H(r/T)\tanh(\pi r)r\dd r
+\]
+and in similar way as in the previous section, this leads to the approximation
+\[
+\sum_{t_{j}\leq T}1-\frac{1}{2}\int_{-T}^{T}\left(\frac{\vphi'}{\vphi}\right)\left(\frac{1}{2}+\imi t\right)\sim\frac{\Area(X(1))}{2\pi}T^{2}
+\]
+Using the fact the $\vphi(s)=\Lambda(2s-1)/\Lambda(2s)$, it is possible to prove that the leading term on the left hand side is the summation, hence $X(1)$ is \emph{essentialy cuspidal} (see the final part of chapter \ref{Chapter6}). For details, see \cite{Sarnak:review},\cite{Shimura:book}.
+
+
+
+
+%-----------------------------------
+%	SUBSECTION 2
+%-----------------------------------

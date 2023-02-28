@@ -1,0 +1,139 @@
+% Appendix A
+
+\chapter{Ergodic notions} % Main appendix title
+
+\label{AppendixA} % For referencing this appendix elsewhere, use \ref{AppendixA}
+\thispagestyle{empty}
+%\section{Mixing}
+%
+%The color of links can be changed to your liking using:
+%
+%{\small\verb!\hypersetup{urlcolor=red}!}, or
+%
+%{\small\verb!\hypersetup{citecolor=green}!}, or
+%
+%{\small\verb!\hypersetup{allcolor=blue}!}.
+%
+%\noindent If you want to completely hide the links, you can use:
+%
+%{\small\verb!\hypersetup{allcolors=.}!}, or even better: 
+%
+%{\small\verb!\hypersetup{hidelinks}!}.
+%
+%\noindent If you want to have obvious links in the PDF but not the printed text, use:
+%
+%{\small\verb!\hypersetup{colorlinks=false}!}.
+
+
+\section{Mixing}
+
+In this section, we will prove theorem \ref{impTeo:mixing_flow_psl2}
+
+\begin{nlem}
+\label{lem:2.7_weakly_conv_invariant_phi_appendix}
+If $\vphi\in\Hilb$ such that the sequence $\{\pi(A_{t_{n}})\vphi\}_{n\geq0}$ converges weakly to an element $\vphi_{0}$. Then $\vphi_{0}$ is itself invariant to the action of the group $\Lie{U}$.
+\end{nlem}
+\begin{prf}
+Let $as$ Be simple matrix multiplications, we get 
+\[
+A_{-t}U_{s}A_{t}=U_{s\e^{-t}}.
+\]
+Then, for any $\psi\in H$,
+\begin{align*}
+\pscl{\pi(U_{s})\vphi_{0}-\vphi_{0}}{\psi}&=\lim_{n\to\infty}\pscl{\pi(U_{s}A_{t_{n}})\vphi-\pi(A_{t_{n}})\vphi}{\psi}\\
+&=\lim_{n\to\infty}\pscl{\pi(A_{-t_{n}}U_{s}A_{t_{n}})\vphi-\vphi}{\pi(A_{-t_{n}})\psi}\\
+&=\lim_{n\to\infty}\pscl{\pi(U_{s\e^{-t_{n}}})\vphi-\vphi}{\pi(A_{-t_{n}})\psi}\\
+&\leq \lim_{n\to\infty}\norm{\pi(U_{s\e^{-t_{n}}})\vphi-\vphi}{\psi}
+\end{align*}
+where last inequality follows from Cauchy-Schwarz inequality and $U_{s\e^{-t_{n}}}\to I$. This concludes the proof.
+\end{prf}
+
+
+\begin{nlem}[Mautner phenomenon]
+\label{lem:2.8_mautner_phenomemon_appendix}
+If $\vphi\in\Hilb$ is invariant under the action of $U$, then it's invariant under $\SL_{2}\R$.
+\end{nlem}
+\begin{prf}
+For any matrix $G\in\SL_{2}\R$, we define the function 
+\[
+F(G)=\pscl{\pi(G)\vphi}{\vphi}.
+\]
+Function $F$ is nothing else then a matrix coefficient METTI RIFERIMENTO. We note that $\vphi$ is bi-$U$-invariant. In fact:
+\[
+F(UGU')=\pscl{\pi(UGU')\vphi}{\vphi}=\pscl{\pi(G)\vphi}{\pi(U^{-1})\vphi}=F(G)\,\forall U,U'\in\Lie{U}.
+\]
+We consider the matrix
+\[
+B=\Matrix{1&r\\&1}\Matrix{1&\\\veps&1}\Matrix{1&s\\&1}=\Matrix{
+1+\veps r& r+s+rs\veps\\
+\veps & 1+s\veps
+}.
+\]
+Let $r=(\e^{t}-1)/\veps$, for fixed $t\in\R,\veps>0$. So $B=\Smallmatrix{\e^{t}&\\\veps&\e^{-t}}$. This means that, for any $\veps,t>0$
+\[
+F\left(
+\Matrix{1&\\\veps&1}\right)=F\left(
+\Matrix{\e^{t}&\\\veps&\e^{-t}}
+\right).
+\]
+By continuity of representation, if $\veps\to$, we have 
+\[
+\pscl{\vphi}{\vphi}=\lim_{\veps\to0}F(B)=F\left(
+\Matrix{\e^{t}&\\&\e^{-t}}
+\right).
+\]
+This means that $F(A_{t})=\pscl{\pi(A_{t})\vphi}{\vphi}=\norm{\vphi}^{2}$ and hence the equality case in Cauchy-Schwarz inequality holds. This is possible only if $\pi(A_{t})\vphi$ and $\vphi$ are linear dependent and but putting $t=0$, we get $\pi(A_{t})\vphi=\vphi$.  Using the same reasoning, it is possible to prove that $F$ is bi-$\Lie{A}$-invariant. In ana analogous way as before, we set 
+\[
+D=A_{-t}\Matrix{1&\\s\e^{-t}&1}A_{t}=\Matrix{1&\\s&1},
+\]
+to get that 
+\[
+F\left(
+\Matrix{
+1&\\
+s\e^{-t}&1
+}
+\right)=F\left(
+\Matrix{
+1&\\
+s&1
+}
+\right)
+\]
+Again, by a continuity argument, we get 
+\[
+F\left(
+\Matrix{1&\\s&1}
+\right)=\norm{\vphi}
+\]
+and thus the invariance of $\vphi$ under $\Lie{U}^{-}$. So $\vphi$ is invariant under the diagonal group $\Lie{A}$ and under the groups $\Lie{U}^{\pm}$, hence it must be invariant under the action of all group $\PSL_{2}\R$.
+\end{prf}
+
+We are now ready to prove the main result.
+
+\begin{nteo}[Howe-Moore]
+\label{teo:mixing_flow_psl2_appendix}
+Let $\pi$ be a strongly continuos unitary representation of $\SL_{2}\R$ on a Hilbert space $\Hilb$. Assume that $\pi$ has non-trivial invariant vector in $\Hilb$. Then, if $G_{n}$ is a diverging\footnote{That is for any compact $K\subset \SL_{2}\R$, there exists $N\in\N$ such that $G_{n}\not\in K$ for all $n\geq N$.} sequence in $\SL_{2}\R$, then 
+\[
+\lim_{n\to\infty}\pscl{\pi(G_{n})\vphi}{\psi}=\int_{X}\vphi\dd\mu\int_{X}\psi\dd\mu
+\]
+\end{nteo}
+\begin{prf}
+As a first step, we will show that the converging thesis holds for the diagonal subgroup $\Lie{A}$. Suppose there exist $\vphi,\psi$ and a sequence $t_{n}\to\infty$ such that $ \pscl{\pi(A_{t_{n}})\vphi}{\psi}$ does not converge to $\int_{X}\vphi\dd\mu\int_{X}\psi\dd\mu$.\\
+We have $\norm{\pi(A_{t_{n}})\vphi}=\norm{\vphi}$, so (by Banach-Alaoglu theorem) we can find a subsequence that is weakly convergent to some $\vphi_{0}$. By lemmas \ref{lem:2.7_weakly_conv_invariant_phi_appendix} and \ref{lem:2.8_mautner_phenomemon_appendix}, $\vphi_{0}$ is $\SL_{2}\R$-invariant, hence $\vphi_{0}$ is constant. This is a contradiction, because  the considered subsequence. Then, necessarily $\forall\phi,\psi\in H$, we have $\pscl{\pi(A_{t})}{\psi}\to\int_{X}\vphi\dd\mu\int_{X}\psi\dd\mu$ for $t\to\infty$.\\
+For a general diverging sequence $G_{n}\in\SL_{2}\R$, there exists (for fixed $n$) $k_{n},k'_{n}\in\SO_{2}\R$ and a sequence $t_{n}\to\infty$ such that 
+\[
+G_{n}=K_{n}A_{t_{n}}K'_{n},\quad K_{n}, K_{n}'\in\SO_{2}\R.
+\]
+This is only a sort of \virg{hyperbolic-polar decomposition} of elements $G_{n}$. As $K_{n},K'_{n}$ are bounded elements in $\SL_{2}\R$, using multiple diagonal argument, we can choose a subsequence (which will be still denoted by index $n$) such that $K_{n}\to K$ and $K_{n}'\to K'$. So
+\[
+\pscl{\pi(G_{n})\vphi}{\psi}=\pscl{\pi(A_{t_{n}})\pi(K_{n}')\vphi}{\pi(K_{n})^{-1}\psi}
+\]
+has the same limit as
+\[
+\pscl{\pi(A_{t_{n}})\pi(K')\vphi}{\pi(K)^{-1}\psi}.
+\]
+However, the limit of this last term is $0$,
+
+\end{prf}
+

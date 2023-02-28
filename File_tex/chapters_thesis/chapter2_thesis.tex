@@ -1,0 +1,774 @@
+% Chapter Template
+
+\chapter{Semiclassical analysis} % Main chapter title
+
+\label{Chapter2} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+\thispagestyle{empty}
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+In this chapter we provide a very brief introduction to basic notions of semiclassical analysis, in particular about symbol quantization. The tools of semiclassical analysis will be essential to understand Weyl's law and the important Egorov theorem. A comprehensive resource for this subject is \cite{Zworski:semic}, but for a general introductive overview the lecture notes \cite{Semy:lec_semi} can be very helpful.
+
+
+\section{Semiclassical Quantizazion}
+
+To be able to relate classical mechanics and its quantum counterpart it is necessary to associate the Hilbert space $H=L^{2}(M)$ (where $M$ is a manifold) to the mathematical basic structure for classical mechanics, i.e. the cotangent bundle $T^{\ast}M$ with its symplectic structure. Moreover, it is necessary to associate operators on $H$ to functions on $T^{\ast}M$.\\
+From a functorial \virg{universal} point of view, there is no procedure to do this \cite{Hove:noFunc}, but there are practical standard and useful ways to do so. One of the most convenient is \emph{Weyl quantization}, which associate classical quantities (\emph{symbols}) $a(x,p)\colon T^{\ast}M\to\mathbb{C}$ to a quantum observable (pseudodifferential operator) $A(x,\planck\Diff)$, where $x$ is still the position, but $\Diff$ is a differential and $\planck$ is a (semiclassical) parameter. In this sense, the limit $h\to0$ is to be understood as the classical limit, from the quantum level and for this reason is called \emph{semiclassical limit}. We will now provide the basic notions of this approach.
+
+
+
+\subsection{Semiclassical Fourier transform}
+
+From elementary physics, we know that Fourier transform allows us to \virg{change} functions of the position variable $q$ to functions of the momentum $p$, in the phase space $T^{\ast}M$. Quantization is the tool that allows us to deal with both sets of variables simultaneously in the semiclassical limit. Functions of both $q$ and $p$ variables are called symbols, and are quantized using a sort of \virg{semiclassical Fourier transform}.\\
+
+We refer to appendix \ref{Appendix_Fourier} for the details about classical Fourier transform and the theory of distributions. The latter is a class of important functions related to Fourier transform, in particular we consider the set of \emph{tempered distribution}, which can be view as the dual (in the sense of vector spaces) of Schwarz space $\schwarz$ defined by 
+\[
+\schwarz=\left\{
+f\in C^{\infty}(\R^{n})\colon \norm{}_{\alpha,\beta}<\infty
+\,\forall\alpha,\beta\in\N^{n}\right\},
+\]
+where $\norm{\cdot}_{\alpha,\beta}$ is the seminorm defined in \ref{def:scwharz_space}. In other words, Schwarz space $\schwarz$ is the set of smooth functions with \virg{rapid decay}. Just to understand the importance of Fourier transform in physics, we will show how it provides the mathematical fundation for the Heisenberg uncertainty principle \cite{DU:notes}.
+
+
+\begin{nese}[Heinsenberg uncertainty principle in $\R$]
+\label{ese:heisenberg_fourier}
+Consider some $\psi\in L^{2}(\R)$ where $x\psi$ and $p\Fourier(\psi)\in L^{2}(\R)$. With the dispersion of $\psi$ defined as
+\[
+\mathcal{D}\psi\coloneqq\frac{\int_{\R}x^{2}\abs{\psi(x)}^{2}\dd x}{\int_{\R}\abs{\psi(x)}^{2}\dd x},
+\]
+we will show, through straightforward computation, that 
+\[
+(\mathcal{D}\psi)(\mathcal{D}\Fourier(\psi))\geq\frac{1}{4}.
+\]
+By integration by parts, we get
+\begin{align*}
+\int_{\R}\abs{\psi(x)}^{2}\dd x &= \left.x\abs{\psi(x)}^{2}\right|_{-\infty}^{\infty}-\int_{\R}x\psi(x)\overline{\psi'(x)}\dd x-\int_{\R}x\overline{\psi(x)}\psi'(x)\dd x\\
+&=-2\Re\left(
+\int_{\R}x\overline{\psi(x)}\psi'(x)\dd x
+\right),
+\end{align*}
+where the first term is vanished from the decay properties of functions in $\schwarz$. Squaring both sides and using Schwarz inequality gives 
+\[
+\left( 
+\int_{\R}\abs{\psi(x)}^{2}\dd x
+\right)^{2}\leq 4
+\left(\int_{\R}\abs{x\overline{\psi(x)}\psi'(x)}\dd x\right)^{2}\leq 4\left(\int_{\R}x^{2}\abs{\psi(x)}^{2}\dd x\right)\left(
+\int_{\R}\abs{\psi'(x)}^{2}\dd x
+\right).
+\]
+(i) and (iv) of proposition \ref{prop:prop_of_fourier} give $\Fourier(\psi'(x))=\imi p\Fourier(\psi)(p)$ and $\norm{\psi}^{2}=(2\pi)^{-1}\norm{\Fourier(\psi)}^{2}$, so
+\[
+\int_{\R}\abs{\psi'(x)}^{2}\dd x = \frac{1}{2\pi}\int_{\R}p^{2}\abs{\Four{\psi}(p)}^{2}\dd p.
+\]
+The thesis follows by last two equalities.
+\end{nese}
+
+This simple yet fundamental example is explanatory of the following definition, i.e. the semiclassical Fourier transform. 
+
+\begin{defin}[semiclassical Fourier transform]
+For a parameter $\planck>0$, the semiclassical Fourier transform $\Fourier_{\planck}\colon\schwarz'\to\schwarz'$ is defined by
+\[
+\Fourier_{\planck}(f)(p)\coloneqq\Fourier(f)\left(\frac{p}{\planck}\right)=\int_{\R^{n}}\e^{-\frac{\imi}{\planck}\pscl{q}{p}}f(q)\dd q,
+\]
+with the inverse 
+\[
+\Fourier_{\planck}^{-1}(f)(q)=\planck^{-n}\Fourier(f)\left(
+\frac{q}{\planck}
+\right)=\frac{1}{(2\pi\planck)^{n}}\int_{\R^{n}}\e^{\frac{\imi}{\planck}\pscl{q}{p}}f(p)\dd p.
+\]
+\end{defin}
+
+This different version of Fourier transform has lots of properties similar to the ones of the classical version (see proposition \ref{prop:four_properties}).
+
+\begin{nprop}
+\label{prop:properties_semicl_fourier}
+\begin{compactenum}
+\item $(\planck\Diff_{p})^{\alpha}\Fourier_{\planck}(\vphi)=\Fourier((-q)^{\alpha}\vphi)$ and $\Fourier_{\planck}((\planck\Diff_{q})^{\alpha}\vphi)=p^{\alpha}\Fourier_{\planck}(\vphi)$.
+\item $\norm{\vphi}=(2\pi\planck)^{-n/2}\norm{\Fourier_{\planck}(\vphi)}$.
+\end{compactenum}
+\end{nprop}
+\begin{prf}
+See \cite{Zworski:semic}.
+\end{prf}
+
+The aim behind this definition is the desire to control the degree of localization and uncertainty of $\Fourier$ in the semiclassical limit, using a parameter $h>0$. This is the statement of subsequent theorem \ref{teo:new_uncert_principle}.
+
+
+\begin{nteo}[generalized uncertainty principle]
+\label{teo:new_uncert_principle}
+For $j=1,\ldots,n$ and $f\in\schwarz'$, it holds
+\[
+\frac{\planck}{2}\norm{f}\cdot\norm{\Fourier_{\planck}(f)}\leq \norm{q_{j}f}\cdot \norm{p_{j}\Fourier_{\planck}(f)}.
+\]
+\end{nteo}
+\begin{prf}
+See \cite{Zworski:semic}.% th 2.1.13 WONG 
+\end{prf}
+
+The foregoing theorem \ref{teo:new_uncert_principle} generalizes the previous example \ref{ese:heisenberg_fourier}. It can be retrived from theorem \ref{teo:new_uncert_principle} by choosing $n=1$ and $\planck=1/2$. In particular, we can do the following reasoning. Suppose that, in general, we have a function $\psi\in L^{2}(\R^{n})$ where $1=\norm{\psi}=(2\pi\planck)^{-n/2}\norm{\Fourier_{\planck}(\psi)}$.\\
+As before, the localization of $\psi$ relative to $x=0$ can be gauged by $\norm{q_{j}\psi}$ for $j=1,\ldots,n$. For example, suppose that
+\[
+\psi(q)=\planck^{-\norm{\alpha}_{1}/2}\phi(q_{1}/\planck^{\alpha_{1}},\ldots)
+\]
+for some $n$-uple of positive real numbers $\alpha$, with $\norm{\alpha}_{\infty}\leq 1$, $\phi\in\schwarz$ and $\norm{\phi}=1$. Then, with some computations, it is possible to prove  (CITA \cite{Zworski:semic})
+\[
+\int_{\R^{n}-N_{\planck}(\veps)}\abs{\psi(x)}^{2}\dd x
+\]
+is \virg{very small}, where $N_{h}(\veps)\coloneqq\prod_{i=1}^{n}[-\planck^{\alpha_{i}-\veps},\planck^{\alpha_{i}-\veps}]$. Moreover, $\norm{x_{j}\psi}\simeq \planck^{\alpha_{j}}$, for all $j$. On the other hand, the semiclassical Fourier transform gives us 
+\[
+\Fourier_{\planck}(\psi)(p)=\planck^{\norm{\alpha}_{1}/2}\Fourier(\psi)(p_{1}/\planck^{1-\alpha_{1}},\ldots,p_{n}/\planck^{1-\alpha_{n}}),
+\]
+which implies that $(2\pi\planck)^{-n/2}\norm{p_{j}\Fourier_{\planck}(\psi)}\simeq \planck^{1-\alpha_{j}}$. Again, the localization in $q$ is matched by delocalization in $p$, and vice-versa.
+
+
+\subsection{How to quantize}
+
+\label{subsec:how_to_quant}
+
+We will now write down quantization formulas, which are equations that let us associate symbols (classical observables) to $\planck$-dependent linear operators (quantum observables) which acts on functions $\vphi(x)\in\schwarz(\R^{n})$. We will use variable $x$ for position coordinates, rather than general variable $q$.
+
+\begin{defin}[symbols and Weyl-quantization]
+Any function $a=a(x,p)\in\mathcal{S}(\R^{2n})$ in the Schwartz space will be called \emph{symbol}. The \emph{Weyl quantization}
+\[
+\Op^{W}\colon\schwarz(\R^{2n})\to\Hom(\schwarz(\R^{n}))
+\]
+of symbol $a$ is defined by
+\begin{equation}
+\label{eq:weyl_quant_symbol}
+\Op^{W}(a)(\vphi)(x)=\frac{1}{(2\pi\planck)^{n}}\int_{\R^{n}}\int_{\R^{n}}\e^{\frac{\imi}{\planck}\pscl{x-y}{p}}\, a\left(\frac{x+y}{2},p\right)\vphi(y)\dd y\dd p,
+\end{equation}
+where $\vphi\in\schwarz(\R^{n})$.
+\end{defin}
+
+
+\begin{remark}[\emph{Semiclassical pseudodifferential operator}]
+\label{def:semicla_opert_in_remark}
+It's possible to define a generalization of Weyl quantization, i.e. the $t$-quantization for $0\leq t\leq1$, given by
+\[
+\Op_{t}(a)(\vphi)(x)=\frac{1}{(2\pi\planck)^{n}}\int_{\R^{n}}\int_{\R^{n}}\e^{\frac{\imi}{\planck}\pscl{x-y}{p}}\, a\left(tx+(1-t)y,p\right)\vphi(y)\dd y\dd p.
+\]
+The Weyl quantization is realized for $t=1/2$, while the \emph{left-right quantization} are obtained for $t=1,0$ respectively. The left quantization $\Op^{l}=\Op_{1}$ is often called \emph{standard quantization}.\\
+In general, any operator of the form $\Op_{t}(a)$ is called a \emph{semiclassical pseudodifferential operator} and its dependency on both $x,\planck D$ is expressed by $\Op_{t}(a)(x,\planck D)$.
+\end{remark}
+
+
+In view of remark \ref{def:semicla_opert_in_remark}, we see that Weyl-quantization is a sort of \virg{mean} between left and right quantization (it is defined as $\Op_{1/2}$). The Weyl quantization has a number of useful properties.
+
+\begin{nese}
+\label{ese:weyl_sends_real_to_syummetric}
+Let $a$ a real-valued function (symbol). Then $\Op^{W}(a)$ is a symmetric operator, i.e.
+\[
+\pscl{\Op^{W}(a)(\psi_{1})}{\psi_{2}}=\pscl{\psi_{1}}{\Op^{W}(a)(\psi_{2})}.
+\]
+For this,
+\begin{align*}
+\int\Op^{W}(a)(\psi_{1})(x)\overline{\psi_{2}(x)}\dd x&=
+\iiint\e^{\frac{\imi}{\planck}\pscl{x-y}{p}}\, a\left(\frac{x+y}{2},p\right)\psi_{1}(y)\overline{\psi_{2}(x)}\dd x\dd y\dd p\\
+&=\iiint\e^{\frac{\imi}{\planck}\pscl{x-y}{p}}\, \overline{a\left(\frac{x+y}{2},p\right)}\psi_{1}(y)\overline{\psi_{2}(x)}\dd x\dd y\dd p \\
+&= \int\psi_{1}(y)\overline{\Op^{W}(a)(\psi_{2})(y)}\dd y.
+\end{align*}
+\end{nese} 
+
+We will now briefly present some others examples of symbol quantization and some results that will be useful in the following sections (\cite{Zworski:semic}).
+
+\begin{nese}[quantizing a $p$-dependent symbol]
+If $a(x,p)=p^{{\alpha}}$ for a multiindex ${\alpha}\in\N^{n}$ , then we have
+\[
+\Op_{t}(a)(\vphi)(x)=a(x,\planck \Diff)\vphi(x)=(\planck \Diff)^{{\alpha}}\vphi(x) 
+\]
+where $\planck\Diff$ is a semiclassical scaling of the usual differential operator $\Diff^{{\alpha}}=i^{-\abs{{\alpha}}}\partial^{{\alpha}}$. If $a$ is \virg{polynomial} in $p$, with coefficients depending on $x$, i.e.
+\[
+a(x,p)=\sum_{\abs{{\alpha}}\leq N}\alpha_{{\alpha}}(x)p^{{\alpha}}
+\]
+we see why the operators created by quantization maps are called \virg{pseudodidifferential}: if $a$ is polynomial in $p$, we get a standard differential operator.
+\end{nese}
+
+\begin{nese}[quantizing a $x$-dependent symbol]
+If $a(x,p)=a(x)$, then $\Op_{t}(a)(\vphi)=a\vphi$. To check this, we take the $t$-derivative of $\Op_{t}(a)(\vphi)$:
+\begin{align*}
+\partial_{t}\Op_{t}(a)(\vphi)&=
+\frac{1}{(2\pi\planck)^{n}}\iint_{\R^{n}\times\R^{n}}\e^{\frac{\imi}{\planck}\pscl{x-y}{p}}\pscl{\partial_{t}a(tx+(1-t)y)}{x-y}\vphi(y)\dd y\dd p\\
+&=\frac{\planck}{\imi(2\pi\planck)^{n}}\int_{\R^{n}}\Div_{p}\left(
+\int_{\R^{n}}\e^{\frac{\imi}{\planck}\pscl{x-y}{p}}\partial_{t}a(tx+(1-t)y)\vphi(y)\dd y\right)\dd p\\
+&=\frac{\planck}{\imi(2\pi\planck)^{n}}\int_{\R^{n}}\Div\left(\e^{\frac{\imi}{\planck}\pscl{x}{p}}\Fourier(\psi(p))\right)\dd p.
+\end{align*}
+where $\psi(y)=\partial_{t}a(tx+(1-t)y)\vphi(y)$. The last expression vanishes by rapid decay, and so $\Op_{t}(a)\vphi=\Op_{1}(a)\vphi=a\vphi$.
+\end{nese}
+
+
+\begin{nese}[quantizing a linear symbol]
+\label{ese:quant_linear_symb}
+Let $a(x,p)=\pscl{x}{\xi}+\pscl{p}{\rho}$ be a linear symbol. From the above examples, $\Op_{t}(a)=\pscl{x}{\xi}+\pscl{\planck\Diff}{\rho}$ for all $t\in[0,1]$.
+\end{nese}
+
+
+\begin{nprop}[Properties of quantization]
+The followings hold:
+\label{prop:quant_properties}
+\begin{compactitem}
+\item If $a\in\schwarz(\R^{2n})$, then $\Op_{t}(a)$ is a continous map from $\schwarz'(\R^{n})\to\schwarz(\R^{n})$ for all $t\in[0,1]$;
+\item If $a\in\schwarz'(\R^{2n})$, then $\Op_{t}(a)$ is a continous map from $\schwarz'(\R^{n})\to\schwarz'(\R^{n})$ for all $t\in[0,1]$;
+\item If $a\in\schwarz(\R^{2n})$, then the adjoint operator of $\Op_{t}(a)$ is $\Op_{1-t}(\bar{a})$: in particular the adjoint operator of the Weyl quantization of a real symbol is itself.
+\end{compactitem}
+\end{nprop}
+\begin{prf}
+See \cite{Martinez:semi}.
+\end{prf}
+
+\begin{nprop}
+\label{prop:quant_commut}
+% teo 2.1.20 wong
+The followings hold:
+\begin{compactitem}
+\item $\Op^{W}(\Diff_{x_{j}}a)=[\Diff_{x_{j}},\Op^{W}(a)]$;
+\item $\planck\Op^{W}(\Diff_{p_{j}}a)=-[x_{j},\Op^{w}(a)]$.
+\end{compactitem}
+\end{nprop}
+\begin{prf}
+Let $\vphi\in\schwarz$. We will prove the first statement, as the second is similar. Then by straightforward calculation
+\begin{align*}
+\Op^{W}(\Diff_{x_{j}}a)&=\frac{1}{(2\pi\planck)^{n}}\iint_{\R^{n}\times\R^{n}}\Diff_{x_{j}}a\left(\frac{x+y}{2},p\right)\e^{\frac{\imi}{\planck}\pscl{x-y}{p}}\vphi(y)\dd p\dd y\\
+&=\frac{1}{(2\pi\planck)^{n}}\iint_{\R^{n}\times\R^{n}}(\Diff_{x_{j}}+\Diff_{y_{j}})a\left(\frac{x+y}{2},p\right)\e^{\frac{\imi}{\planck}\pscl{x-y}{p}}\vphi(y)\dd p\dd y
+\end{align*}
+\end{prf}
+
+\begin{nprop}[conjugation]
+% teo 2.1.21
+\label{prop:semic_fourier_conj}
+It holds
+\[
+\Fourier_{\planck}^{-1}\Op^{W}(a)(x,\planck\Diff)\Fourier_{\planck}=\Op^{W}(a)(\planck\Diff,-x).
+\]
+\end{nprop}
+\begin{prf}
+Omitted.
+\end{prf}
+
+
+
+\subsection{Semiclassical Pseudodifferential Operators}
+
+From now on, we will only consider Weyl quantization for simplicity. The starting point is the equation
+\begin{equation}
+\label{eq:weyl_prod}
+\Op^{W}(a)\Op^{W}(b)=\Op^{W}(c)
+\end{equation}
+for three symbols $a,b,c$. We want to know under which conditions this equation can hold and compute the corrispondent symbol $c$, which will be denoted by $c\coloneqq a\Wprd b$. So we define the \emph{Weyl product} of two symbols $a,b$ as a third symbol $c$ such that equation \eqref{eq:weyl_prod} holds.\\
+A linear symbol is a function $l$ of the form 
+\[
+l(x,p)=\pscl{x}{\xi}+\pscl{p}{\rho}
+\]
+with $(\xi,\rho)\in\R^{2n}$ fixed. In this sense, there is a bijection between points of $\R^{n}$ and linear symbols. We first require two lemmas to get the symbol $a\Wprd b$.
+
+\begin{nlem}
+\label{lem:quant_exp_of_linear_symbol}
+Let $l(x,p)=\pscl{x}{\xi}+\pscl{p}{\rho}$ be a linear symbol. If $a(x,p)=\e^{\frac{\imi}{\planck}}l(x,p)$ is the exponential of a linear symbol, then 
+\[
+\Op^{W}(a)(x,\planck\Diff)=\e^{\frac{\imi}{\planck}l(x,\planck\Diff)}
+\]
+where $l(x,\planck\Diff)=l(x,\planck\Diff)=\Op^{w}(l)(x,\planck\Diff)=\pscl{x}{\xi}+\pscl{\planck\Diff}{\rho}$ and $\e^{\frac{\imi}{\planck}l(x,\planck\Diff)}\vphi(x)\coloneqq\e^{\frac{\imi}{\planck}\pscl{x}{\xi}}+\e^{\frac{\imi}{2\planck}\pscl{\xi}{\rho}}\vphi(x+\rho)$. Furthermore, if $l,m$ are both linear symbols, then 
+\[
+\e^{\frac{\imi}{\planck}l(x,\planck\Diff)}\e^{\frac{\imi}{\planck}m(x,\planck\Diff)}=
+\e^{\frac{\imi}{2\planck}\sigma(l,m)}\e^{\frac{\imi}{\planck}(l+m)(x,\planck\Diff)},
+\]
+for $\sigma((x,p),(y,q))=\pscl{y}{p}-\pscl{x}{q}$ being the symplectic form on $\R^{n}\times\R^{n}$.
+\end{nlem}
+\begin{prf}
+At first, we consider the \textsc{PDE} problem with boundary condition defined by
+\[
+\begin{cases}
+\imi\planck\partial_{t}v+l(x,\planck\Diff)v(x,t)=0\\
+v(x,0)=u(x),
+\end{cases}
+\]
+for the function $v(x,t)$ and $u\in\schwarz, t\in\R$. Its unique solution is given by $v(x,t)=\e^{\frac{\imi t}{\planck}}{l(x,\planck\Diff)}u$ for $t\in\R$, where the above PDE problem defines the operator $\e^{\frac{\imi t}{\planck}l(x,\planck\Diff)}$. Now, if $l(x,\planck\Diff)=\Op^{W}(l)(x,\planck\Diff)=\pscl{x}{\xi}+\pscl{\planck\Diff}{\rho}$, it follows that 
+\[
+v(x,t)=\e^{\frac{\imi t}{\planck}\pscl{x}{\xi}}+\e^{\frac{\imi t^{2}}{2\planck}\pscl{\xi}{\rho}}u(x+t\rho),
+\] 
+which gives $\e^{\frac{\imi}{\planck}l(x,\planck\Diff)}\vphi(x)=\e^{\frac{\imi}{\planck}\pscl{x}{\xi}}+\e^{\frac{\imi}{2\planck}\pscl{\xi}{\rho}}\vphi(x+\rho)$. So we can compute
+\begin{align*}
+\Op^{W}(\e^{\frac{\imi}{\planck}l})(u)&=\frac{1}{(2\pi\planck)^{n}}\iint_{\R^{n}\times\R^{n}}\e^{\frac{\imi}{\planck}\pscl{x-y}{p}}\e^{\frac{\imi}{\planck}\left(\pscl{p}{\rho}+\pscl{\frac{x+y}{2}}{\xi}\right)}u(y)\dd y\dd p\\
+&=\frac{1}{(2\pi\planck)^{n}}\e^{\frac{\imi}{2\planck}\pscl{x}{\xi}}\iint_{\R^{n}\times\R^{n}}\e^{\frac{\imi}{\planck}\pscl{x-y+\rho}{p}}\e^{\frac{\imi}{2\planck}\pscl{\xi}{y}}u(y)\dd y\dd p\\
+&=\frac{1}{(2\pi\planck)^{n}}\e^{\frac{\imi}{2\planck}\pscl{x}{\xi}}\iint_{\R^{n}\times\R^{n}}\e^{\frac{\imi}{\planck}\pscl{x-y}{p}}\e^{\frac{\imi}{2\planck}\pscl{\xi}{y+\rho}}u(y+\rho)\dd y\dd p\\
+&=\e^{\frac{\imi}{\planck}\pscl{x}{\xi}}\e^{\frac{\imi}{2\planck}\pscl{\xi}{\rho}}u(x+\rho),
+\end{align*}
+since rescaling the Fourier inversion formula applied to a linear symbol (example \ref{ese:quant_linear_symb}) gives (informally)
+\[
+\delta_{xy}=\frac{1}{(2\pi\planck)^{n}}\int_{\R^{n}}\e^{\frac{\imi}{\planck}\pscl{x-y}{p}}\dd p
+\]
+in $\schwarz'$, where $\delta_{x,y}$ is the Dirac delta equal to $1$ if $x=y$. We have thus obtained the identity
+\[
+\Op^{W}(\e^{\frac{\imi}{\planck}}l)(x,\planck\Diff)=\e^{\frac{\imi}{\planck}l(x,\planck\Diff)}.
+\]
+Now we take two linear symbols $l(x,p)=\pscl{x}{\xi}+\pscl{p}{\rho}$ and $m(y,q)=\pscl{y}{\gamma}+\pscl{q}{\eta}$. From the equation above, we have $\e^{\frac{\imi}{\planck}m(x,\planck\Diff)}u(x)=\e^{\frac{\imi}{\planck}\pscl{x}{\gamma}+\frac{\imi}{2\planck}\pscl{\gamma}{\eta}}u(x+\eta)$. This implies that 
+\[
+\e^{\frac{\imi}{\planck}l(x,\planck\Diff)}\e^{\frac{\imi}{\planck}m(x,\planck\Diff)}u(x)=\exp\left(\frac{\imi}{\planck}\pscl{x}{\xi}+\frac{\imi}{2\planck}\pscl{\xi}{\rho}\right)\exp\left(\frac{\imi}{\planck}\pscl{\gamma}{x+\rho}+\frac{\imi}{2\planck}\pscl{\gamma}{\eta}\right)u(x+\rho+\eta).
+\]
+Since $\e^{\frac{\imi}{\planck}(l+m)(x,\planck\Diff)}u(x)=\e^{\frac{\imi}{\planck}\pscl{x}{\xi+\gamma}+\frac{\imi}{2\planck}\pscl{\xi+\gamma}{\rho+\eta}}u(x+\rho+\eta)$, we have 
+\[
+\e^{\frac{\imi}{\planck}(l+m)(x,\planck\Diff)}u(x)=\exp\left(\frac{\imi}{2\planck}\overbrace{\pscl{\xi}{\eta}-\pscl{\gamma}{\rho}}^{=\sigma(l,m)}\right)\e^{\frac{\imi}{\planck}l(x,\planck\Diff)}\e^{\frac{\imi}{\planck}m(x,\planck\Diff)}u(x).
+\]
+This gives the seeked equation $\e^{\frac{\imi}{\planck}l(x,\planck\Diff)}\e^{\frac{\imi}{\planck}m(x,\planck\Diff)}=$
+\end{prf}
+
+The above lemma essentially tell us that the Weyl quantization of the exponention of a linear symbol is itself, with the difference that $p$ is substituted by the differential operator $\planck\Diff$.
+
+
+\begin{nlem}[Fourier decomposition of $\Op^{W}(a)$]
+% lemma 2.2.2 Wong
+\label{lem:fourier_decomp_op}
+If we write
+\[
+\Fourier(a)(l)\coloneqq\iint_{\R^{n}\times\R^{n}}\e^{-\frac{\imi}{\planck}l(x,p)}a(x,p)\dd x\dd p.
+\]
+for $a\in\schwarz$ and $l(x,p)=\pscl{x}{\xi}+\pscl{p}{\rho}$ is a linear symbol. Then the following decomposition formula holds:
+\[
+\Op^{w}(a)(x,\planck\Diff)=\frac{1}{(2\pi\planck)^{2n}}\iint_{\R^{n}\times\R^{n}}\e^{\frac{\imi}{\planck}l(x,p)\Fourier(a)(l)\e^{\frac{\imi}{\planck}l(x,\planck\Diff)}}\dd\xi\dd\rho.
+\]
+\end{nlem}
+\begin{prf}
+Sketch of the proof: applying the Fourier inverse formula to $\Fourier(a)$ with the previous lemma, the result follows. See \cite{Zworski:semic}, \cite{Semy:lec_semi} for details.
+\end{prf}
+
+The following result gives the desired answer for the Weyl product $\Wprd$.
+
+
+
+\begin{nteo}[quantization composition theorem]
+% wong theorem 2.2.3
+\label{teo:quant_compos_theorem}
+If $a,b\in\schwarz$, then\\ $\Op^{W}(a)\Op^{W}(b)=\Op^{w}(a\Wprd b)$, where
+\[
+(a\Wprd b)(x,p)\coloneqq \left.\e^{\imi\planck A(\Diff)}(a(x,p)b(y,q))\right|_{y=x,q=p}
+\]
+with $A(\Diff)\coloneqq\frac{1}{2}\sigma(\Diff_{x},\Diff_{p},\Diff_{y},\Diff_{q})$ where $\sigma((x,p),(y,q))=\pscl{p}{y}-pscl{x}{q}$ is the symplectic form. 
+\end{nteo}
+\begin{prf}
+
+Let $l,m$ be linear symbols. Using lemma \ref{lem:fourier_decomp_op}, we get
+\begin{align*}
+\Op^{w}(a)(x,\planck\Diff)&=\frac{1}{(2\pi\planck)^{2n}}\iint_{\R^{n}\times\R^{n}}\hat{a}(l)\e^{\frac{\imi}{\planck}l(x,\planck\Diff)}\dd l\\
+\Op^{w}(b)(x,\planck\Diff)&=\frac{1}{(2\pi\planck)^{2n}}\iint_{\R^{n}\times\R^{n}}\hat{a}(m)\e^{\frac{\imi}{\planck}m(x,\planck\Diff)}\dd m
+\end{align*}
+where the integration is intended using the identification between linear symbols and $\R^{2n}$. Then, using lemma \ref{lem:quant_exp_of_linear_symbol},
+\begin{align*}
+\Op^{W}(a)(x,\planck\Diff)\Op^{W}(b)(x,\planck\Diff)&=\frac{1}{(2\pi\planck)^{4n}}\iint_{\R^{2n}\times\R^{2n}}\hat{a}(l)\hat{b}(m)\e^{\frac{\imi}{\planck}l(x,\planck\Diff)}\e^{\frac{\imi}{\planck}m(x,\planck\Diff)}\dd m\dd l\\
+&=\frac{1}{(2\pi\planck)^{4n}}\iint_{\R^{2n}\times\R^{2n}}\hat{a}(l)\hat{b}(m)\e^{\frac{\imi}{2\planck}\sigma(l,m)}\e^{\frac{\imi}{\planck}(l+m)(x,\planck\Diff)}\dd m\dd l\\
+&=\frac{1}{(2\pi\planck)^{2n}}\int_{\R^{2n}}\hat{\vphi}_{1}(r)\e^{\frac{\imi}{\planck}r(x,\planck\Diff)}\dd r
+\end{align*}
+where $\hat{\vphi}_{1}(r)\coloneqq\frac{1}{(2\pi\planck)^{2n}}\int_{l+m=r}\hat{a}(l)\hat{b}(m)\e^{\frac{\imi}{2\planck}}\sigma(l,m)\dd l$ is obtained with the change of variable $r=l+m$. We now will show that $\vphi_{1}=a\Wprd b$.\\
+We write $z=(x,p)$, $w=(y,q)$ and $\vphi=a\Wprd b$, so that 
+\[
+\vphi(z)=\e^{\frac{\imi}{2\planck}\sigma(\planck\Diff_{z},\planck\Diff_{w})}a(z)b(w),
+\] 
+and 
+\[
+a(z)=\frac{1}{(2\pi\planck)^{2n}}\int_{\R^{2n}}\e^{\frac{\imi}{\planck}l(z)}\hat{a}(l)\dd l,\quad b(w)=\frac{1}{(2\pi\planck)^{2n}}\int_{\R^{2n}}\e^{\frac{\imi}{\planck}m(w)}\hat{b}(m)\dd m.
+\]
+Since\footnote{Again, we are using the abuse of nation of identifying linear symbols with points of $\R^{2n}$.} $l(z)=\pscl{l}{z}$ and $m(w)=\pscl{m}{w}$, we have that 
+\[
+\exp\left(\frac{\imi}{2\planck}\sigma(\planck\Diff_{z},\planck\Diff_{w})\right)\exp\left(
+\frac{\imi}{\planck}(l(z)+m(w))
+\right)=\exp\left(
+\frac{\imi}{\planck}(l(z)+m(w))+\frac{\imi}{2\planck}\sigma(l,m)
+\right)
+\]
+implying
+\begin{align*}
+\vphi(z)&=\frac{1}{(2\pi\planck)^{4}}\iint_{\R^{2n}\times\R^{2n}}\left.\e^{\frac{\imi}{2\planck}}\sigma(\planck\Diff_{z},\planck\Diff_{w})\e^{\frac{\imi}{\planck}(l(z)+m(w))}\right|_{z=w}\hat{a}(l)\hat{b}(m)\dd l\dd m
+\\
+&=\frac{1}{(2\pi\planck)^{4}}\iint_{\R^{2n}\times\R^{2n}}\e^{\frac{\imi}{\planck}(l(z)+m(w))+\frac{\imi}{2\planck}\sigma(l,m)}\hat{a}(l)\hat{b}(m)\dd l\dd m.
+\end{align*}
+Taking the semiclassical Fourier transform of $\vphi$ gives
+\begin{align*}
+\Fourier_{\planck}(\vphi)&=\frac{1}{(2\pi\planck)^{2n}}\iint_{\R^{2n}\times\R^{2n}}\frac{1}{(2\pi\planck)^{2n}}\left(\overbrace{
+\int_{\R^{n}}\e^{\frac{\imi}{\planck}(l+m-r)(z)}\dd z
+}^{=\delta_{l+m,r}}\right)
+\e^{\frac{\imi}{2\planck}\sigma(l,m)}\hat{a}(l)\hat{b}(m)\dd l\dd m\\
+&=\frac{1}{(2\pi\planck)^{2n}}\iint_{l+m=r}\e^{\frac{\imi}{2\planck}\sigma(l,m)}\hat{a}(l)\hat{b}(m)\dd l\dd m=\hat{\vphi}_{1}(r)=\hat{\vphi}_{1}(r).
+\end{align*}
+where $\delta_{l+m,r}\in\schwarz'$ is the Dirac delta equals to $1$ only if $l+m=r$. Thus $\vphi=\vphi_{1}$ (they have the same Fourier transform) and we are done.
+\end{prf}
+
+
+
+The Weyl product also admits the following integral representation.
+
+\begin{nprop}[integral representation for $\Wprd$]
+If $a,b\in\schwarz$, then 
+\[
+(a\Wprd b)(x,p)=\frac{1}{(\pi\planck)^{2n}}\iint_{\R^{2n}\times\R^{2n}}\e^{-\frac{2\imi}{\planck}\sigma(w_{1},w_{2})}a(z+w_{1})b(z+w_{2})\dd w_{1}\dd w_{2}
+\]
+where $z=(x,p)$.
+\end{nprop}
+\begin{prf}
+Omitted. See DS
+\end{prf}
+
+In \cite{Martinez:semi},\cite{Zworski:semic} is presented a series expansion for the product $a\Wprd b$ and a first order approximation (in $\planck$) is given by
+\[
+a\Wprd b =ab+\frac{\planck}{2\imi}\{a,b\}+O_{\schwarz}(\planck^{2})
+\]
+and, with some computations,
+\[
+[\Op^{w}(a)(x,\planck\Diff),\Op^{w}(b)(x,\planck\Diff)]=\frac{\planck}{\imi}\Op^{W}(\{a,b\})(x,\planck\Diff)+O_{\schwarz}(\planck^{3}).
+\]
+We begin to recognize the signicance of the classical-quantum correspondence: in the above equation, the commutator of $\Op^{W}(a)$ and $\Op^{W}(b)$ is related to the Poisson bracket $\{a,b\}$, a classical quantity. Thus the two worlds relate to each other.\\
+The tools developed here will be now generalized for \emph{symbol classes}, to present, in section \ref{sec:weyl_and_egorov}, Egorov theorem and Weyl's law. To summarize, in the current section we have defined quantization
+procedures, showing that the resulting quantized, pseudodifferential operators form a commutative algebra.
+
+
+\subsection{Symbol Classes}
+
+%sec 2.3.2  WONG
+
+The notion of symbol classes was first defined by H{\"o}rmander in analyzing PDEs and $\PDO$ (\cite{Horm:book3}). In fact, oftentimes it is useful to organize symbols $a(x,p)$ into \emph{symbol classes}, as this operation allows us to extend symbol calculus to symbols that can depend on the semiclassical parameter $\planck$. This section follows the one of Zworski and H{\"o}rmander respectively in \cite{Zworski:semic},\cite{Horm:book3}. We only describe the basic definition of symbol classes, stating the principal results without proof, for the sake of brevity.
+
+\begin{defin}[order function]
+\label{def:order_func}
+A measurable function $m\colon\R^{2n}\to\R_{>0}$ is called an \emph{order function} if there are constants $C$ and $N$ such that $m(w)\leq Cg(v-w)^{N}m(v)$ for all $v,w\in\R^{2n}$, where $g(v)=(1+\norm{v}^{2})^{1/2}$.
+\end{defin}
+
+Trivial examples of order functions are the constant function $\one$ and $g(v)$ itself. It is easy to say that if $f_{1},f_{2}$ are order functions, then the product $f_{1}f_{2}$ is an order function as well.
+
+\begin{defin}[symbol class]
+\label{def:symbol_class}
+Let $m(z)$ be an order function. The \emph{symbol class} of $m(z)$ is given by 
+\[
+S(m)\coloneqq \left\{
+a\in C^{\infty}(\R^{2n})\colon\forall\alpha\in\N^{2n},\,\exists C = C(\alpha)\text{ such that }\abs{\partial^{\alpha}}\leq Cm
+\right\}.
+\]
+Likewise, for $\delta\in[0,1/2]$, we have the $(\planck,\delta)$-dependent symbol class
+\[
+S(m)\coloneqq \left\{
+a\in C^{\infty}(\R^{2n})\colon\forall\alpha\in\N^{2n},\,\exists C = C(\alpha)\text{ such that }\abs{\partial^{\alpha}}\leq C\planck^{-\delta\abs{\alpha}}m
+\right\}.
+\]
+\end{defin}
+
+In particular $S_{0}(m)=S(m)$. One of the benets of extending our formulation to symbol classes is that all the previous results still hold. In particular, $\schwarz(\R^{2n})\subset S(m)$ for any order function $m$, and it can be shown that Weyl quantization of symbols in $S_{\delta}(m)$ is also a continuous linear map.
+
+\begin{nteo}
+\label{teo:prop_schwar_cont_class_symbols}
+If $a\in S_{\delta}(m)$ with $0\leq \delta\leq 1/2$ then both
+\[
+\Op^{W}(a)(x,\planck\Diff)\colon\schwarz(\R^{n})\to\schwarz(\R^{n}) ,\;
+\Op^{W}(a)(x,\planck\Diff)\colon\schwarz'(\R^{n})\to\schwarz'(\R^{n})
+\]
+are continuos linear transformations.
+\end{nteo}
+
+We also retain the quantization composition theorems. As mentioned, we just state the result.
+
+
+\begin{nteo}
+\label{teo:comp_symbol_class}
+Let $a\in S_{\delta}(m_{1})$ and $b\in S_{\delta}(m_{2})$ for $0\leq\delta\leq 1/2$. The Weyl product $a\Wprd b$ then lies in $\in S_{\delta}(m_{1}m_{2})$ and $\Op^{W}(a)\Op^{W}(b)=\Op^{W}(a\Wprd b)$. An approximation for $a\Wprd b$ is given by
+\[
+a\Wprd b=ab+\frac{\planck}{2\imi}\{a,b\}+O_{S_{\delta}(m_{1}m_{2})}(\planck^{1-2\delta}).
+\]
+The commutator $[\cdot,\cdot]$ and Poisson bracket $\{\cdot,\cdot\}$ are linked by
+\[
+[\Op^{W}(a)(x,\planck\Diff),\Op^{W}(b)(x,\planck\Diff)]=\frac{\planck}{\imi}\Op^{W}(\{a,b\})(x,\planck\Diff)+O_{S_{\delta}(m_{1}m_{2})}(\planck^{3(1-2\delta)}).
+\]
+\end{nteo}
+
+
+
+
+\section{Two main results: Weyl law and Egorov's Theorem}
+
+
+\label{sec:weyl_and_egorov}
+
+In this section we will present a first example of Weyl's law and Egorov's theorem, two results mentioned at the beginning of this thesis. The latter put in evidence the corrispondence between classical and quantum mechanics, while the former gives informations regarding eigenvalue spacing statistics of the Laplacian. We begin with a real-valued \emph{potential function} $V\in C^{\infty}(\R^{n})$ and define the \emph{Hamiltonian symbol}
+\begin{equation}
+\label{eq:ham_symbol}
+\Ham(x,p)\coloneqq\norm{p}^{2}+V(x)
+\end{equation} 
+with the corrisponding \emph{Schr{\"o}dinger operator} in $n$-dimension defined by
+\begin{equation}
+\label{eq:schrod_operator}
+\Xi(h)\coloneqq\Xi(x,\planck\Diff)=-\planck^{2}\Lapl+V(x)
+\end{equation}
+where $\Lapl$ is the usual euclidian Laplacian and $\planck$ is the semiclassical parameter. In particular, we can observe that $\Op^{W}(\xi)(x,\planck\Diff)=\Xi(\planck)$. Our goal is to describe the asymptotic distribution of the eigenvalue of Schr{\"o}dinger operator for $\planck\to 0$.
+
+
+\subsection{Weyl Law in Euclidian space}
+
+As a introductory toy example, we can consider the $1$-dimensional potential $V(x)=x^{2}$ (elastic potential), for a simple harmonic oscillator \HO. We consider the case $\planck=1$ and so $\Xi=-\partial_{xx}+x^{2}$. From elementary quantum mechanics, we can define the \emph{creation and annihilation operators} $A\coloneqq \Diff_{x}+\imi x$ and $A^{\dagger}\coloneqq\Diff_{x}-\imi x$ to get 
+\[
+\Xi=AA^{\dagger}+1=A^{\dagger}A-1.
+\]
+It is possible to solve the eigenfunction problem related to the \HO with the Hermite polynomials 
+\[
+H_{n}(x)\coloneqq(-1)^{n}\exp(x^{2})\frac{\dd^{n}}{\dd x^{n}}\exp(-x^{2}).
+\]
+In particular, the gaussian function $\exp(-x^{2}/2)$ is the eigenfunction corrisponding to the eigenvalue $1$. Moreover, the set of eigenfunctions $\{\psi_{n}\}_{n\geq0}$, which are given by $H_{n}(x)\exp(-x^{2}/2)$, are orthonormal to each other, so they form a complete set in $L^{2}(R^{n})$.\\
+In the $n$-dimensional case, for an \HO scaled by semiclassical parameter $\planck$, we get that the set of functions
+\[
+\psi_{\alpha}(x,\planck)=\planck^{-n/4}\prod_{i=1}^{n}H_{\alpha_{i}}(x_{i}\planck^{-1/2})\exp\left(-\frac{\abs{x}^{2}}{2}\right)
+,\quad\alpha\in \N^{n}
+\]
+are eigenfunctions for $\Xi(\planck)$, with eigenvalue $E_{\alpha}=(2\norm{\alpha}_{1}+n)\planck$. Reindexing the multi-indices, we get that $\Xi(\planck)\psi_{i}(x,\planck)=E_{i}(\planck)\psi_{i}(x,\planck)$.
+
+\begin{nteo}[Weyl's law for \HO]
+For $0\leq a< b<\infty$, it holds
+\[
+\#\left\{
+E(\planck)\colon a\leq E(\planck)\leq b
+\right\}=
+\frac{1}{(2\pi\planck)^{n}}\left(\mu\left(
+\left\{
+a\leq\norm{x}^{2}+\norm{p}^{2}
+\right\}
+\right)
++o(1)\right)
+\]
+where $E(\planck)$ is any eigenvalue of $\Xi(\planck)$. 
+\end{nteo} 
+\begin{prf}
+We follow the proof in \cite{Zworski:semic}.\\
+Without loss of generality, let $a=0$. Since $E(\planck)=(2\norm{\alpha}_{1}+n)\planck$ for some multiindex $\alpha\in\N^{n}$,
+\[
+\#\left\{
+E(\planck)\colon 0\leq E(\planck)\leq b
+\right\}=\#\left\{\alpha\in\N^{n}\colon 0\leq 2\norm{\alpha}_{1}+n\leq b/\planck\right\}=\#\left\{\alpha\in\N^{n}\colon\norm{\alpha}_{1}\leq c\right\}
+\]
+where $c=(b-n\planck)/2\planck$. This implies that 
+\begin{align*}
+\#\left\{
+E(\planck)\colon 0\leq E(\planck)\leq b
+\right\}&=\abs{x\in\R^{n}\colon x_{i}\geq 0, 1\leq i\leq n\text{ and }\sum_{i}x_{i}\leq c}+o(c^{n})
+&=(n!)^{-1}c^{n}+o(c^{n}), 
+\end{align*}
+where the last equality holds because, for $c\to\infty$, since it can be easly computed that 
+\[
+\abs{x\in\R^{n}\colon x_{i}\geq 0, 1\leq i\leq n\text{ and }\sum_{i}x_{i}\leq 1}=(n!)^{-1}.
+\]
+Thus, for $\planck\to0$,
+\[
+\#\left\{
+E(\planck)\colon 0\leq E(\planck)\leq b
+\right\}=\frac{b^{n}}{n!(2\planck)^{n}}+o(\planck^{-n}).
+\]
+Now, the measure of the \virg{sphere} $\left\{\norm{x}^{2}+\norm{p}^{2}\leq b\right\}$ is given by $b^{n}G(2n)$, where $G(k)=\pi^{k/2}\Gamma(k/2+1)^{-1}$. Since $V(2n)=\pi^{n}(n!)^{n}$, we have
+\[
+\#\left\{
+E(\planck)\colon 0\leq E(\planck)\leq b
+\right\}=\frac{b^{n}}{n!(2\planck)^{n}}+o(\planck^{-n})=\frac{1}{(2\pi\planck)^{n}}\mu\left(
+\left\{
+a\leq\norm{x}^{2}+\norm{p}^{2}
+\right\}
+\right)+o(\planck^{-n})
+\]
+as desired. 
+\end{prf}
+
+This example gives justification for the following more general result. We will not proved the theorem, because the complexity of its proof is beyond the scope of this thesis, but its statement is nonetheless usefull. We suppose that the potential function $V\in C^{\infty}(\R^{n})$ satisfies
+\[
+\begin{cases}
+\abs{\partial^{\alpha}V(x)}\leq C\spn{x}^{k},\quad \forall\alpha\in\N^{n}, C=C(\alpha)\in\R\\
+V(x)\geq c\spn{x}^{k},\quad \norm{x}\geq R
+\end{cases}
+\]
+for certain constants $k,c,R\in\R$.
+\begin{nteo}
+\label{teo:weyl_law_euclid}
+Suppose that $V$ is an admissible potential function, and that $E(\planck)$ denotes an arbitrary eigenvalue of the operator $\Xi(\planck)=-\planck^{2}\Lapl+V(x)$. Then
+\[
+\#\left\{
+E(\planck)\colon a\leq E(\planck)\leq b
+\right\}=(2\pi\planck)^{-n}\left(\mu\left(
+\left\{
+a\leq\norm{p}^{2}+V(x)
+\right\}
+\right)
++o(1)\right)
+\]
+for all $a<b$ in the limit $\planck\to0$.
+\end{nteo}
+
+We will see another form of Weyl's law in the hyperbolic case, obtained by Seldberg trace formula (see chapter \ref{Chapter4}).
+
+
+
+
+
+\subsection{$\PDO$ on Manifolds}
+
+Being the subject very complex, we will focus our discussion on intuition, rather then going in every detail. In this sense, we remark that, for details, the most satisfactory resource for this is aim is given by Zworski's book \cite{Zworski:semic}.
+
+
+Let $M$ be a smooth Riemannian manifold of dimension $n$. We will further suppose, in this and the following section, that all manifolds are \underline{compact}. Let $g\colon M\subset U_{g}\to V_{g}\subset\R^{n}$ be a smooth diffeomorphism between open sets and let $\Dif(M)$ the set of all smooth diffeomorphism of $M$. At first, we will define distributions on manifolds.
+
+\begin{defin}
+\label{def:distr_on_manifold}
+Let $\vphi\colon C^{\infty}(M)\to\mathbb{C}$ be a linear map and let $\Sigma\colon\schwarz(\R^{n})\to\mathbb{C}$ be defined by
+\[
+\Sigma(f)\coloneqq\vphi\left(
+g^{\ast}\left(\chi f\right)
+\right),
+\]
+where $g\in\Dif(M),\chi\in C_{c}^{\infty}(V_{g})$. If $\Sigma\in\schwarz'(\R^{n})$, then $\vphi$ is a distribution on $M$, and write $\vphi\in\Distr'(M)$.
+\end{defin}
+
+
+
+\begin{defin}
+\label{def:diff_oper_on_manifold} 
+If $Q=\Sigma X_{j_{1}}\ldots X_{j_{k}}$ where $X_{j_{i}}\colon M\to TM$ is a smooth vector field on $M$, for all $j_{i}$ and $1\leq k\leq m$, then $Q$ is a differential operator on $M$ of order at most $m$.
+\end{defin}
+
+We can see that any differential operator $P$ maps the sets
+\[
+C^{\infty}(M)\to C^{\infty}(M),\;\Distr'(M)\to\Distr'(M).
+\]
+due to mapping properties of vector fields.\\
+We can now define $\PSO$ and a quantization procedure on a manifold $M$. One possible way to approach this would be to use standard pseudodifferential calculus on $\R^{n}$ and consider then a partition of unity to define quantization operators on $M$. However:
+\begin{compactitem}
+\item this construction depends on local coordinate;
+\item it depends also on the unit partition.
+\end{compactitem}
+
+A key starting question is to determin which symbols are invariant under some diffeomorphism $\phi\colon\R^{n}\to\R^{n}$: in fact, if the symbol class $S(m)$ is defined by the condition that $\forall\alpha\in\N^{n},\exists C=(\alpha)\in\R\colon\abs{\partial^{\alpha}a}\leq Cm$, then it may not be true that the pullback of a by the lift of $\phi^{-1}$ to the cotangent bundle $T^{\ast}\R^{n}$ satisfies the same inequality. It turns out that the appropriate invariant class is given by the following.
+
+\begin{defin}
+\label{def:symbols_true} The \emph{Kohn-Nirenberg} symbol class of order $m\in\Z$ is defined as
+\[
+S^{m}(\R^{2n})\coloneqq\left\{
+a\in C^{\infty}(\R^{2n})\colon\forall\alpha,\beta\in\N^{n},\exists C(\alpha,\beta)\in\R\colon\,\abs{\partial_{x}^{\alpha}\partial_{p}^{\beta}a}\leq C\spn{p}^{m-\norm{\beta}_{1}}.
+\right\}
+\]
+\end{defin}
+
+\begin{nteo}[Invariance of Kohn-Nirenberg symbols under diffeomorphism]
+Let $\theta\colon\R^{n}\to\R^{n}$ be a diffeomorphism satisfying the inequalities $\abs{\partial^{\alpha}\phi}\leq C$ and $\abs{\partial^{\alpha}\theta^{-1}}\leq C$ for $C$ constant depending on the multiindex $\alpha$. Then, for each symbol $a\in S^{m}(\R^{2n})$, the pullback $b(x,p)\coloneqq a(\theta^{-1}(x),\partial\theta(\theta^{-1}(x))\cdot p)$ under the lift of $\theta^{-1}$ is in $S^{m}$. 
+\end{nteo}
+
+The definition of the Kohn-Nirenberg symbols allows us to define the relevant class of $\PDO$s on any smooth manifold.
+
+\begin{defin}[$\PDO$ on $M$]
+\label{def:pdo_on_manifolds}
+A linear map $A\colon C^{\infty}(M)\to C^{\infty}(M)$ is called a \emph{pseudodifferential operator on $M$} of order $m$ if it can be written on each coordinate patch $U_{\beta}\subset M$ as 
+\[
+\vphi A(\psi f)=\vphi\beta^{\ast}\Op^{W}(a_{\beta})(x,\planck\Diff)(\beta^{-1})^{\ast}(\psi f)
+\]
+where $\beta\in\Dif(M)$, $\vphi,\psi\in C^{\infty}_{c}(U_{\beta}), f\in C^{\infty}(M)$, and the symbol $a_{\beta}$ is in the Kohn-Nirenberg class $S^{m}(\R^{2n})$ for some order $m$. The set of $\PDO$ of order $m$ on $M$ will be denoted by $\Psi^{m}(M)$.
+\end{defin}
+
+\begin{defin}[symbols on $T^{\ast}M$]
+Let $a\in C^{\infty}(T^{\ast} M)$, $\Phi\in\Diff(M)$ and $\pi\colon U_{\Phi}\times\R^{n}\to T^{\ast}U_{\Phi}$ be the natural identification betweeen the open set $U_{\Phi}\subset M$ and $\R^{n}$. If $\Phi^{\ast}a\in S^{m}(U_{\Phi}\times\R^{n}),$ then $a$ is a \emph{symbol of order} $m$ on $T^{\ast}M$, and we write $a\in S^{m}(T^{\ast}M)$. 
+\end{defin}
+
+The above definitions provide the stage for the following two results, which will be used in Egorov's theorem sketch of the proof \ref{impTeo:egorov}.
+
+
+\begin{nteo}[quantization on manifold]
+\label{teo:quant_on_manifold}
+If $\Psi^{m}(M)$ denotes the image $S^{m}(T^{\ast}M)$ under $\Op^{W}$, then there exist linear maps
+\[
+\sigma\colon \Psi^{m}(M)\to S^{m}(T^{\ast}M)/\planck S^{m-1}(T^{\ast}M)
+\]
+and a \virg{quantizing} operator $\Op^{W}\colon S^{m}(T^{\ast}M)\to\Psi^{m}(M)$ defined respectively
+\[
+\sigma(A_{1}A_{2})=\sigma(A_{1})\sigma(A_{2}),\quad\text{and}\quad\sigma(\Op^{W}(a))=[a]\in S^{m}(T^{\ast}M)/\planck S^{m-1}(T^{\ast}M),
+\]
+where $[a]$ denotes the equivalence class of $a$. Then, $a=\sigma(A)$ is the (principal) symbol of the $\PDO$ $A$.
+\end{nteo}
+
+\begin{nteo}[Properties of $\PDO$]
+\label{teo:prop_PDO}
+If $A\in\Psi^{0}(M)$, then $A\colon L^{2}(M)\to L^{2}(M)$ is bounded. If $A\in\Psi^{m}(M)$, with $m<0$, then $A$ is compact.
+\end{nteo}
+
+
+We will now present how these notions relates with the previous mentioned Weyl's law. With a choice of local coordinates, we consider the Schr{\"o}dinger operator $\Xi(\planck)\coloneqq -\planck^{2}\Lapl+V(x)$ on a compact manifold $(M,g)$ (in this setting $\Lapl=\Lapl_{g}$). Using previous examples, we get that the symbol of $\Xi(\planck)$ is given by 
+\[
+\sigma(\Xi(\planck))=\Ham(x,p)=\norm{p}^{2}_{g_{x}}+V(x).
+\]
+
+\begin{nteo}
+\label{teo:eigenf_of_xi_schord_operator}
+The pseudodifferential Schr{\"o}dinger operator $\Xi(\planck)\colon C^{\infty}_{c}(M)\to C_{c}(M)$ is essentialy self-adjont. Moreover, for a fixed $\planck>0$, there exist a orthogonal basis $\{\psi_{k}(\planck)\}_{k\geq0}$ of $L^{2}(M)$ made up by $\Xi$-eigenfunctions such that their eigenvalues tend to $\infty$ for $k\to\infty$.
+\end{nteo}
+
+A mirable consequence of this result is the following form of the already mentioned \emph{Weyl's law}, for planar domains.
+
+\begin{nteo}
+\label{teo:weyl_law_new_planar_version}
+Let $\Omega\subset\R^{2}$ be a planar domain in the euclidian plane. If $\Xi = \Xi(1)=-\Lapl$, where $V=0$, and for each $\Xi$-eigenfunction $\psi_{j}$ we consider the corrispondent eigenvalue $E_{j}$, then
+\[
+\lim_{\lambda\to\infty}\frac{\#\left\{ j\colon E_{j}<\lambda\right\} }{\lambda}=\frac{\Area(\Omega)}{4\pi}.
+\]
+\end{nteo}
+
+
+
+\subsection{Connection between classical and quantum dynamics: Egorov's Theorem}
+
+
+Egorov theorem is a very import result in semiclassical analysis which links directly the quantum-mechanical time evolution of a Weyl-quantized operator and the time-evolution of the corrispond symbol along the classical flow. Therefore, Egorov theorem provides a bridge between classical and quantum mechanics.\\
+We will now formulate the theorem. Let $(M,g)$ be a compact smooth Riemannian manifold with metric $g$ and let $V$ be a smooth, real-valued potential on $M$. Considering local coordinates, the Hamiltonian, as mentioned before, is expressed by 
+\[
+\Ham(x,p)\coloneqq\norm{p}_{g_{x}}^{2}+V(x)
+\]
+where $(x,p)\in T^{\ast}M$. The Hamiltonian flow generated by $H$ is given by (CITARE APPENDICE DA FARE)
+\[
+\Phi^{t}=\exp(t X_{\Ham})
+\]
+where $X_{\Ham}$ is the Hamiltonian vector field given by $\Ham$.\\
+From functional analysis theory, by \emph{Stone's theorem} we know that self-adjont operators are the infinitesimal generators of unitary groups of time evolution operators. So, we denote the unitary group on $L^{2}(M)$ generated by the self-adjont operator $\Xi(\planck)$ as $U(t)=\exp(-\imi t \Xi(\planck)/\planck)$.\\
+If $A\in\bigcap_{m\in\Z}\Psi^{m}(M)$ is another $\PDO$, then its quantum time evolution is given by $A(t)=U^{-1}(t)AU(t)$. This is in perfect agreement with Heisenberg picture of quantum mechanics. We are now ready to Egorov's theorem. We now provide a sketch of the proof.
+
+
+\begin{impTeo}{Egorov, \cite{Egorov:article}}{egorov}
+Let $\Phi_{t}$ be the Hamiltonian flow of 
+\[
+\Ham(q,p)=\norm{p}^{2}_{g_{q}}+V(q),
+\]
+$U(t)$ the unitary time-evolution operator $\exp(-\imi t \Xi(\planck)/\planck)$ and $a_{t}(q,p)=a(\Phi_{t}(q,p))$ for some $a\in S^{-\infty}(T^{\ast} M)$. If $A=\Op^{w}(a)(q,\planck \Diff)$ and $\tilde{A}(t)\coloneqq\Op^{w}(a_{t})(q,\planck\Diff)$. Then, it holds
+\[
+\norm{\Op^{w}(a_{t})(q,\planck\Diff)-U^{-1}(t)AU(t)}=\norm{A(t)-\tilde{A}(t)}_{L^{2}\to L^{2}}=O(h)
+\]
+uniformly respect to $t$, for any fixed $T>0$ e for all $0\leq t\leq T$.
+\end{impTeo}
+\begin{remark}
+It is necessary to require that $a\in S^{-\infty}(T^{\ast}M)$ to guarantee that $a_{t}$ is in the same symbol class. In fact, if we only require that $a\in S(T^{\ast}M)$, then the symbol class is not preserved by $(\Phi^{t})^{\ast}$, as the flow of $\Ham$ is faster at higher frequencies.
+\end{remark}
+
+\begin{prf} %[of theorem \ref{impTeo:egorov]
+First of all, $\partial_{t}a_{t}=\{\xi,a_{t}\}$, where $\{\xi,a_{t}\}$ is the Poisson bracket on $T^{\ast}M$. Let $\sigma(P)$ be the symbol of a $\PDO$ $P$; then 
+\[
+\sigma\left(\frac{\imi}{h}[\Xi(h),B]\right)=\{\xi,\sigma(B)\}
+\]
+for any $B\in\bigcap_{m\in\Z}\Psi^{m}(M)$. In \cite{Zworski:semic} and \cite{Martinez:semi}, using theorem \ref{teo:prop_PDO} and \ref{teo:quant_on_manifold}, it is proved that 
+\[
+\partial_{t}\tilde{A}(t)=\frac{\imi}{\planck}[\Xi(\planck),\tilde{A}(t)]+E(t)
+\]
+for $E(t)\in \planck\Psi^{-\infty}(M)$, with $\norm{E(t)}_{L^{2}\to L^{2}}=O(\planck)$. Applying now the time-evolution operator on 
+\begin{align*}
+\partial_{t}\left(\e^{-\frac{\imi t\Xi(\planck)}{\planck}}\tilde{A}(t)\e^{\frac{\imi t\Xi(\planck)}{\planck}}\right)&=\e^{-\frac{\imi t\Xi(\planck)}{\planck}}\left(\partial_{t}\tilde{A}(t)-\frac{\imi}{\planck}[\Xi(\planck),\tilde{A}(t)]\right)\e^{\frac{\imi t\Xi(\planck)}{\planck}}\\
+&=\e^{-\frac{\imi t\Xi(\planck)}{\planck}}\left(\frac{\imi}{\planck}[\Xi(\planck),\tilde{A}(t)]+E(t)-\frac{\imi}{\planck}[\Xi(\planck),\tilde{A}(t)]\right)\e^{\frac{\imi t\Xi(\planck)}{\planck}}\\
+&=\e^{-\frac{\imi t\Xi(\planck)}{\planck}}E(t)\e^{\frac{\imi t\Xi(\planck)}{\planck}}
+\end{align*}
+and as the time-evolution operator is unitary, the last term is $O(\planck)$. Integrating both sides, this equality gives
+\[
+\norm{U(t)\tilde{A}(t)U^{-1}(t)-A}_{L^{2}\to L^{2}}=\norm{\e^{-\frac{\imi t\Xi(\planck)}{\planck}}\tilde{A}(t)\e^{\frac{\imi t\Xi(\planck)}{\planck}}-A}_{L^{2}\to L^{2}}=O(\planck).
+\]
+This implies that 
+\begin{align*}
+\norm{\tilde{A}(t)-A(t)}_{L^{2}\to L^{2}}&=\norm{U(t)\left(
+\tilde{A}(t)-U^{-1}(t)AU(t)\right)U^{-1}(t)}_{L^{2}\to L^{2}}\\
+&=\norm{U(t)\tilde{A}(t)U^{-1}(t)-A}_{L^{2}\to L^{2}}=O(\planck)
+\end{align*}
+uniformly for all $t\in[0,T]$.
+\end{prf}
+
+
+
+
+
+

@@ -1,0 +1,343 @@
+%%%%% some useful environment
+
+%comandi per enunciati
+
+
+%\theoremstyle{plain}
+\theorembodyfont{\normalfont}
+\theoremheaderfont{\bfseries}
+\theorempreskipamount\topsep
+\theorempostskipamount\topsep
+\theoremsymbol{$\clubsuit$}
+%stile roman
+\newtheorem{ex}{Exercise}[section]
+\newtheorem{ese}[ex]{Example} 
+\newtheorem{eseex}[ex]{Es./Ex.} %definizione ambiente esempio/esercizio
+
+\theoremsymbol{}
+
+\theorembodyfont{\slshape}
+\newtheorem{teo}{Theorem}[section] %definizione ambiente teorema
+\newtheorem{teodef}[teo]{Thm./Def.} %definizione ambiente teorema
+\newtheorem{prop}[teo]{Proposition}    %definizione ambiente proposizione
+\newtheorem{cor}[teo]{Corollary}       %definizione ambiente corollario
+\newtheorem{defin}[teo]{Definition}%definizione ambiente definizione 
+\newtheorem{lem}[teo]{Lemma}           %definizione ambiente lemma 
+\newtheorem{prob}[teo]{Problem}           %definizione ambiente lemma 
+
+%\newenvironment{prf}{\begin{proof}{\textsl{Dimostrazione}}}{\end{proof}} % dimostrazioni con stile cambiato
+
+% svolgimento
+\theoremstyle{nonumberplain}
+\theoremheaderfont{\slshape}
+\theorembodyfont{\normalfont\small}
+\theoremseparator{.\,}
+\theoremsymbol{$\circledS$}
+\newtheorem{svolg}{Svolgimento}
+%
+
+% dimostrazione
+\theoremstyle{nonumberplain}
+\theoremheaderfont{\slshape}
+\theorembodyfont{\normalfont\small}
+\theoremseparator{.\,}
+\theoremsymbol{$\blacksquare$}
+\newtheorem{prf}{Proof}
+%
+
+
+%Osservazione
+\theoremstyle{plain}
+\theoremheaderfont{\bfseries}
+\theorembodyfont{\normalfont}
+%\theoremseparator{.\,}
+\theoremsymbol{}
+\newtheorem{remark}{Remark}[section]
+%
+%%%%%%%%
+
+
+
+%comando teoremi importanti impTeo
+
+
+%% the following is commaon for all examples in mdframed manual
+%\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
+%%% up to here
+\colorlet{ColimpTeo}{myroyal5}
+
+
+%\newenvironment{impTeo}[1][]{%
+%\refstepcounter{teo}%
+%\ifstrempty{#1}%
+%{\mdfsetup{%
+%frametitle={%
+%\tikz[baseline=(current bounding box.east),outer sep=0pt]
+%\node[anchor=east,rectangle,draw=ColimpTeo, fill=ColimpTeo!80, linewidth=0.5mm]{\strut Teorema~\theteo};}}
+%}%
+%{\mdfsetup{%
+%frametitle={%
+%\tikz[baseline=(current bounding box.east),outer sep=0pt]
+%\node[anchor=east,rectangle,draw=ColimpTeo, fill=white, line width=1mm]
+%{\strut Teorema~\theteo:~#1};}}%
+%}%
+%\mdfsetup{innertopmargin=10pt,linecolor=ColimpTeo,%
+%linewidth=2pt,topline=true,%
+%frametitleaboveskip=\dimexpr-\ht\strutbox\relax, roundcorner=10pt
+%}
+%\begin{mdframed}[]\relax%
+%}{\end{mdframed}}
+
+
+
+\tcbuselibrary{theorems}
+\newtcbtheorem[number within=section]{newese}{Esempio}%
+{colback=green!5,colframe=green!35!black,,fonttitle=\bfseries}{nese}
+
+\newtcbtheorem[use counter*=teo, number within=section]% init options
+  {impTeo}% name
+  {Theorem}% title
+  {%
+    colback=blue!5,
+    colframe=ColimpTeo,
+    fonttitle={\usefont{T1}{lmss}{bx}{n}},%\bfseries,
+  }% options
+  {impTeo}% prefix
+
+\newtcbtheorem[use counter*=teo, number within=section]% init options
+  {subimpTeo}% name
+  {Theorem}% title
+  {%
+    colback=blue!5,
+    colframe=ColimpTeo,
+    fonttitle={\usefont{T1}{lmss}{bx}{n}},%\bfseries,
+  }% options
+  {subimpTeo}% prefix
+
+
+
+%\newenvironment{impTeo}[1][]{%
+%\refstepcounter{teo}%
+%%\setcounter{impTeo}{teo}%
+%\ifstrempty{#1}%
+% {\mdfsetup{%
+%   frametitle={%
+%    \tikz[baseline=(current bounding box.east),outer sep=0pt]
+%    \node[anchor=east,rectangle,fill=blue!40]
+%         {\strut Teorema~\theteo};}}
+% }%
+%{\mdfsetup{%
+%  frametitle={%
+%   \tikz[baseline=(current bounding box.east),outer sep=0pt]
+%   \node[anchor=east,rectangle,fill=blue!40]
+%        {\strut Teorema~\theteo:~#1};}}%
+% }%
+%\mdfsetup{innertopmargin=10pt,
+%linecolor=blue!40,%
+%       linewidth=2pt
+%       ,topline=true
+%       ,frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+%       }
+%   \begin{mdframed}[]\relax%
+%}
+%{\end{mdframed}}
+
+
+
+
+%% important Lemma 
+
+\colorlet{ColimpLem}{bord1}
+
+%\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
+%%%% upto here
+%\newenvironment{impLem}[1][]{%
+%\refstepcounter{teo}%
+%\ifstrempty{#1}%
+% {\mdfsetup{%
+%   frametitle={%
+%    \tikz[baseline=(current bounding box.east),outer sep=0pt]
+%    \node[anchor=east,rectangle,draw=ColimpLem, fill=black, linewidth=0.5mm]
+%         {\strut Lemma~\theteo};}}
+% }%
+%{\mdfsetup{%
+%  frametitle={%
+%   \tikz[baseline=(current bounding box.east),outer sep=0pt]
+%   \node[anchor=east,rectangle,draw=ColimpLem, fill=white, line width=1mm]
+%        {\strut Lemma~\theteo:~#1};}}%
+% }%
+%\mdfsetup{innertopmargin=10pt,linecolor=ColimpLem,%
+%       linewidth=2pt,topline=true,
+%       frametitleaboveskip=\dimexpr-\ht\strutbox\relax, roundcorner=10pt}
+%   \begin{mdframed}[]\relax%
+%}
+%{\end{mdframed}}
+
+\newtcbtheorem[use counter*=teo, number within=section]% init options
+  {impLem}% name
+  {Theorem}% title
+  {%
+    colback=red!5,
+    colframe=ColimpLem,
+    fonttitle={\usefont{T1}{lmss}{bx}{n}},%\bfseries,
+  }% options
+  {impTeo}% prefix
+
+\newtcbtheorem[use counter*=teo, number within=section]% init options
+  {subimpLem}% name
+  {Theorem}% title
+  {%
+    colback=red!5,
+    colframe=ColimpLem,
+    fonttitle={\usefont{T1}{lmss}{bx}{n}},%\bfseries,
+  }% options
+  {subimpLem}% prefix
+
+
+
+\colorlet{ColimpConj}{Dark2}
+
+\newtcbtheorem[use counter*=teo, number within=section]% init options
+  {impConj}% name
+  {Conjecture}% title
+  {%
+    colback=red!5,
+    colframe=ColimpConj,
+    fonttitle={\usefont{T1}{lmss}{bx}{n}},%\bfseries,
+  }% options
+  {impConj}% prefix
+
+
+
+%
+%\newtheoremstyle{break}
+%  {\topsep}
+%  {\topsep}
+%  {\itshape}
+%  {0pt}
+%  {\bfseries}
+%  {.}
+%  {\newline}
+%  {\thmname{#1}\thmnumber{ #2}\thmnote{ \textbf{(#3)}}}
+%\theoremstyle{break}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% - Theorems with bar
+
+
+\colorlet{ColTheos}{dark1}
+\colorlet{ColExamp}{dark_green1}
+\colorlet{ColConj}{Dark2}
+
+
+\theorembodyfont{\slshape}
+\theoremheaderfont{\bfseries}
+\theorempreskipamount\topsep
+\theorempostskipamount\topsep
+\theoremsymbol{}
+
+\newmdtheoremenv[
+  linecolor=ColTheos,
+  linewidth=2pt,
+  topline=false,rightline=false,bottomline=false,
+  innertopmargin=0pt,
+  innerbottommargin=10pt,
+  innerrightmargin=0pt,
+]{nteo}[teo]{Theorem}  
+
+\newmdtheoremenv[
+  linecolor=ColTheos,
+  linewidth=2pt,
+  topline=false,rightline=false,bottomline=false,
+  innertopmargin=0pt,
+  innerbottommargin=10pt,
+  innerrightmargin=0pt,
+]{nlem}[teo]{Lemma}  
+
+
+\newmdtheoremenv[
+  linecolor=ColConj,
+  linewidth=2pt,
+  topline=false,rightline=false,bottomline=false,
+  innertopmargin=0pt,
+  innerbottommargin=10pt,
+  innerrightmargin=0pt,
+]{nconj}[teo]{Conjecture}  
+  
+
+\newmdtheoremenv[
+  linecolor=ColTheos,
+  linewidth=2pt,
+  topline=false,rightline=false,bottomline=false,
+  innertopmargin=0pt,
+  innerbottommargin=10pt,
+  innerrightmargin=0pt,
+]{nprop}[teo]{Proposition}  
+  
+  
+  \newmdtheoremenv[
+  linecolor=ColTheos,
+  linewidth=2pt,
+  topline=false,rightline=false,bottomline=false,
+  innertopmargin=0pt,
+  innerbottommargin=10pt,
+  innerrightmargin=0pt,
+]{ncor}[teo]{Corollary}  
+
+
+\newmdtheoremenv[
+  linecolor=ColTheos,
+  linewidth=2pt,
+  topline=false,rightline=false,bottomline=false,
+  innertopmargin=0pt,
+  innerbottommargin=10pt,
+  innerrightmargin=0pt,
+]{subnewprop}[teo]{Proposition}
+
+
+
+
+\def\exampletext{Example} % If English
+\newcounter{testexample}
+\NewDocumentEnvironment{nese}{ O{} }
+{
+\newtcolorbox[use counter=testexample]{testexamplebox}{%
+    % Example Frame Start
+    empty,% Empty previously set parameters
+    title={ %background = colback=blue!30
+    \begin{tcolorbox}[width=13cm, colframe=ColExamp, arc=2mm, sharp corners=west, boxsep=1mm]
+    \exampletext\ \thesection.\thetcbcounter: #1
+    \end{tcolorbox}},% use \thetcbcounter to access the testexample counter text
+    % Attaching a box requires an overlay
+    attach boxed title to top left,
+       % Ensures proper line breaking in longer titles
+       minipage boxed title,
+    % (boxed title style requires an overlay)
+    boxed title style={empty,size=minimal,toprule=0pt,top=4pt,left=3mm,overlay={}},
+    coltitle=ColExamp,fonttitle=\bfseries,
+    before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=3mm,right=0mm,top=0pt,breakable,pad at break=0mm,
+       before upper=\csname @totalleftmargin\endcsname0pt, % Use instead of parbox=true. This ensures parskip is inherited by box.
+    % Handles box when it exists on one page only
+    overlay unbroken={\draw[ColExamp,line width=2pt] ([xshift=-0pt]title.north west) -- ([xshift=-0pt]frame.south west); },
+    % Handles multipage box: first page
+    overlay first={\draw[ColExamp,line width=2pt] ([xshift=-0pt]title.north west) -- ([xshift=-0pt]frame.south west); },
+    % Handles multipage box: middle page
+    overlay middle={\draw[ColExamp,line width=2pt] ([xshift=-0pt]frame.north west) -- ([xshift=-0pt]frame.south west); },
+    % Handles multipage box: last page
+    overlay last={\draw[ColExamp,line width=2pt] ([xshift=-0pt]frame.north west) -- ([xshift=-0pt]frame.south west); },%
+    }
+\begin{testexamplebox}}
+{\end{testexamplebox}\endlist}
+
+
+
+
+
+
+
+
+
+
+
+

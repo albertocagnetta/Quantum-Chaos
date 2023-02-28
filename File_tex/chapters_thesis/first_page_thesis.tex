@@ -1,0 +1,70 @@
+\newgeometry{centering, bottom=2cm, top=3cm}    %%% make the page centered on paper
+
+
+% the options can be changed in main file
+\begin{titlepage}
+  \begin{center}
+    \vbox to0pt{%
+    \vbox to1.00\textheight{\vfil
+    \includegraphics[width=0.86\textwidth]{Figures/\sfondo}%
+    \vfil}\vss}
+  \end{center}
+
+\begin{center}
+%\vspace*{.008\textheight}
+
+{{\huge\bfseries \textcolor{colTitle}{\univname}}\\\vspace{0.1cm}
+{\large \textcolor{colTitle}{\deptname}}\par}%\\
+%\vspace{0.5cm}
+
+\rule[0.1cm]{7cm}{0.5mm}
+$\bullet$
+\rule[0.1cm]{7cm}{0.5mm}\\[0.25cm]
+%$\,\,\,${{\Large{\textsc{\Partnership\,$\cdot$\,\University}}}} 
+\textsc{\Large \bfseries \textcolor{colTitle}{Master degree in Mathematics}}\\[0.2cm] % Thesis type
+
+\HRule \\[0.3cm] % Horizontal line
+%{\Huge {\fontfamily{ppl}\selectfont\ttitle}\par}\vspace{0.4cm} % Thesis title
+{\Huge {\bfseries \textcolor{colTitle}{\ttitle}}\par}\vspace{0.3cm} 
+\HRule \\%[1.5cm] % Horizontal line
+\end{center}
+\vspace*{9.8cm}
+\begin{center}
+%\includegraphics[scale=0.1]{Figures/\logo} \\
+%\vspace{0.5cm}
+\end{center}
+\begin{minipage}[t]{0.5\textwidth}
+{%\fontsize{25}{0}\selectfont
+\begin{flushleft} \large
+\emph{Author:} \\
+%\href{http://www.johnsmith.com}{\authorname}
+{\bf \authorname} % Author name - remove the \href bracket to remove the link
+\end{flushleft}
+}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+{%\fontsize{25}{0}\selectfont
+\begin{flushright} \large
+\emph{Supervisor:} \\
+%\href{http://www.jamessmith.com}{\supname}
+{\bf \supname}\\ % Supervisor name - remove the \href bracket to remove the link
+\emph{Co-supervisor}: \\
+{\bf Sebastiano$\;$\textsc{Sonego}}
+\end{flushright}
+}
+\end{minipage}
+ 
+\vfill
+
+%\large \textit{A thesis submitted in fulfillment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
+%\textit{in the}\\[0.4cm]
+%\groupname\\\deptname\\[2cm] % Research group name and department name
+% 
+%\vfill
+%\vspace{12mm}
+\begin{center}
+{\normalsize{\bf Anno Accademico\\
+$\mathfrak{\CurrentYear}$ }}
+\end{center} % lo manda a fondo pagina
+\end{titlepage}
+\restoregeometry 

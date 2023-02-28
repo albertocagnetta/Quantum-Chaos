@@ -1,0 +1,125 @@
+% Appendix A
+
+\chapter{Fourier transform} % Main appendix title
+
+\label{Appendix_Fourier} % For referencing this appendix elsewhere, use \ref{AppendixA}
+\thispagestyle{empty}
+
+In this appendix we briefly review some notions and properties of the \emph{Fourier transform}.
+
+\section{Basic notions}
+
+We will present Fourier transform on $\R^{n}$, keeping in mind that it can be extended to general smooth manifolds using \emph{partition of unity}.\\
+
+A suitable space for the Fourier transform is the so-called \emph{Schwarz space}, i.e. the space of \emph{rapidly decaying functions}. More precisely, we give the following definition, (\cite{Horm:book1})
+
+\begin{defin}
+\label{def:scwharz_space}
+We define the seminorm $\norm{\cdot}_{\alpha,\beta}$ for a smooth function $f$ on $\R_{n}$ as 
+\[
+\norm{f}_{\alpha,\beta}\coloneqq\norm{x^{\alpha}\partial^{\beta}f}_{\infty}
+\]
+for fixed multiindices $\alpha\in\N^{n}$ and $\beta$, where\footnote{We are implicitly using the fact that the derivatives commute.}
+\[
+x^{\alpha}=\prod_{i}^{n}x_{i}^{\alpha_{i}},\quad\partial^{\beta}=\prod_{i=1}^{n}\partial_{x_{i}^{\beta_{i}}}.
+\]
+The \emph{Schwarz space} (in $\R^{n}$) is the set $\schwarz=\schwarz(\R^{n})=\left\{f\in C^{\infty}(\R^{n})\colon\norm{f}_{\alpha,\beta}<\infty\;\forall\alpha,\beta\in\N^{n}\right\}$. The space $(\schwarz,\norm{\cdot}_{\alpha,\beta})$ is a Fréchet space over $\mathbb{C}$ and we say $f_{j}\to f$ in $\schwarz$ if $\norm{f_{j}-f}_{\alpha,\beta}\to 0$ for all multiindices $\alpha,\beta$. 
+\end{defin}
+
+
+\begin{defin}
+\label{def:Four_transform}
+The Fourier is defined by $\Fourier\colon\schwarz\ni f\mapsto\Four{f}\in\schwarz$ (we will also use the notation $\hat{f}$ for the Fourier transform of $f$) and 
+\[
+\Four{f}(p)=\int_{\R^{n}}\e^{-\imi\pscl{p}{x}}f(x)\dd x,
+\]
+with the inverse given by
+\[
+\Fourier^{-1}(f)(x)=\frac{1}{(2\pi)^{n}}\int_{\R^{n}}\e^{\imi\pscl{x}{p}}f(p)\dd p.
+\]
+\end{defin}
+
+The Fourier transform can be defined also for larger spaces, see for example Plancherel theorem. A useful result is the following.
+
+\begin{nlem}
+Let be given a real, symmetric and positive-definite quadratic form $x^{\trsp}Qx$, where $Q$ is a $n\times n$-matrix. Then
+\[
+\Fourier\left(\e^{-\frac{1}{2}x^{\trsp}Qx}\right)=\frac{(2\pi)^{n/2}}{(\det Q)^{1/2}}\e^{-\frac{1}{2}\pscl{Q^{-1}p}{p}}.
+\]
+\end{nlem}
+\begin{prf}
+Using the spectral theorem, we can choose an orthogonal basis $v_{1},\ldots, v_{n}$ for $\R^{n}$ that makes $Q$ diagonal, with diagonal elements $\lambda_{1}^{2},\ldots,\lambda_{n}^{2}$, where each element is positive. Hence, if $A$ is the coordinate-change matrix and $D=\diag(\lambda_{1}^{2},\ldots,\lambda_{n}^{2})$, using Einstein notation, from a straightforward computation we get that
+\begin{align*}
+\Fourier(\e^{-\frac{1}{2}x^{\trsp}Qx})&=\int_{\R_{n}}\e^{-\frac{1}{2}\left(\lambda_{i}^{2}v_{i}^{2}-2\imi v_{i}(a_{ji}p_{j})-\frac{(a_{ji}p_{j})}{\lambda_{i}^{2}}\right)-\frac{1}{2}\frac{(a_{ji}p_{j})^{2}}{\lambda_{i}^{2}}}\dd v\\
+&=\e^{-\frac{1}{2}\frac{(a_{ji}p_{j})^{2}}{\lambda_{i}^{2}}}\int_{\R^{n}}\e^{-\frac{1}{2}\left(\lambda_{i}v_{i}-\imi\frac{(a_{ji}p_{j})}{\lambda_{i}}\right)^{2}}\dd v.
+\end{align*}
+The external term $\e^{-\frac{1}{2}\frac{(a_{ji}p_{j})^{2}}{\lambda_{i}^{2}}}$ can be seen as $\pscl{AD^{-1}A^{\trsp}p}{p}$. But, from $A^{\trsp}Q A=D$, we get that $Q^{-1}=AD^{-1}A^{\trsp}$, hence we get $\e^{-\frac{1}{2}\pscl{Q^{-1}p}{p}}$. The integral part and can be computed by separating each $v_{i}$ and using the substitution $y_{i}=\lambda_{i}v_{i}-\imi\frac{(a_{ji}p_{j})}{\lambda_{i}}$ we get standard guassian integral. The final result is 
+\[
+\e^{-\frac{1}{2}\frac{(a_{ji}p_{j})^{2}}{\lambda_{i}^{2}}}\int_{\R^{n}}\e^{-\frac{1}{2}\left(\lambda_{i}v_{i}-\imi\frac{(a_{ji}p_{j})}{\lambda_{i}}\right)^{2}}\dd v=\e^{-\frac{1}{2}\frac{(a_{ji}p_{j})^{2}}{\lambda_{i}^{2}}}\prod_{i=1}^{n}\frac{(2\pi)^{1/2}}{\lambda_{i}}=\frac{(2\pi)^{n/2}}{(\det Q)^{1/2}}\e^{-\frac{1}{2}\frac{(a_{ji}p_{j})^{2}}{\lambda_{i}^{2}}},
+\]
+and we are done.
+\end{prf}
+
+
+The main properties of the Fourier transform are summarized by the following.
+
+
+\begin{nprop}
+\label{prop:four_properties}
+The Fourier transform $\Fourier\colon\schwarz\to\schwarz$ is an isomorphism of topological vector spaces. Moreover, for all $f,g\in\schwarz$ hold:
+\begin{compactenum}
+\item $\Diff^{\alpha}_{p}(\Fourier(f))=\Fourier((-x)^{\alpha}f)$ and $\Fourier(\Diff_{x}^{\alpha}(f))=p^{\alpha}\Fourier(f)$, where $\Diff_{x}^{\alpha}\coloneqq\frac{\partial^{\alpha}}{\imi^{\abs{\alpha}}}$.
+\item $\Fourier(f\ast g)=(2\pi)^{-n}\Fourier(f)\ast\Fourier(g)$, where $\ast$ is the standard convolution.
+\item $\pscl{\Fourier(f)}{g}=\pscl{f}{\Fourier(g)}$.
+\item the Fourier transform is an $L^{2}$-isometry.
+\end{compactenum}
+\end{nprop}
+
+
+\section{Distributions}
+
+
+Another tool linked to the Fourier transform is the notion of \emph{distribution}. In general, a \emph{distribution} on $\R^{n}$ is a linear functional $\vphi\colon C_{c}^{\infty}(\R^{n})\to\R$ such that $\vphi(f_{n})\to\vphi(f)$, if $f_{n}\to f$ with the respect to the previously introduced seminorm, in $C_{c}^{\infty}(\R^{n})$. The set of all distributions generalizes and forms a vector space dual to $C_{c}^{\infty}(\R^{n})$. Often, the distribution are improperly denoted by some functions, when they are actually applications.\\
+The vector space of tempered distributions $\schwarz'$ is defined by duality from the Schwartz space $\schwarz$. Introducing tempered distributions gives, among other things, the correct vector space for a rigorous formulation of the Fourier transforms of nonsmooth functions. 
+
+\begin{defin}
+\label{def:tempered_distrib}
+Let the space of tempered distributions $\schwarz'$ be the set of all continuos linear functionals $\vphi\colon\schwarz\ni f\mapsto\vphi(f)$. We say that $\vphi_{j}\rightharpoonup\vphi$ in $\schwarz'$ if there the convergence componentwise (i.e. for each function $f\in\schwarz$). Moreover, we define, for each multiindex $\alpha\in\N^{n}$:
+\begin{compactitem}
+\item $\Diff^{\alpha}\vphi(f)\coloneqq (-1)^{\abs{\alpha}}\vphi(\Diff^{\alpha}f)$.
+\item $(x^{\alpha}\vphi)(f)\coloneqq\vphi(x^{\alpha} f)$.
+\end{compactitem} 
+Finally, $\Fourier$ extends to $\schwarz'$ by setting $\Fourier(\vphi)(f)\coloneqq\vphi(\Fourier(f))$, $\forall\vphi\in\schwarz',f\in\schwarz$.
+\end{defin}
+
+\begin{nese}[Fourier transform of Dirac distribution]
+The Dirac distribution is defined by $\delta_{0}(f)=f(0)$. Viewed as a tempered distribution, its Fourier transform is 
+\[
+\Fourier(\delta_{0})(f)=\delta_{0}\Fourier(f)=Fourier(f)(0)=1.
+\]
+\end{nese}
+
+
+Using distributions, it is possible to prove the following result. We omit the proof, as it is a little involved.
+
+\begin{nprop}
+\label{prop:Fourier_imaginiary}
+Let be given a real, symmetric and invertible quadratic form $x^{\trsp}Qx$, where $Q$ is a $n\times n$-matrix. Then
+\[
+\Fourier\left(\e^{-\frac{1}{2}\imi x^{\trsp}Qx}\right)=\frac{(2\pi)^{n/2}\e^{\imi\frac{\pi}{4}\sgn Q}}{\abs{\det Q}^{1/2}}\e^{-\frac{1}{2}\imi\pscl{Q^{-1}p}{p}}.
+\]
+where $\sgn Q$ is the \emph{signature} of $Q$. 
+\end{nprop}
+
+
+
+
+
+
+
+
+
+
+
+
+
