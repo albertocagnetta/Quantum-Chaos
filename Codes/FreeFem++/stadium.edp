@@ -1,0 +1,77 @@
+
+
+/* real[int] colorhsv=[ // color hsv model : from blue (zero) to yellow (maximum)
+4./6., 1 , 0.5, // dark blue
+4./6., 1 , 1, // blue
+5./6., 1 , 1, // magenta
+1, 1. , 1, // red
+1, 0.5 , 1 // light red
+];  */
+
+
+
+
+
+
+int R = 1;//13.5;  // radius of stadium 
+int L = 2;//2*18;  // length of stadium
+
+int nev=30; // number of eigenvalues
+int meshSize = 6;
+//real D = 1;
+real sigma=3.5 ; // value of the shift
+
+
+
+
+
+int C=1;
+
+// create the border of the stadium (anticlockwise)
+
+
+border LU(t=-L/2, L/2){ x=-t; y=R; label=1*C;};         // lato up
+border LB(t=-L/2, L/2){ x=t; y=-R; label=2*C;};    // lato down
+border DL(t=pi/2, 3*pi/2){ x=R*cos(t)-L/2; y=R*sin(t); label=3*C;};     // disco left
+border DR(t=-pi/2, pi/2) { x=R*cos(t)+L/2; y=R*sin(t); label=4*C;};	// disco right
+//border C14(t=0, 1){ x=-0.5;    y=-3+6*t; label=B;}
+
+mesh Mesh = buildmesh(LU(meshSize*10) + LB(meshSize*10) + DL(meshSize*30) + DR(meshSize*30) );
+//mesh Mesh = buildmesh(DL(meshSize*30) + DR(meshSize*30) );
+plot(Mesh, wait=true);
+
+// create finite element space
+fespace Fh(Mesh, P2);
+Fh u, u2; // test functions on finite element space
+//SpaceP1 f = 1; // try 10*x
+
+
+
+varf op(u,u2)=int2d(Mesh)(dx(u)*dx(u2)+dy(u)*dy(u2)-sigma*(u*u2))+ on(C, u=0);
+varf b([u],[u2]) = int2d(Mesh)(u*u2);
+
+matrix OP = op(Fh,Fh, solver=Crout, factorize=1);
+matrix B = b(Fh,Fh, solver=CG, eps=1e-20);
+
+//Solve the problem
+real[int] ev(nev);
+Fh[int] eV(nev);
+mesh[int] grid(nev);
+
+int k = EigenValue(OP, B, sym=true, sigma=sigma, value=ev, vector=eV, tol=1e-15, maxit=0, ncv=0);
+
+// Adaptmesh loop
+/* for (int i = 0; i < 6; i++){
+    grid(= adaptmesh(Th, u, err=error);
+    error = error/2;
+    plot(u, wait=1);
+} */
+
+
+for (int i = 0; i < k; i++){
+   u = eV[i];
+   real gg = int2d(Mesh)(dx(u)*dx(u) + dy(u)*dy(u));
+   real mm = int2d(Mesh)(u*u) ;
+   cout << "lambda[" << i << "] = " << ev[i] << ", err= " << int2d(Mesh)(dx(u)*dx(u) + dy(u)*dy(u) - (ev[i])*u*u) << endl;
+   plot(u*u, cmm="Eigen Vector "+i+" value ="+ev[i], wait=true, value=true, fill=true, aspectratio=true, boundary=true); //, hsv=colorhsv);
+   }
