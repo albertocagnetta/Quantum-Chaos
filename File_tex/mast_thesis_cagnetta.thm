@@ -1,0 +1,152 @@
+\contentsline {defin}{{Definition}{1.1.{1}}{}}{3}{teo.1.1.1}%
+\contentsline {nteo}{{Theorem}{1.1.{2}}{Ergodicity, discrete case}}{4}{teo.1.1.2}%
+\contentsline {defin}{{Definition}{1.1.{3}}{Mixing}}{4}{teo.1.1.3}%
+\contentsline {defin}{{Definition}{1.1.{4}}{Ergodicity and mixing, continuos case}}{4}{teo.1.1.4}%
+\contentsline {nteo}{{Theorem}{1.1.{5}}{Birkhoff}}{4}{teo.1.1.5}%
+\contentsline {nteo}{{Theorem}{1.1.{6}}{}}{5}{teo.1.1.6}%
+\contentsline {defin}{{Definition}{1.2.{1}}{}}{8}{teo.1.2.1}%
+\contentsline {defin}{{Definition}{1.2.{2}}{}}{9}{teo.1.2.2}%
+\contentsline {defin}{{Definition}{1.2.{3}}{}}{9}{teo.1.2.3}%
+\contentsline {nteo}{{Theorem}{1.2.{4}}{Hopf}}{9}{teo.1.2.4}%
+\contentsline {nteo}{{Theorem}{1.2.{5}}{}}{10}{teo.1.2.5}%
+\contentsline {teo}{{Theorem}{1.2.{6}}{Lindenstrauss 2006, Soundarajan 2010}}{10}{teo.1.2.6}%
+\contentsline {defin}{{Definition}{1.3.{1}}{}}{10}{teo.1.3.1}%
+\contentsline {nlem}{{Lemma}{2.2.{1}}{}}{15}{teo.2.2.1}%
+\contentsline {prf}{{Proof}{1}{}}{15}{prf.1}%
+\contentsline {nteo}{{Theorem}{2.2.{2}}{}}{16}{teo.2.2.2}%
+\contentsline {nprop}{{Proposition}{2.2.{3}}{}}{16}{teo.2.2.3}%
+\contentsline {prf}{{Proof}{2}{}}{16}{prf.2}%
+\contentsline {nlem}{{Lemma}{2.2.{4}}{}}{16}{teo.2.2.4}%
+\contentsline {prf}{{Proof}{3}{}}{16}{prf.3}%
+\contentsline {nteo}{{Theorem}{2.2.{5}}{}}{20}{teo.2.2.5}%
+\contentsline {defin}{{Definition}{2.2.{6}}{Fuchsian group}}{20}{teo.2.2.6}%
+\contentsline {defin}{{Definition}{2.2.{7}}{Fundamental domain}}{21}{teo.2.2.7}%
+\contentsline {defin}{{Definition}{2.2.{8}}{Hyperbolic perpendicular bisector}}{21}{teo.2.2.8}%
+\contentsline {defin}{{Definition}{2.2.{9}}{}}{24}{teo.2.2.9}%
+\contentsline {nteo}{{Theorem}{2.2.{10}}{Siegel}}{24}{teo.2.2.10}%
+\contentsline {nteo}{{Theorem}{2.2.{11}}{}}{24}{teo.2.2.11}%
+\contentsline {defin}{{Definition}{2.3.{1}}{}}{24}{teo.2.3.1}%
+\contentsline {defin}{{Definition}{2.3.{2}}{}}{25}{teo.2.3.2}%
+\contentsline {nteo}{{Theorem}{2.3.{3}}{}}{26}{teo.2.3.3}%
+\contentsline {defin}{{Definition}{2.3.{4}}{}}{26}{teo.2.3.4}%
+\contentsline {defin}{{Definition}{2.3.{5}}{}}{26}{teo.2.3.5}%
+\contentsline {prf}{{Proof}{4}{}}{27}{prf.4}%
+\contentsline {defin}{{Definition}{3.1.{1}}{semiclassical Fourier transform}}{32}{teo.3.1.1}%
+\contentsline {nprop}{{Proposition}{3.1.{2}}{}}{33}{teo.3.1.2}%
+\contentsline {prf}{{Proof}{5}{}}{33}{prf.5}%
+\contentsline {nteo}{{Theorem}{3.1.{3}}{generalized uncertainty principle}}{33}{teo.3.1.3}%
+\contentsline {prf}{{Proof}{6}{}}{33}{prf.6}%
+\contentsline {defin}{{Definition}{3.1.{4}}{symbols and Weyl-quantization}}{33}{teo.3.1.4}%
+\contentsline {remark}{{Remark}{3.1.{1}}{\emph {Semiclassical pseudodifferential operator}}}{34}{remark.3.1.1}%
+\contentsline {nprop}{{Proposition}{3.1.{5}}{Properties of quantization}}{35}{teo.3.1.5}%
+\contentsline {prf}{{Proof}{7}{}}{35}{prf.7}%
+\contentsline {nprop}{{Proposition}{3.1.{6}}{}}{35}{teo.3.1.6}%
+\contentsline {prf}{{Proof}{8}{}}{36}{prf.8}%
+\contentsline {nprop}{{Proposition}{3.1.{7}}{conjugation}}{36}{teo.3.1.7}%
+\contentsline {prf}{{Proof}{9}{}}{36}{prf.9}%
+\contentsline {nlem}{{Lemma}{3.1.{8}}{}}{36}{teo.3.1.8}%
+\contentsline {prf}{{Proof}{10}{}}{36}{prf.10}%
+\contentsline {nlem}{{Lemma}{3.1.{9}}{Fourier decomposition of $\Op ^{W}(a)$}}{37}{teo.3.1.9}%
+\contentsline {prf}{{Proof}{11}{}}{37}{prf.11}%
+\contentsline {nteo}{{Theorem}{3.1.{10}}{quantization composition theorem}}{38}{teo.3.1.10}%
+\contentsline {prf}{{Proof}{12}{}}{38}{prf.12}%
+\contentsline {nprop}{{Proposition}{3.1.{11}}{integral representation for $\Wprd $}}{39}{teo.3.1.11}%
+\contentsline {prf}{{Proof}{13}{}}{39}{prf.13}%
+\contentsline {defin}{{Definition}{3.1.{12}}{order function}}{40}{teo.3.1.12}%
+\contentsline {defin}{{Definition}{3.1.{13}}{symbol class}}{40}{teo.3.1.13}%
+\contentsline {nteo}{{Theorem}{3.1.{14}}{}}{40}{teo.3.1.14}%
+\contentsline {nteo}{{Theorem}{3.1.{15}}{}}{40}{teo.3.1.15}%
+\contentsline {nteo}{{Theorem}{3.2.{1}}{Weyl's law for \HO }}{41}{teo.3.2.1}%
+\contentsline {prf}{{Proof}{14}{}}{41}{prf.14}%
+\contentsline {nteo}{{Theorem}{3.2.{2}}{}}{42}{teo.3.2.2}%
+\contentsline {defin}{{Definition}{3.2.{3}}{}}{42}{teo.3.2.3}%
+\contentsline {defin}{{Definition}{3.2.{4}}{}}{43}{teo.3.2.4}%
+\contentsline {defin}{{Definition}{3.2.{5}}{}}{43}{teo.3.2.5}%
+\contentsline {nteo}{{Theorem}{3.2.{6}}{Invariance of Kohn-Nirenberg symbols under diffeomorphism}}{43}{teo.3.2.6}%
+\contentsline {defin}{{Definition}{3.2.{7}}{$\PDO $ on $M$}}{43}{teo.3.2.7}%
+\contentsline {defin}{{Definition}{3.2.{8}}{symbols on $T^{\ast }M$}}{43}{teo.3.2.8}%
+\contentsline {nteo}{{Theorem}{3.2.{9}}{quantization on manifold}}{44}{teo.3.2.9}%
+\contentsline {nteo}{{Theorem}{3.2.{10}}{Properties of $\PDO $}}{44}{teo.3.2.10}%
+\contentsline {nteo}{{Theorem}{3.2.{11}}{}}{44}{teo.3.2.11}%
+\contentsline {nteo}{{Theorem}{3.2.{12}}{}}{44}{teo.3.2.12}%
+\contentsline {remark}{{Remark}{3.2.{1}}{}}{45}{remark.3.2.1}%
+\contentsline {prf}{{Proof}{15}{}}{45}{prf.15}%
+\contentsline {defin}{{Definition}{4.1.{1}}{density of a sequence in a set}}{47}{teo.4.1.1}%
+\contentsline {cor}{{Corollary}{4.1.{3}}{}}{48}{teo.4.1.3}%
+\contentsline {remark}{{Remark}{4.1.{1}}{}}{48}{remark.4.1.1}%
+\contentsline {defin}{{Definition}{4.1.{4}}{Uniform symbol}}{48}{teo.4.1.4}%
+\contentsline {nteo}{{Theorem}{4.1.{5}}{\QE , Zelditch and Zworski}}{49}{teo.4.1.5}%
+\contentsline {defin}{{Definition}{4.2.{1}}{}}{50}{teo.4.2.1}%
+\contentsline {defin}{{Definition}{4.2.{2}}{}}{50}{teo.4.2.2}%
+\contentsline {defin}{{Definition}{4.2.{3}}{Quantum limit}}{50}{teo.4.2.3}%
+\contentsline {defin}{{Definition}{4.2.{4}}{}}{51}{teo.4.2.4}%
+\contentsline {remark}{{Remark}{4.3.{1}}{}}{53}{remark.4.3.1}%
+\contentsline {nteo}{{Theorem}{5.1.{1}}{}}{57}{teo.5.1.1}%
+\contentsline {nlem}{{Lemma}{5.2.{1}}{}}{58}{teo.5.2.1}%
+\contentsline {prf}{{Proof}{16}{}}{58}{prf.16}%
+\contentsline {remark}{{Remark}{5.2.{1}}{}}{58}{remark.5.2.1}%
+\contentsline {nteo}{{Theorem}{5.2.{2}}{}}{58}{teo.5.2.2}%
+\contentsline {prf}{{Proof}{17}{}}{58}{prf.17}%
+\contentsline {nprop}{{Proposition}{5.2.{3}}{}}{58}{teo.5.2.3}%
+\contentsline {defin}{{Definition}{5.2.{4}}{}}{58}{teo.5.2.4}%
+\contentsline {nprop}{{Proposition}{5.2.{5}}{}}{59}{teo.5.2.5}%
+\contentsline {prf}{{Proof}{18}{}}{59}{prf.18}%
+\contentsline {nlem}{{Lemma}{5.2.{6}}{}}{60}{teo.5.2.6}%
+\contentsline {prf}{{Proof}{19}{}}{60}{prf.19}%
+\contentsline {nprop}{{Proposition}{5.2.{7}}{}}{60}{teo.5.2.7}%
+\contentsline {prf}{{Proof}{20}{}}{60}{prf.20}%
+\contentsline {nprop}{{Proposition}{5.2.{8}}{}}{61}{teo.5.2.8}%
+\contentsline {prf}{{Proof}{21}{}}{61}{prf.21}%
+\contentsline {defin}{{Definition}{5.3.{1}}{}}{61}{teo.5.3.1}%
+\contentsline {nlem}{{Lemma}{5.3.{2}}{}}{62}{teo.5.3.2}%
+\contentsline {prf}{{Proof}{22}{}}{62}{prf.22}%
+\contentsline {defin}{{Definition}{5.3.{3}}{}}{62}{teo.5.3.3}%
+\contentsline {nprop}{{Proposition}{5.3.{4}}{}}{62}{teo.5.3.4}%
+\contentsline {prf}{{Proof}{23}{}}{62}{prf.23}%
+\contentsline {nprop}{{Proposition}{5.3.{5}}{}}{63}{teo.5.3.5}%
+\contentsline {prf}{{Proof}{24}{}}{63}{prf.24}%
+\contentsline {nprop}{{Proposition}{5.4.{1}}{}}{63}{teo.5.4.1}%
+\contentsline {prf}{{Proof}{25}{}}{64}{prf.25}%
+\contentsline {remark}{{Remark}{5.4.{1}}{}}{65}{remark.5.4.1}%
+\contentsline {nlem}{{Lemma}{5.4.{2}}{}}{66}{teo.5.4.2}%
+\contentsline {prf}{{Proof}{26}{}}{66}{prf.26}%
+\contentsline {nteo}{{Theorem}{5.5.{1}}{Weyl law, hyperbolic case}}{67}{teo.5.5.1}%
+\contentsline {nlem}{{Lemma}{5.5.{2}}{Karamata}}{67}{teo.5.5.2}%
+\contentsline {prf}{{Proof}{27}{}}{68}{prf.27}%
+\contentsline {nlem}{{Lemma}{5.5.{3}}{tauberian lemma}}{68}{teo.5.5.3}%
+\contentsline {prf}{{Proof}{28}{}}{68}{prf.28}%
+\contentsline {prf}{{Proof}{29}{}}{68}{prf.29}%
+\contentsline {nteo}{{Theorem}{6.1.{2}}{Lindenstrauss' measure rigidity theorem}}{71}{teo.6.1.2}%
+\contentsline {defin}{{Definition}{6.1.{3}}{Lie algebra of $\SL _{2}\R $}}{72}{teo.6.1.3}%
+\contentsline {lem}{{Lemma}{6.1.{4}}{}}{72}{teo.6.1.4}%
+\contentsline {ncor}{{Corollary}{6.1.{6}}{}}{74}{teo.6.1.6}%
+\contentsline {defin}{{Definition}{6.2.{1}}{General $\PGL $ group}}{75}{teo.6.2.1}%
+\contentsline {nprop}{{Proposition}{6.2.{2}}{}}{75}{teo.6.2.2}%
+\contentsline {prf}{{Proof}{30}{}}{75}{prf.30}%
+\contentsline {nprop}{{Proposition}{6.2.{3}}{}}{76}{teo.6.2.3}%
+\contentsline {prf}{{Proof}{31}{}}{76}{prf.31}%
+\contentsline {nprop}{{Proposition}{6.2.{4}}{Cartan decomposition}}{76}{teo.6.2.4}%
+\contentsline {prf}{{Proof}{32}{}}{76}{prf.32}%
+\contentsline {nlem}{{Lemma}{6.2.{5}}{}}{77}{teo.6.2.5}%
+\contentsline {nprop}{{Proposition}{6.2.{6}}{}}{77}{teo.6.2.6}%
+\contentsline {prf}{{Proof}{33}{}}{78}{prf.33}%
+\contentsline {defin}{{Definition}{6.2.{7}}{Hecke recurrence}}{78}{teo.6.2.7}%
+\contentsline {nteo}{{Theorem}{6.2.{8}}{}}{78}{teo.6.2.8}%
+\contentsline {prf}{{Proof}{34}{}}{78}{prf.34}%
+\contentsline {remark}{{Remark}{7.2.{1}}{}}{85}{remark.7.2.1}%
+\contentsline {defin}{{Definition}{7.2.{3}}{Gaussian Random Matrix}}{86}{teo.7.2.3}%
+\contentsline {nlem}{{Lemma}{A.1.{1}}{}}{89}{teo.A.1.1}%
+\contentsline {prf}{{Proof}{35}{}}{89}{prf.35}%
+\contentsline {nlem}{{Lemma}{A.1.{2}}{Mautner phenomenon}}{89}{teo.A.1.2}%
+\contentsline {prf}{{Proof}{36}{}}{89}{prf.36}%
+\contentsline {nteo}{{Theorem}{A.1.{3}}{Howe-Moore}}{90}{teo.A.1.3}%
+\contentsline {prf}{{Proof}{37}{}}{90}{prf.37}%
+\contentsline {defin}{{Definition}{B.1.{1}}{}}{93}{teo.B.1.1}%
+\contentsline {defin}{{Definition}{B.1.{2}}{}}{93}{teo.B.1.2}%
+\contentsline {nlem}{{Lemma}{B.1.{3}}{}}{94}{teo.B.1.3}%
+\contentsline {prf}{{Proof}{38}{}}{94}{prf.38}%
+\contentsline {nprop}{{Proposition}{B.1.{4}}{}}{94}{teo.B.1.4}%
+\contentsline {defin}{{Definition}{B.2.{1}}{}}{95}{teo.B.2.1}%
+\contentsline {nprop}{{Proposition}{B.2.{2}}{}}{95}{teo.B.2.2}%
+\contentsline {nteo}{{Theorem}{C.1.{1}}{}}{97}{teo.C.1.1}%
+\contentsline {nteo}{{Theorem}{C.1.{2}}{Birkhof's theorem}}{97}{teo.C.1.2}%

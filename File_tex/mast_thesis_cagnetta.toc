@@ -1,0 +1,77 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Abstract}{iii}{section*.1}%
+\contentsline {chapter}{Acknowledgements}{v}{section*.3}%
+\contentsline {chapter}{List of Abbreviations}{xi}{chapter*.5}%
+\contentsline {chapter}{List of Symbols}{xiii}{chapter*.6}%
+\contentsline {chapter}{Overview}{1}{chapter*.7}%
+\contentsline {section}{Main Section 1}{1}{section*.8}%
+\contentsline {section}{\numberline {0.1}Materials}{1}{section.0.1}%
+\contentsline {chapter}{\numberline {1}Billiards and quantum chaos}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Examples}{5}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}From classical to quantum billiards}{8}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Unique ergodicity}{8}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Quantum regime}{8}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Some insights about \textsc {QUE}\,}{9}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}The classic-quantum correspondence}{10}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Hyperbolic geometry}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Iwasawa decomposition}{13}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Hyperbolic models: upper-half plane and disk}{13}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Hyperbolic plane}{13}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Hyperbolic isometries}{17}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Hyperbolic surfaces and fuchsian groups}{20}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Hyperbolic dynamics}{24}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Geodesic flow}{24}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Mixing flow on hyperbolic plane}{25}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Examples}{27}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Spectra of modular surfaces}{28}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Semiclassical analysis}{31}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Semiclassical Quantizazion}{31}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Semiclassical Fourier transform}{31}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}How to quantize}{33}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Semiclassical Pseudodifferential Operators}{36}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Symbol Classes}{39}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}Two main results: Weyl law and Egorov's Theorem}{40}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Weyl Law in Euclidian space}{41}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}$\PDO $ on Manifolds}{42}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Connection between classical and quantum dynamics: Egorov's Theorem}{44}{subsection.3.2.3}%
+\contentsline {chapter}{\numberline {4}Quantum ergodicity}{47}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Quantum ergodicity}{47}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Quantum unique ergodicity}{50}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Hassell disproof of \textsc {QUE}\,}{51}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Seldberg trace formula}{55}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Trace formula on $\mathbb {S}^{1}$}{55}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Laplacian operator}{57}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}A brief journey across harmonic analysis on the hyperbolic plane}{58}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}Periodic geodesics}{61}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Pretrace formula}{63}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Hyperbolic terms}{66}{subsection.5.4.1}%
+\contentsline {section}{\numberline {5.5}An application: Weyl's law}{67}{section.5.5}%
+\contentsline {section}{\numberline {5.6}The case of $\PSL _{2}\mathbb {Z}$}{69}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Arithmetic Quantum Unique Ergodicity}{71}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Lindenstrauss' result}{71}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Microlocal lift revised}{72}{subsection.6.1.1}%
+\contentsline {section}{\numberline {6.2}Hecke recurrence}{74}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}The $p$-adic extension of $\Gamma \setminus \PSL _{2}\mathbb {R}$}{74}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Hecke operators}{77}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Hecke invariance}{77}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Existence}{79}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Frontiers in \emph {Quantum chaology}}{81}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Numerical simulations}{81}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Numerical methods}{83}{subsection.7.1.1}%
+\contentsline {section}{\numberline {7.2}Spectral statistics and Random Matrix Theory}{84}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Conclusion}{87}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Billiard and spectral simulations}{87}{subsection.7.3.1}%
+\contentsline {chapter}{\numberline {A}Ergodic notions}{89}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Mixing}{89}{section.A.1}%
+\contentsline {chapter}{\numberline {B}Fourier transform}{93}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Basic notions}{93}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Distributions}{94}{section.B.2}%
+\contentsline {chapter}{\numberline {C}Flows and integrable systems}{97}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Ergodic notions}{97}{section.C.1}%
+\contentsline {section}{\numberline {C.2}Python codes}{99}{section.C.2}%
+\contentsline {subsection}{\numberline {C.2.1}Billiards}{99}{subsection.C.2.1}%
+\contentsline {subsection}{\numberline {C.2.2}Quantum eigenfunctions}{107}{subsection.C.2.2}%
+\contentsline {section}{\numberline {C.3}FreeFem++}{107}{section.C.3}%
+\contentsline {chapter}{List of Figures}{109}{appendix*.33}%
+\contentsline {chapter}{Bibliography}{111}{appendix*.34}%

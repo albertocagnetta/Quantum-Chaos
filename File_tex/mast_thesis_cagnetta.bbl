@@ -1,0 +1,2165 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{Antar:scars}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5b534f720b601f36ee9e784ae0d64f55}{%
+           family={Anantharaman},
+           familyi={A\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b534f720b601f36ee9e784ae0d64f55}
+      \strng{fullhash}{5b534f720b601f36ee9e784ae0d64f55}
+      \strng{bibnamehash}{5b534f720b601f36ee9e784ae0d64f55}
+      \strng{authorbibnamehash}{5b534f720b601f36ee9e784ae0d64f55}
+      \strng{authornamehash}{5b534f720b601f36ee9e784ae0d64f55}
+      \strng{authorfullhash}{5b534f720b601f36ee9e784ae0d64f55}
+      \field{labelalpha}{Ana09}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{News. Euro. Math. Soc.}
+      \field{title}{Chaotic vibrations and strong scars}
+      \field{volume}{74}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{19\bibrangedash 24}
+      \range{pages}{6}
+    \endentry
+    \entry{Arnold:book}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ff4159d339a8205fcaf83c1c04fc4275}{%
+           family={Arnold},
+           familyi={A\bibinitperiod},
+           given={V.I.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{ff4159d339a8205fcaf83c1c04fc4275}
+      \strng{fullhash}{ff4159d339a8205fcaf83c1c04fc4275}
+      \strng{bibnamehash}{ff4159d339a8205fcaf83c1c04fc4275}
+      \strng{authorbibnamehash}{ff4159d339a8205fcaf83c1c04fc4275}
+      \strng{authornamehash}{ff4159d339a8205fcaf83c1c04fc4275}
+      \strng{authorfullhash}{ff4159d339a8205fcaf83c1c04fc4275}
+      \field{labelalpha}{Arn78}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mathematical Methods of Classical Mechanics}
+      \field{year}{1978}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{Barnett:asym_rate}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a83919b5f447314c430b72d29834b5ec}{%
+           family={Barnett},
+           familyi={B\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a83919b5f447314c430b72d29834b5ec}
+      \strng{fullhash}{a83919b5f447314c430b72d29834b5ec}
+      \strng{bibnamehash}{a83919b5f447314c430b72d29834b5ec}
+      \strng{authorbibnamehash}{a83919b5f447314c430b72d29834b5ec}
+      \strng{authornamehash}{a83919b5f447314c430b72d29834b5ec}
+      \strng{authorfullhash}{a83919b5f447314c430b72d29834b5ec}
+      \field{labelalpha}{Bar06}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comm. Pure Appl. Math}
+      \field{title}{Asymptotic rate of quantum ergodicity in chaotic Euclidean billiards}
+      \field{volume}{59}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{pages}{1457\bibrangedash 1488}
+      \range{pages}{32}
+    \endentry
+    \entry{Berry:chaol}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c39b5bef0dadef3d5a4f70afa0a11abe}{%
+           family={Berry},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c39b5bef0dadef3d5a4f70afa0a11abe}
+      \strng{fullhash}{c39b5bef0dadef3d5a4f70afa0a11abe}
+      \strng{bibnamehash}{c39b5bef0dadef3d5a4f70afa0a11abe}
+      \strng{authorbibnamehash}{c39b5bef0dadef3d5a4f70afa0a11abe}
+      \strng{authornamehash}{c39b5bef0dadef3d5a4f70afa0a11abe}
+      \strng{authorfullhash}{c39b5bef0dadef3d5a4f70afa0a11abe}
+      \field{extraname}{1}
+      \field{labelalpha}{Ber03}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quantum chaology}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb http://www.phy.bris.ac.uk/people/berry_mv/the_papers/berry358.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.phy.bris.ac.uk/people/berry_mv/the_papers/berry358.pdf
+      \endverb
+    \endentry
+    \entry{bergeron:spectrum}{book}{}
+      \name{author}{1}{}{%
+        {{hash=882ba8376a94cf802c75379f6cdd7ab3}{%
+           family={Bergeron},
+           familyi={B\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{882ba8376a94cf802c75379f6cdd7ab3}
+      \strng{fullhash}{882ba8376a94cf802c75379f6cdd7ab3}
+      \strng{bibnamehash}{882ba8376a94cf802c75379f6cdd7ab3}
+      \strng{authorbibnamehash}{882ba8376a94cf802c75379f6cdd7ab3}
+      \strng{authornamehash}{882ba8376a94cf802c75379f6cdd7ab3}
+      \strng{authorfullhash}{882ba8376a94cf802c75379f6cdd7ab3}
+      \field{labelalpha}{Ber16}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783319276649}
+      \field{series}{Universitext}
+      \field{title}{The Spectrum of Hyperbolic Surfaces}
+      \field{year}{2016}
+    \endentry
+    \entry{Berry:conj}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c39b5bef0dadef3d5a4f70afa0a11abe}{%
+           family={Berry},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c39b5bef0dadef3d5a4f70afa0a11abe}
+      \strng{fullhash}{c39b5bef0dadef3d5a4f70afa0a11abe}
+      \strng{bibnamehash}{c39b5bef0dadef3d5a4f70afa0a11abe}
+      \strng{authorbibnamehash}{c39b5bef0dadef3d5a4f70afa0a11abe}
+      \strng{authornamehash}{c39b5bef0dadef3d5a4f70afa0a11abe}
+      \strng{authorfullhash}{c39b5bef0dadef3d5a4f70afa0a11abe}
+      \field{extraname}{2}
+      \field{labelalpha}{Ber89}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proc. Roy. Soc. London}
+      \field{title}{Quantum scars of classical closed orbits in phase space}
+      \field{volume}{423}
+      \field{year}{1989}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{219\bibrangedash 231}
+      \range{pages}{13}
+    \endentry
+    \entry{bogomolnyaltri:article}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4f56af2d04df14de60e52b74a5aff856}{%
+           family={Bogomolny},
+           familyi={B\bibinitperiod},
+           given={E.\bibnamedelimi B.},
+           giveni={E\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ab60ddd3a7acb7780524c9411853c2c4}{%
+           family={Georgeot},
+           familyi={G\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=5c663b9e37364bb8b7859380d5b7b8b6}{%
+           family={Giannoni},
+           familyi={G\bibinitperiod},
+           given={M.-J.},
+           giveni={M\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=3992a2ec813e649d38b4c253d7fdb02e}{%
+           family={Schimt},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{5a1e5ad2204f43fa03522f79a075df71}
+      \strng{fullhash}{0118d90ca09e01a742555718cb007606}
+      \strng{bibnamehash}{5a1e5ad2204f43fa03522f79a075df71}
+      \strng{authorbibnamehash}{5a1e5ad2204f43fa03522f79a075df71}
+      \strng{authornamehash}{5a1e5ad2204f43fa03522f79a075df71}
+      \strng{authorfullhash}{0118d90ca09e01a742555718cb007606}
+      \field{labelalpha}{Bog+97}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Rep.}
+      \field{title}{Arithmetical Chaos}
+      \field{volume}{291}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{pages}{219\bibrangedash 324}
+      \range{pages}{106}
+    \endentry
+    \entry{bogomolny:article}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=4f56af2d04df14de60e52b74a5aff856}{%
+           family={Bogomolny},
+           familyi={B\bibinitperiod},
+           given={E.\bibnamedelimi B.},
+           giveni={E\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Université de Paris XI}%
+      }
+      \strng{namehash}{4f56af2d04df14de60e52b74a5aff856}
+      \strng{fullhash}{4f56af2d04df14de60e52b74a5aff856}
+      \strng{bibnamehash}{4f56af2d04df14de60e52b74a5aff856}
+      \strng{authorbibnamehash}{4f56af2d04df14de60e52b74a5aff856}
+      \strng{authornamehash}{4f56af2d04df14de60e52b74a5aff856}
+      \strng{authorfullhash}{4f56af2d04df14de60e52b74a5aff856}
+      \field{labelalpha}{Bog03}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quantum and Arithmetical Chaos}
+      \field{year}{2003}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Bun:stad}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a2fea8afbf174ae517cf7765538392cf}{%
+           family={Bunimovich},
+           familyi={B\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{a2fea8afbf174ae517cf7765538392cf}
+      \strng{fullhash}{a2fea8afbf174ae517cf7765538392cf}
+      \strng{bibnamehash}{a2fea8afbf174ae517cf7765538392cf}
+      \strng{authorbibnamehash}{a2fea8afbf174ae517cf7765538392cf}
+      \strng{authornamehash}{a2fea8afbf174ae517cf7765538392cf}
+      \strng{authorfullhash}{a2fea8afbf174ae517cf7765538392cf}
+      \field{labelalpha}{Bun79}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comm. Math. Phys.}
+      \field{title}{On the ergodic properties of nowhere dispersing billiards}
+      \field{volume}{65}
+      \field{year}{1979}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{292\bibrangedash 312}
+      \range{pages}{21}
+    \endentry
+    \entry{cagnetta:tesi}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=a3df905925491f91c070ed5036d4c9ba}{%
+           family={Cagnetta},
+           familyi={C\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Udine University}%
+      }
+      \strng{namehash}{a3df905925491f91c070ed5036d4c9ba}
+      \strng{fullhash}{a3df905925491f91c070ed5036d4c9ba}
+      \strng{bibnamehash}{a3df905925491f91c070ed5036d4c9ba}
+      \strng{authorbibnamehash}{a3df905925491f91c070ed5036d4c9ba}
+      \strng{authornamehash}{a3df905925491f91c070ed5036d4c9ba}
+      \strng{authorfullhash}{a3df905925491f91c070ed5036d4c9ba}
+      \field{labelalpha}{Cag20}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Approcci Tauberiani al Teorema dei Numeri Primi}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{Cart:comput}{article}{}
+      \name{author}{1}{}{%
+        {{hash=14bb32a3832b7c4586e698cd97afad34}{%
+           family={Cartier},
+           familyi={C\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{14bb32a3832b7c4586e698cd97afad34}
+      \strng{fullhash}{14bb32a3832b7c4586e698cd97afad34}
+      \strng{bibnamehash}{14bb32a3832b7c4586e698cd97afad34}
+      \strng{authorbibnamehash}{14bb32a3832b7c4586e698cd97afad34}
+      \strng{authornamehash}{14bb32a3832b7c4586e698cd97afad34}
+      \strng{authorfullhash}{14bb32a3832b7c4586e698cd97afad34}
+      \field{labelalpha}{Car71}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Academic Press}
+      \field{title}{Computers in Number Theory}
+      \field{year}{1971}
+      \field{dateera}{ce}
+      \field{pages}{37\bibrangedash 48}
+      \range{pages}{12}
+    \endentry
+    \entry{verdiere:article}{article}{}
+      \name{author}{1}{}{%
+        {{hash=457831b084d0aab10d67de182d7ed396}{%
+           family={Colin\bibnamedelimb de\bibnamedelima Verdière},
+           familyi={C\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{457831b084d0aab10d67de182d7ed396}
+      \strng{fullhash}{457831b084d0aab10d67de182d7ed396}
+      \strng{bibnamehash}{457831b084d0aab10d67de182d7ed396}
+      \strng{authorbibnamehash}{457831b084d0aab10d67de182d7ed396}
+      \strng{authornamehash}{457831b084d0aab10d67de182d7ed396}
+      \strng{authorfullhash}{457831b084d0aab10d67de182d7ed396}
+      \field{extraname}{1}
+      \field{labelalpha}{Col85}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comm. Math. Phys.}
+      \field{title}{Ergodicité et fonctions propres du Laplacien}
+      \field{volume}{102}
+      \field{year}{1985}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{497\bibrangedash 502}
+      \range{pages}{6}
+    \endentry
+    \entry{Verdiere:erg_laplac}{article}{}
+      \name{author}{1}{}{%
+        {{hash=457831b084d0aab10d67de182d7ed396}{%
+           family={Colin\bibnamedelimb de\bibnamedelima Verdière},
+           familyi={C\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{457831b084d0aab10d67de182d7ed396}
+      \strng{fullhash}{457831b084d0aab10d67de182d7ed396}
+      \strng{bibnamehash}{457831b084d0aab10d67de182d7ed396}
+      \strng{authorbibnamehash}{457831b084d0aab10d67de182d7ed396}
+      \strng{authornamehash}{457831b084d0aab10d67de182d7ed396}
+      \strng{authorfullhash}{457831b084d0aab10d67de182d7ed396}
+      \field{extraname}{2}
+      \field{labelalpha}{Col85}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comm. Math. Phys.}
+      \field{title}{Ergodiciti et fonctions propres du laplacien}
+      \field{volume}{102}
+      \field{year}{1985}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{497\bibrangedash 502}
+      \range{pages}{6}
+    \endentry
+    \entry{Cook:phdThesis}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=e999b5a29d50ffde7d295cb24b26fd25}{%
+           family={Cook},
+           familyi={C\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Loughborough University}%
+      }
+      \strng{namehash}{e999b5a29d50ffde7d295cb24b26fd25}
+      \strng{fullhash}{e999b5a29d50ffde7d295cb24b26fd25}
+      \strng{bibnamehash}{e999b5a29d50ffde7d295cb24b26fd25}
+      \strng{authorbibnamehash}{e999b5a29d50ffde7d295cb24b26fd25}
+      \strng{authornamehash}{e999b5a29d50ffde7d295cb24b26fd25}
+      \strng{authorfullhash}{e999b5a29d50ffde7d295cb24b26fd25}
+      \field{labelalpha}{Coo18}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{02}
+      \field{title}{Properties of Eigenvalues on Riemann Surfaces with Large Symmetry Groups}
+      \field{type}{PhD thesis in Mathematics}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://core.ac.uk/download/288357815.pdf
+      \endverb
+      \verb{url}
+      \verb https://core.ac.uk/download/288357815.pdf
+      \endverb
+    \endentry
+    \entry{DS:book}{book}{}
+      \name{author}{2}{}{%
+        {{hash=68cc070318aaf06e2c21a8e18896ecb1}{%
+           family={Dimassi},
+           familyi={D\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e8b696d16d9d1b3465f99f6af86a41ee}{%
+           family={Sjöstrand},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge UP}%
+      }
+      \strng{namehash}{c8a19ef855581da15804db13ffca5b35}
+      \strng{fullhash}{c8a19ef855581da15804db13ffca5b35}
+      \strng{bibnamehash}{c8a19ef855581da15804db13ffca5b35}
+      \strng{authorbibnamehash}{c8a19ef855581da15804db13ffca5b35}
+      \strng{authornamehash}{c8a19ef855581da15804db13ffca5b35}
+      \strng{authorfullhash}{c8a19ef855581da15804db13ffca5b35}
+      \field{labelalpha}{DS99}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Lecture Note Series}
+      \field{title}{Spectral Asymptotics in the Semi-Classical Limit}
+      \field{volume}{268}
+      \field{year}{1999}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{DU:notes}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=76fff9e2193f2667e90a3dbcfea16b6f}{%
+           family={Du.},
+           familyi={D\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Chicago}%
+      }
+      \strng{namehash}{76fff9e2193f2667e90a3dbcfea16b6f}
+      \strng{fullhash}{76fff9e2193f2667e90a3dbcfea16b6f}
+      \strng{bibnamehash}{76fff9e2193f2667e90a3dbcfea16b6f}
+      \strng{authorbibnamehash}{76fff9e2193f2667e90a3dbcfea16b6f}
+      \strng{authornamehash}{76fff9e2193f2667e90a3dbcfea16b6f}
+      \strng{authorfullhash}{76fff9e2193f2667e90a3dbcfea16b6f}
+      \field{labelalpha}{Du09}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fourier analysis and the uncertainty principle}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://www.math.uchicago.edu/~may/VIGRE/VIGRE2009/ REUPapers/Du.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.math.uchicago.edu/~may/VIGRE/VIGRE2009/%20REUPapers/Du.pdf
+      \endverb
+    \endentry
+    \entry{Semy:lec_qe}{online}{}
+      \name{author}{1}{}{%
+        {{hash=77e39af727b21a306a8fa9ad11b94d77}{%
+           family={Dyatlov},
+           familyi={D\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{fullhash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{bibnamehash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{authorbibnamehash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{authornamehash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{authorfullhash}{77e39af727b21a306a8fa9ad11b94d77}
+      \field{extraname}{1}
+      \field{labelalpha}{Dya16}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lecture notes on quantum ergodicity}
+      \field{year}{2016}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://math.mit.edu/~dyatlov/files/2016/qenotes.pdf
+      \endverb
+      \verb{url}
+      \verb https://math.mit.edu/~dyatlov/files/2016/qenotes.pdf
+      \endverb
+    \endentry
+    \entry{Semy:lec_semi}{online}{}
+      \name{author}{1}{}{%
+        {{hash=77e39af727b21a306a8fa9ad11b94d77}{%
+           family={Dyatlov},
+           familyi={D\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{fullhash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{bibnamehash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{authorbibnamehash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{authornamehash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{authorfullhash}{77e39af727b21a306a8fa9ad11b94d77}
+      \field{extraname}{2}
+      \field{labelalpha}{Dya19}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lecture notes on semiclassical analysis}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://math.mit.edu/~dyatlov/semisnap/
+      \endverb
+      \verb{url}
+      \verb https://math.mit.edu/~dyatlov/semisnap/
+      \endverb
+    \endentry
+    \entry{Semyov:around_new}{article}{}
+      \name{author}{1}{}{%
+        {{hash=77e39af727b21a306a8fa9ad11b94d77}{%
+           family={Dyatlov},
+           familyi={D\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{fullhash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{bibnamehash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{authorbibnamehash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{authornamehash}{77e39af727b21a306a8fa9ad11b94d77}
+      \strng{authorfullhash}{77e39af727b21a306a8fa9ad11b94d77}
+      \field{extraname}{3}
+      \field{labelalpha}{Dya22}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ann. Math. du Québec}
+      \field{title}{Around quantum ergodicity}
+      \field{volume}{46}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{11\bibrangedash 26}
+      \range{pages}{16}
+    \endentry
+    \entry{Eastman:review}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=ee0620ce6a3b283b7baa79cedd4884b8}{%
+           family={Eastman},
+           familyi={E\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Chicago University}%
+      }
+      \strng{namehash}{ee0620ce6a3b283b7baa79cedd4884b8}
+      \strng{fullhash}{ee0620ce6a3b283b7baa79cedd4884b8}
+      \strng{bibnamehash}{ee0620ce6a3b283b7baa79cedd4884b8}
+      \strng{authorbibnamehash}{ee0620ce6a3b283b7baa79cedd4884b8}
+      \strng{authornamehash}{ee0620ce6a3b283b7baa79cedd4884b8}
+      \strng{authorfullhash}{ee0620ce6a3b283b7baa79cedd4884b8}
+      \field{labelalpha}{Eas20}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Lecture notes}
+      \field{title}{Quantum Ergodicity on Hyperbolic Surfaces}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://perso.u-cergy.fr/~elemasson/qchyp.pdf
+      \endverb
+      \verb{url}
+      \verb https://perso.u-cergy.fr/~elemasson/qchyp.pdf
+      \endverb
+    \endentry
+    \entry{Egorov:article}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3620c6eab947521dbfcc8dc2f322fda3}{%
+           family={Egorov},
+           familyi={E\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{3620c6eab947521dbfcc8dc2f322fda3}
+      \strng{fullhash}{3620c6eab947521dbfcc8dc2f322fda3}
+      \strng{bibnamehash}{3620c6eab947521dbfcc8dc2f322fda3}
+      \strng{authorbibnamehash}{3620c6eab947521dbfcc8dc2f322fda3}
+      \strng{authornamehash}{3620c6eab947521dbfcc8dc2f322fda3}
+      \strng{authorfullhash}{3620c6eab947521dbfcc8dc2f322fda3}
+      \field{labelalpha}{Ego69}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Uspehi. Mat. Nauk.}
+      \field{number}{5}
+      \field{title}{The canonical transformations of pseudodifferential operators}
+      \field{volume}{24}
+      \field{year}{1969}
+      \field{dateera}{ce}
+      \field{pages}{235\bibrangedash 236}
+      \range{pages}{2}
+    \endentry
+    \entry{Evans:book}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4c42306339190696dac41c40f9210da1}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {AMS}%
+      }
+      \strng{namehash}{4c42306339190696dac41c40f9210da1}
+      \strng{fullhash}{4c42306339190696dac41c40f9210da1}
+      \strng{bibnamehash}{4c42306339190696dac41c40f9210da1}
+      \strng{authorbibnamehash}{4c42306339190696dac41c40f9210da1}
+      \strng{authornamehash}{4c42306339190696dac41c40f9210da1}
+      \strng{authorfullhash}{4c42306339190696dac41c40f9210da1}
+      \field{labelalpha}{Eva10}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{series}{Graduate Studies in Mathematics}
+      \field{title}{Partial Differential Equations}
+      \field{year}{2010}
+      \field{dateera}{ce}
+    \endentry
+    \entry{EinTW:AQUE}{unpublished}{}
+      \name{author}{2}{}{%
+        {{hash=c225e175a2d0358d0016407525837061}{%
+           family={Einsidler},
+           familyi={E\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8f9f4b912cfd246176efd744bd22ffa8}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {The Southwest Center for Arithmetic Geometry}%
+      }
+      \strng{namehash}{f142b7f49febcabcea4f0e8bf0ae22f8}
+      \strng{fullhash}{f142b7f49febcabcea4f0e8bf0ae22f8}
+      \strng{bibnamehash}{f142b7f49febcabcea4f0e8bf0ae22f8}
+      \strng{authorbibnamehash}{f142b7f49febcabcea4f0e8bf0ae22f8}
+      \strng{authornamehash}{f142b7f49febcabcea4f0e8bf0ae22f8}
+      \strng{authorfullhash}{f142b7f49febcabcea4f0e8bf0ae22f8}
+      \field{labelalpha}{EW10}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Lecture notes for Arizona Winter School 2010}
+      \field{title}{Arithmetic Quantum Unique Ergodicity for $\Gamma\setminus\mathbb{H}$}
+      \field{year}{2010}
+      \field{dateera}{ce}
+    \endentry
+    \entry{geninska:2006geometric}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2a56857b39daa90fdfebd136ab8bc856}{%
+           family={Geninska},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b086116cacdecb0481bba19447fb0d6e}{%
+           family={Leuzinger},
+           familyi={L\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{11f830949d7eb5e0f21515e08a5f9322}
+      \strng{fullhash}{11f830949d7eb5e0f21515e08a5f9322}
+      \strng{bibnamehash}{11f830949d7eb5e0f21515e08a5f9322}
+      \strng{authorbibnamehash}{11f830949d7eb5e0f21515e08a5f9322}
+      \strng{authornamehash}{11f830949d7eb5e0f21515e08a5f9322}
+      \strng{authorfullhash}{11f830949d7eb5e0f21515e08a5f9322}
+      \field{labelalpha}{GL08}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Duke Math. J.}
+      \field{title}{A geometric characterization of arithmetic Fuchsian groups}
+      \field{volume}{142}
+      \field{year}{2008}
+      \true{nocite}
+      \field{pages}{111\bibrangedash 125}
+      \range{pages}{15}
+    \endentry
+    \entry{Gutz:book}{book}{}
+      \name{author}{1}{}{%
+        {{hash=aede0eee5334f1f6c1c5daf850d74ed5}{%
+           family={Gutzwiller},
+           familyi={G\bibinitperiod},
+           given={M.C.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{aede0eee5334f1f6c1c5daf850d74ed5}
+      \strng{fullhash}{aede0eee5334f1f6c1c5daf850d74ed5}
+      \strng{bibnamehash}{aede0eee5334f1f6c1c5daf850d74ed5}
+      \strng{authorbibnamehash}{aede0eee5334f1f6c1c5daf850d74ed5}
+      \strng{authornamehash}{aede0eee5334f1f6c1c5daf850d74ed5}
+      \strng{authorfullhash}{aede0eee5334f1f6c1c5daf850d74ed5}
+      \field{labelalpha}{Gut90}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Interd. App. Math.}
+      \field{title}{Chaos in Classical and Quantum Mechanics}
+      \field{volume}{1}
+      \field{year}{1990}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Hass:billiards_not}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9aa55a298a20569906c9ca626d845ee0}{%
+           family={Hassell},
+           familyi={H\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{fullhash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{bibnamehash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{authorbibnamehash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{authornamehash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{authorfullhash}{9aa55a298a20569906c9ca626d845ee0}
+      \field{extraname}{1}
+      \field{labelalpha}{Has10}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ann. Math.}
+      \field{number}{1}
+      \field{title}{On the ergodic properties of nowhere dispersing billiards}
+      \field{volume}{171}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{pages}{605\bibrangedash 618}
+      \range{pages}{14}
+    \endentry
+    \entry{hassell:article}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9aa55a298a20569906c9ca626d845ee0}{%
+           family={Hassell},
+           familyi={H\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{fullhash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{bibnamehash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{authorbibnamehash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{authornamehash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{authorfullhash}{9aa55a298a20569906c9ca626d845ee0}
+      \field{extraname}{2}
+      \field{labelalpha}{Has10}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Technincal Papers}
+      \field{title}{What is quantum unique ergodicity?}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{Hass:what}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9aa55a298a20569906c9ca626d845ee0}{%
+           family={Hassell},
+           familyi={H\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{fullhash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{bibnamehash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{authorbibnamehash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{authornamehash}{9aa55a298a20569906c9ca626d845ee0}
+      \strng{authorfullhash}{9aa55a298a20569906c9ca626d845ee0}
+      \field{extraname}{3}
+      \field{labelalpha}{Has11}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Aus. Math. Soc. Gazette}
+      \field{title}{What is quantum unique ergodicity?}
+      \field{volume}{35}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{158\bibrangedash 167}
+      \range{pages}{10}
+    \endentry
+    \entry{Hejhal:seld_trace}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c3269bdff39d2b09474be45bb5edb514}{%
+           family={Hejhal},
+           familyi={H\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3269bdff39d2b09474be45bb5edb514}
+      \strng{fullhash}{c3269bdff39d2b09474be45bb5edb514}
+      \strng{bibnamehash}{c3269bdff39d2b09474be45bb5edb514}
+      \strng{authorbibnamehash}{c3269bdff39d2b09474be45bb5edb514}
+      \strng{authornamehash}{c3269bdff39d2b09474be45bb5edb514}
+      \strng{authorfullhash}{c3269bdff39d2b09474be45bb5edb514}
+      \field{extraname}{1}
+      \field{labelalpha}{Hej80}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Springer-Verlag}
+      \field{title}{The Selberg trace formula for $\PSL_{2}\Z$}
+      \field{volume}{1001}
+      \field{year}{1980}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Hejhal:triang}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c3269bdff39d2b09474be45bb5edb514}{%
+           family={Hejhal},
+           familyi={H\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3269bdff39d2b09474be45bb5edb514}
+      \strng{fullhash}{c3269bdff39d2b09474be45bb5edb514}
+      \strng{bibnamehash}{c3269bdff39d2b09474be45bb5edb514}
+      \strng{authorbibnamehash}{c3269bdff39d2b09474be45bb5edb514}
+      \strng{authornamehash}{c3269bdff39d2b09474be45bb5edb514}
+      \strng{authorfullhash}{c3269bdff39d2b09474be45bb5edb514}
+      \field{extraname}{2}
+      \field{labelalpha}{Hej99}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Emerging Applications of Number Theory}
+      \field{title}{On eigenfunctions of the Laplacian for Hecke triangle groups}
+      \field{volume}{109}
+      \field{year}{1999}
+      \field{dateera}{ce}
+      \field{pages}{291\bibrangedash 305}
+      \range{pages}{15}
+    \endentry
+    \entry{Horm:book1}{book}{}
+      \name{author}{1}{}{%
+        {{hash=575ca75bac304d318bbafb92649e08a2}{%
+           family={Hörmander},
+           familyi={H\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{fullhash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{bibnamehash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{authorbibnamehash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{authornamehash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{authorfullhash}{575ca75bac304d318bbafb92649e08a2}
+      \field{extraname}{1}
+      \field{labelalpha}{Hör83}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{A Series of Comprehensive Studies in Mathematics}
+      \field{title}{The Analysis of Linear Partial Differential Operators I: Distribution Theory and Fourier Analysis}
+      \field{volume}{257}
+      \field{year}{1983}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Horm:book2}{book}{}
+      \name{author}{1}{}{%
+        {{hash=575ca75bac304d318bbafb92649e08a2}{%
+           family={Hörmander},
+           familyi={H\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{fullhash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{bibnamehash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{authorbibnamehash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{authornamehash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{authorfullhash}{575ca75bac304d318bbafb92649e08a2}
+      \field{extraname}{2}
+      \field{labelalpha}{Hör83}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{A Series of Comprehensive Studies in Mathematics}
+      \field{title}{The Analysis of Linear Partial Differential Operators II: Differential Operators with Constant Coeffcients}
+      \field{volume}{257}
+      \field{year}{1983}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{Horm:book3}{book}{}
+      \name{author}{1}{}{%
+        {{hash=575ca75bac304d318bbafb92649e08a2}{%
+           family={Hörmander},
+           familyi={H\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{fullhash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{bibnamehash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{authorbibnamehash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{authornamehash}{575ca75bac304d318bbafb92649e08a2}
+      \strng{authorfullhash}{575ca75bac304d318bbafb92649e08a2}
+      \field{extraname}{3}
+      \field{labelalpha}{Hör83}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extraalpha}{3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{A Series of Comprehensive Studies in Mathematics}
+      \field{title}{The Analysis of Linear Partial Differential Operators III: Pseudo-Differential Operators}
+      \field{volume}{257}
+      \field{year}{1983}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Katok:groups}{book}{}
+      \name{author}{1}{}{%
+        {{hash=65f28b98f2a6cb6b7b93624938562d41}{%
+           family={Katok},
+           familyi={K\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Chicago Univ. Press}%
+      }
+      \strng{namehash}{65f28b98f2a6cb6b7b93624938562d41}
+      \strng{fullhash}{65f28b98f2a6cb6b7b93624938562d41}
+      \strng{bibnamehash}{65f28b98f2a6cb6b7b93624938562d41}
+      \strng{authorbibnamehash}{65f28b98f2a6cb6b7b93624938562d41}
+      \strng{authornamehash}{65f28b98f2a6cb6b7b93624938562d41}
+      \strng{authorfullhash}{65f28b98f2a6cb6b7b93624938562d41}
+      \field{labelalpha}{Kat92}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Chicago Lec. in Math.}
+      \field{title}{Fuchsian groups}
+      \field{year}{1992}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Klén:Riku}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a01a54ceb9135d767ef375cb1f0f3428}{%
+           family={Klén},
+           familyi={K\bibinitperiod},
+           given={Riku},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a01a54ceb9135d767ef375cb1f0f3428}
+      \strng{fullhash}{a01a54ceb9135d767ef375cb1f0f3428}
+      \strng{bibnamehash}{a01a54ceb9135d767ef375cb1f0f3428}
+      \strng{authorbibnamehash}{a01a54ceb9135d767ef375cb1f0f3428}
+      \strng{authornamehash}{a01a54ceb9135d767ef375cb1f0f3428}
+      \strng{authorfullhash}{a01a54ceb9135d767ef375cb1f0f3428}
+      \field{labelalpha}{Klé17}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annales Mathematicae et Informaticae}
+      \field{title}{Hyperbolic distance between hyperbolic lines}
+      \field{volume}{47}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{129\bibrangedash 139}
+      \range{pages}{11}
+    \endentry
+    \entry{Kogler:thesis}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=dc64e7b22ab71e1383a702ebbbbafdf1}{%
+           family={Kogler},
+           familyi={K\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {ETH Zürich}%
+      }
+      \strng{namehash}{dc64e7b22ab71e1383a702ebbbbafdf1}
+      \strng{fullhash}{dc64e7b22ab71e1383a702ebbbbafdf1}
+      \strng{bibnamehash}{dc64e7b22ab71e1383a702ebbbbafdf1}
+      \strng{authorbibnamehash}{dc64e7b22ab71e1383a702ebbbbafdf1}
+      \strng{authornamehash}{dc64e7b22ab71e1383a702ebbbbafdf1}
+      \strng{authorfullhash}{dc64e7b22ab71e1383a702ebbbbafdf1}
+      \field{labelalpha}{Kog18}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Closed Geodesics on Compact Hyperbolic Surfaces}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{Korevaar:TauberianBookHistory}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0b7e9219fb04b0a5a309ae2d40b849e7}{%
+           family={Korevaar},
+           familyi={K\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{0b7e9219fb04b0a5a309ae2d40b849e7}
+      \strng{fullhash}{0b7e9219fb04b0a5a309ae2d40b849e7}
+      \strng{bibnamehash}{0b7e9219fb04b0a5a309ae2d40b849e7}
+      \strng{authorbibnamehash}{0b7e9219fb04b0a5a309ae2d40b849e7}
+      \strng{authornamehash}{0b7e9219fb04b0a5a309ae2d40b849e7}
+      \strng{authorfullhash}{0b7e9219fb04b0a5a309ae2d40b849e7}
+      \field{labelalpha}{Kor04}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tauberian Theory - A Century of Development}
+      \field{year}{2004}
+      \field{dateera}{ce}
+    \endentry
+    \entry{LindBourg:entropy}{article}{}
+      \name{author}{2}{}{%
+        {{hash=58a3b45d93c5252c4d16cdcdb8db7e87}{%
+           family={Lindenstrauss},
+           familyi={L\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=0c066450b862d6a95ae8877011f7a9a4}{%
+           family={Bourgain},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2eed3c3c400c0996a5d7f779138df432}
+      \strng{fullhash}{2eed3c3c400c0996a5d7f779138df432}
+      \strng{bibnamehash}{2eed3c3c400c0996a5d7f779138df432}
+      \strng{authorbibnamehash}{2eed3c3c400c0996a5d7f779138df432}
+      \strng{authornamehash}{2eed3c3c400c0996a5d7f779138df432}
+      \strng{authorfullhash}{2eed3c3c400c0996a5d7f779138df432}
+      \field{labelalpha}{LB03}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comm. Math. Phys.}
+      \field{number}{1}
+      \field{title}{Entropy of quantum limits}
+      \field{volume}{40}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \field{pages}{153\bibrangedash 171}
+      \range{pages}{19}
+    \endentry
+    \entry{Masson:aque_everything}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=009bff2886e9fe0a2ee71db19ba8f13a}{%
+           family={Le\bibnamedelima Masson},
+           familyi={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Cergy Paris Université}%
+      }
+      \strng{namehash}{009bff2886e9fe0a2ee71db19ba8f13a}
+      \strng{fullhash}{009bff2886e9fe0a2ee71db19ba8f13a}
+      \strng{bibnamehash}{009bff2886e9fe0a2ee71db19ba8f13a}
+      \strng{authorbibnamehash}{009bff2886e9fe0a2ee71db19ba8f13a}
+      \strng{authornamehash}{009bff2886e9fe0a2ee71db19ba8f13a}
+      \strng{authorfullhash}{009bff2886e9fe0a2ee71db19ba8f13a}
+      \field{labelalpha}{Le 17}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Lectures notes}
+      \field{title}{Quantum Chaos on hyperbolic surfaces}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://perso.u-cergy.fr/~elemasson/qchyp.pdf
+      \endverb
+      \verb{url}
+      \verb https://perso.u-cergy.fr/~elemasson/qchyp.pdf
+      \endverb
+    \endentry
+    \entry{Linden:main_art}{article}{}
+      \name{author}{1}{}{%
+        {{hash=58a3b45d93c5252c4d16cdcdb8db7e87}{%
+           family={Lindenstrauss},
+           familyi={L\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{58a3b45d93c5252c4d16cdcdb8db7e87}
+      \strng{fullhash}{58a3b45d93c5252c4d16cdcdb8db7e87}
+      \strng{bibnamehash}{58a3b45d93c5252c4d16cdcdb8db7e87}
+      \strng{authorbibnamehash}{58a3b45d93c5252c4d16cdcdb8db7e87}
+      \strng{authornamehash}{58a3b45d93c5252c4d16cdcdb8db7e87}
+      \strng{authorfullhash}{58a3b45d93c5252c4d16cdcdb8db7e87}
+      \field{labelalpha}{Lin06}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of Mathematics}
+      \field{title}{Invariant measures and arithmetic quantum unique ergodicity}
+      \field{volume}{163}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{pages}{165\bibrangedash 219}
+      \range{pages}{55}
+    \endentry
+    \entry{Martinez:semi}{book}{}
+      \name{author}{1}{}{%
+        {{hash=13af5ed0a7ed4a7aea08f6db30fa1c57}{%
+           family={Martinez},
+           familyi={M\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{13af5ed0a7ed4a7aea08f6db30fa1c57}
+      \strng{fullhash}{13af5ed0a7ed4a7aea08f6db30fa1c57}
+      \strng{bibnamehash}{13af5ed0a7ed4a7aea08f6db30fa1c57}
+      \strng{authorbibnamehash}{13af5ed0a7ed4a7aea08f6db30fa1c57}
+      \strng{authornamehash}{13af5ed0a7ed4a7aea08f6db30fa1c57}
+      \strng{authorfullhash}{13af5ed0a7ed4a7aea08f6db30fa1c57}
+      \field{labelalpha}{Mar02}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Universitext}
+      \field{title}{An Introduction to Semiclassical and Microlocal Analysis}
+      \field{year}{2002}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Marklof2006ArithmeticQC}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=bfe99ce9bc25302f4d623aeb5ba29976}{%
+           family={Marklof},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{bfe99ce9bc25302f4d623aeb5ba29976}
+      \strng{fullhash}{bfe99ce9bc25302f4d623aeb5ba29976}
+      \strng{bibnamehash}{bfe99ce9bc25302f4d623aeb5ba29976}
+      \strng{authorbibnamehash}{bfe99ce9bc25302f4d623aeb5ba29976}
+      \strng{authornamehash}{bfe99ce9bc25302f4d623aeb5ba29976}
+      \strng{authorfullhash}{bfe99ce9bc25302f4d623aeb5ba29976}
+      \field{extraname}{1}
+      \field{labelalpha}{Mar06}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Arithmetic Quantum Chaos}
+      \field{year}{2006}
+      \true{nocite}
+    \endentry
+    \entry{Markloff:article}{book}{}
+      \name{author}{1}{}{%
+        {{hash=bfe99ce9bc25302f4d623aeb5ba29976}{%
+           family={Marklof},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {London Math. Soc.}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge Univ. Press}%
+      }
+      \strng{namehash}{bfe99ce9bc25302f4d623aeb5ba29976}
+      \strng{fullhash}{bfe99ce9bc25302f4d623aeb5ba29976}
+      \strng{bibnamehash}{bfe99ce9bc25302f4d623aeb5ba29976}
+      \strng{authorbibnamehash}{bfe99ce9bc25302f4d623aeb5ba29976}
+      \strng{authornamehash}{bfe99ce9bc25302f4d623aeb5ba29976}
+      \strng{authorfullhash}{bfe99ce9bc25302f4d623aeb5ba29976}
+      \field{extraname}{2}
+      \field{labelalpha}{Mar12}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Lecture Note Ser.}
+      \field{title}{Selberg's Trace Formula: An Introduction}
+      \field{volume}{397}
+      \field{year}{2012}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Morris:arth_group}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=60598a341748784537820a079567fb26}{%
+           family={Morris},
+           familyi={M\bibinitperiod},
+           given={Dave\bibnamedelima Witte},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{60598a341748784537820a079567fb26}
+      \strng{fullhash}{60598a341748784537820a079567fb26}
+      \strng{bibnamehash}{60598a341748784537820a079567fb26}
+      \strng{authorbibnamehash}{60598a341748784537820a079567fb26}
+      \strng{authornamehash}{60598a341748784537820a079567fb26}
+      \strng{authorfullhash}{60598a341748784537820a079567fb26}
+      \field{labelalpha}{Mor01}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Arithmetic Groups}
+      \field{year}{2001}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/ARXIV.MATH/0106063
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0106063
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0106063
+      \endverb
+    \endentry
+    \entry{chinese:quant}{online}{}
+      \name{author}{1}{}{%
+        {{hash=837de5440ae8cb9b4789c45d24b03786}{%
+           family={Natsume},
+           familyi={N\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{837de5440ae8cb9b4789c45d24b03786}
+      \strng{fullhash}{837de5440ae8cb9b4789c45d24b03786}
+      \strng{bibnamehash}{837de5440ae8cb9b4789c45d24b03786}
+      \strng{authorbibnamehash}{837de5440ae8cb9b4789c45d24b03786}
+      \strng{authornamehash}{837de5440ae8cb9b4789c45d24b03786}
+      \strng{authorfullhash}{837de5440ae8cb9b4789c45d24b03786}
+      \field{labelalpha}{Nat21}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{Quantum Chaos with Python}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://medium.com/@natsunoyuki/quantum-chaos-with-python-f4adfe4ab62c
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@natsunoyuki/quantum-chaos-with-python-f4adfe4ab62c
+      \endverb
+    \endentry
+    \entry{Odly:comput}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0e2a5df747740bf9c6d6f6eaa6fe41de}{%
+           family={Odlyzko},
+           familyi={O\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0fe336425e7749ac71c94b7eb93c1284}{%
+           family={Forrester},
+           familyi={F\bibinitperiod},
+           given={P.J.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{5f20846d6cab6353aeeca965185846c8}
+      \strng{fullhash}{5f20846d6cab6353aeeca965185846c8}
+      \strng{bibnamehash}{5f20846d6cab6353aeeca965185846c8}
+      \strng{authorbibnamehash}{5f20846d6cab6353aeeca965185846c8}
+      \strng{authornamehash}{5f20846d6cab6353aeeca965185846c8}
+      \strng{authorfullhash}{5f20846d6cab6353aeeca965185846c8}
+      \field{labelalpha}{OF}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proc. of the Organic Math. Workshop}
+      \field{title}{A nonlinear equation and its application to near est neighbor spacings for zeros of the zeta function and eigenvalues of random matrices}
+      \verb{urlraw}
+      \verb http://www.cecm.sfu.ca/~pborwein/
+      \endverb
+      \verb{url}
+      \verb http://www.cecm.sfu.ca/~pborwein/
+      \endverb
+    \endentry
+    \entry{Peter:triang}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2be92f0f6b9aad0e4584d239dee726df}{%
+           family={Petersson},
+           familyi={P\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Univ. Hamburg}%
+      }
+      \strng{namehash}{2be92f0f6b9aad0e4584d239dee726df}
+      \strng{fullhash}{2be92f0f6b9aad0e4584d239dee726df}
+      \strng{bibnamehash}{2be92f0f6b9aad0e4584d239dee726df}
+      \strng{authorbibnamehash}{2be92f0f6b9aad0e4584d239dee726df}
+      \strng{authornamehash}{2be92f0f6b9aad0e4584d239dee726df}
+      \strng{authorfullhash}{2be92f0f6b9aad0e4584d239dee726df}
+      \field{labelalpha}{Pet37}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Abh. Math. Sem.}
+      \field{number}{1}
+      \field{title}{Über die eindeutige bestimmung und die erweiterungsfähigkeit von gewissen grenzkreisgruppen}
+      \field{volume}{12}
+      \field{year}{1937}
+      \field{dateera}{ce}
+      \field{pages}{180\bibrangedash 199}
+      \range{pages}{20}
+    \endentry
+    \entry{Queva:p-adic}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f881efab58c4fb6e460b10eebd9dacaa}{%
+           family={Q.\bibnamedelimi Gouvéa},
+           familyi={Q\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Q.},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Cham}%
+      }
+      \strng{namehash}{f881efab58c4fb6e460b10eebd9dacaa}
+      \strng{fullhash}{f881efab58c4fb6e460b10eebd9dacaa}
+      \strng{bibnamehash}{f881efab58c4fb6e460b10eebd9dacaa}
+      \strng{authorbibnamehash}{f881efab58c4fb6e460b10eebd9dacaa}
+      \strng{authornamehash}{f881efab58c4fb6e460b10eebd9dacaa}
+      \strng{authorfullhash}{f881efab58c4fb6e460b10eebd9dacaa}
+      \field{labelalpha}{Q G20}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{series}{Universitext}
+      \field{title}{$p$-adic Numbers}
+      \field{year}{2020}
+      \field{dateera}{ce}
+    \endentry
+    \entry{RudSarn:conj}{article}{}
+      \name{author}{2}{}{%
+        {{hash=282f7e7cbfc7648b9eefd178d77e238b}{%
+           family={Rudnick},
+           familyi={R\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=ea78b04077f0596f70f50f0559b2a1f2}{%
+           family={Sarnak},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{82a01ac9543888cb24eb647e0f69fd91}
+      \strng{fullhash}{82a01ac9543888cb24eb647e0f69fd91}
+      \strng{bibnamehash}{82a01ac9543888cb24eb647e0f69fd91}
+      \strng{authorbibnamehash}{82a01ac9543888cb24eb647e0f69fd91}
+      \strng{authornamehash}{82a01ac9543888cb24eb647e0f69fd91}
+      \strng{authorfullhash}{82a01ac9543888cb24eb647e0f69fd91}
+      \field{labelalpha}{RS96}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comm. Math. Phys.}
+      \field{number}{1}
+      \field{title}{The behaviour of eigenstates of arithmetic hyperbolic manifolds}
+      \field{volume}{161}
+      \field{year}{1996}
+      \field{dateera}{ce}
+      \field{pages}{195\bibrangedash 213}
+      \range{pages}{19}
+    \endentry
+    \entry{Rudnick:whatIs}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=282f7e7cbfc7648b9eefd178d77e238b}{%
+           family={Rudnick},
+           familyi={R\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Notices of the AMS}%
+      }
+      \strng{namehash}{282f7e7cbfc7648b9eefd178d77e238b}
+      \strng{fullhash}{282f7e7cbfc7648b9eefd178d77e238b}
+      \strng{bibnamehash}{282f7e7cbfc7648b9eefd178d77e238b}
+      \strng{authorbibnamehash}{282f7e7cbfc7648b9eefd178d77e238b}
+      \strng{authornamehash}{282f7e7cbfc7648b9eefd178d77e238b}
+      \strng{authorfullhash}{282f7e7cbfc7648b9eefd178d77e238b}
+      \field{labelalpha}{Rud07}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{1}
+      \field{title}{What is Quantum Chaos?}
+      \field{volume}{55}
+      \field{year}{2007}
+    \endentry
+    \entry{Sarnak:review}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ea78b04077f0596f70f50f0559b2a1f2}{%
+           family={Sarnak},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea78b04077f0596f70f50f0559b2a1f2}
+      \strng{fullhash}{ea78b04077f0596f70f50f0559b2a1f2}
+      \strng{bibnamehash}{ea78b04077f0596f70f50f0559b2a1f2}
+      \strng{authorbibnamehash}{ea78b04077f0596f70f50f0559b2a1f2}
+      \strng{authornamehash}{ea78b04077f0596f70f50f0559b2a1f2}
+      \strng{authorfullhash}{ea78b04077f0596f70f50f0559b2a1f2}
+      \field{extraname}{1}
+      \field{labelalpha}{Sar03}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin (New Series) of the American Mathematical Society}
+      \field{number}{4}
+      \field{title}{Spectra of Hyperbolic Surfaces}
+      \field{volume}{40}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \field{pages}{441\bibrangedash 478}
+      \range{pages}{38}
+    \endentry
+    \entry{Sarnak:article}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ea78b04077f0596f70f50f0559b2a1f2}{%
+           family={Sarnak},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea78b04077f0596f70f50f0559b2a1f2}
+      \strng{fullhash}{ea78b04077f0596f70f50f0559b2a1f2}
+      \strng{bibnamehash}{ea78b04077f0596f70f50f0559b2a1f2}
+      \strng{authorbibnamehash}{ea78b04077f0596f70f50f0559b2a1f2}
+      \strng{authornamehash}{ea78b04077f0596f70f50f0559b2a1f2}
+      \strng{authorfullhash}{ea78b04077f0596f70f50f0559b2a1f2}
+      \field{extraname}{2}
+      \field{labelalpha}{Sar11}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bullettin of the American Mathematical Society}
+      \field{title}{Recent progress on the quantum unique ergodicity conjecture}
+      \field{volume}{48}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{pages}{211\bibrangedash 228}
+      \range{pages}{18}
+    \endentry
+    \entry{Shimura:book}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b66ed61c36d67d495041a4d50a46c92c}{%
+           family={Shimura},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton Univ. Press}%
+      }
+      \strng{namehash}{b66ed61c36d67d495041a4d50a46c92c}
+      \strng{fullhash}{b66ed61c36d67d495041a4d50a46c92c}
+      \strng{bibnamehash}{b66ed61c36d67d495041a4d50a46c92c}
+      \strng{authorbibnamehash}{b66ed61c36d67d495041a4d50a46c92c}
+      \strng{authornamehash}{b66ed61c36d67d495041a4d50a46c92c}
+      \strng{authorfullhash}{b66ed61c36d67d495041a4d50a46c92c}
+      \field{labelalpha}{Shi71}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to the arithmetic theory of automorphic functions}
+      \field{year}{1971}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Sound:article}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7f91a902bd752a30cf403b46f35f94fe}{%
+           family={Soundarajan},
+           familyi={S\bibinitperiod},
+           given={Kannan},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f91a902bd752a30cf403b46f35f94fe}
+      \strng{fullhash}{7f91a902bd752a30cf403b46f35f94fe}
+      \strng{bibnamehash}{7f91a902bd752a30cf403b46f35f94fe}
+      \strng{authorbibnamehash}{7f91a902bd752a30cf403b46f35f94fe}
+      \strng{authornamehash}{7f91a902bd752a30cf403b46f35f94fe}
+      \strng{authorfullhash}{7f91a902bd752a30cf403b46f35f94fe}
+      \field{labelalpha}{Sou10}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ann. of Math.}
+      \field{number}{2}
+      \field{title}{Quantum unique ergodicity for $\SL_{2}\Z\setminus\Hilb$}
+      \field{volume}{172}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{pages}{1529\bibrangedash 1538}
+      \range{pages}{10}
+    \endentry
+    \entry{Sound:QUE_notes}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=549bdccc730fda930fd587b6ae3caaba}{%
+           family={Soundararajan},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {The Southwest Center for Arithmetic Geometry}%
+      }
+      \strng{namehash}{549bdccc730fda930fd587b6ae3caaba}
+      \strng{fullhash}{549bdccc730fda930fd587b6ae3caaba}
+      \strng{bibnamehash}{549bdccc730fda930fd587b6ae3caaba}
+      \strng{authorbibnamehash}{549bdccc730fda930fd587b6ae3caaba}
+      \strng{authornamehash}{549bdccc730fda930fd587b6ae3caaba}
+      \strng{authorfullhash}{549bdccc730fda930fd587b6ae3caaba}
+      \field{labelalpha}{Sou10}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Lecture notes for Arizona Winter School 2010}
+      \field{title}{Quantum Unique Ergodicity and Number Theory}
+      \field{year}{2010}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Stark:mod_forms}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5f830d0c7fc9f787207eac71289664f9}{%
+           family={Stark},
+           familyi={S\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5f830d0c7fc9f787207eac71289664f9}
+      \strng{fullhash}{5f830d0c7fc9f787207eac71289664f9}
+      \strng{bibnamehash}{5f830d0c7fc9f787207eac71289664f9}
+      \strng{authorbibnamehash}{5f830d0c7fc9f787207eac71289664f9}
+      \strng{authornamehash}{5f830d0c7fc9f787207eac71289664f9}
+      \strng{authorfullhash}{5f830d0c7fc9f787207eac71289664f9}
+      \field{labelalpha}{Sta84}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Modular Forms (R. A. Rankin ed.)}
+      \field{title}{Fourier coefficients of Maass waveforms}
+      \field{year}{1984}
+      \field{dateera}{ce}
+      \field{pages}{263\bibrangedash 269}
+      \range{pages}{7}
+    \endentry
+    \entry{Stromb:presentation}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ff623a10d4859ae02a45ea1838ae1354}{%
+           family={Strömberg},
+           familyi={S\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universiti Putra Malaysia}%
+      }
+      \strng{namehash}{ff623a10d4859ae02a45ea1838ae1354}
+      \strng{fullhash}{ff623a10d4859ae02a45ea1838ae1354}
+      \strng{bibnamehash}{ff623a10d4859ae02a45ea1838ae1354}
+      \strng{authorbibnamehash}{ff623a10d4859ae02a45ea1838ae1354}
+      \strng{authornamehash}{ff623a10d4859ae02a45ea1838ae1354}
+      \strng{authorfullhash}{ff623a10d4859ae02a45ea1838ae1354}
+      \field{extraname}{1}
+      \field{labelalpha}{Str12}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Expository Quantum Lecture Series 5}
+      \field{title}{Arithmetic Quantum Chaos}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{Stromb:article}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ff623a10d4859ae02a45ea1838ae1354}{%
+           family={Strömberg},
+           familyi={S\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff623a10d4859ae02a45ea1838ae1354}
+      \strng{fullhash}{ff623a10d4859ae02a45ea1838ae1354}
+      \strng{bibnamehash}{ff623a10d4859ae02a45ea1838ae1354}
+      \strng{authorbibnamehash}{ff623a10d4859ae02a45ea1838ae1354}
+      \strng{authornamehash}{ff623a10d4859ae02a45ea1838ae1354}
+      \strng{authorfullhash}{ff623a10d4859ae02a45ea1838ae1354}
+      \field{extraname}{2}
+      \field{labelalpha}{Str19}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-314X}
+      \field{journaltitle}{Journal of Number Theory}
+      \field{title}{Noncongruence subgroups and Maass waveforms}
+      \field{volume}{199}
+      \field{year}{2019}
+      \field{pages}{436\bibrangedash 493}
+      \range{pages}{58}
+      \verb{urlraw}
+      \verb https://github.com/fredstro/noncongruence
+      \endverb
+      \verb{url}
+      \verb https://github.com/fredstro/noncongruence
+      \endverb
+    \endentry
+    \entry{Stransky:notes}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=acc93b7665b0fafaf8683b68e0f731c3}{%
+           family={Strànsky},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Institute of Particle}%
+        {Nuclear Physics}%
+      }
+      \list{location}{1}{%
+        {Charles University, Prague}%
+      }
+      \strng{namehash}{acc93b7665b0fafaf8683b68e0f731c3}
+      \strng{fullhash}{acc93b7665b0fafaf8683b68e0f731c3}
+      \strng{bibnamehash}{acc93b7665b0fafaf8683b68e0f731c3}
+      \strng{authorbibnamehash}{acc93b7665b0fafaf8683b68e0f731c3}
+      \strng{authornamehash}{acc93b7665b0fafaf8683b68e0f731c3}
+      \strng{authorfullhash}{acc93b7665b0fafaf8683b68e0f731c3}
+      \field{labelalpha}{Str22}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{Lecture Notes on Quantum Chaos}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{Stroh:comput}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f7efe1833ee84b775305a72630c027a4}{%
+           family={Strohmaier},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=38f1ded4c84a099251f5f16c6dceb7e8}{%
+           family={Uski},
+           familyi={U\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{54f215dc9ec3577a9931974908ac67be}
+      \strng{fullhash}{54f215dc9ec3577a9931974908ac67be}
+      \strng{bibnamehash}{54f215dc9ec3577a9931974908ac67be}
+      \strng{authorbibnamehash}{54f215dc9ec3577a9931974908ac67be}
+      \strng{authornamehash}{54f215dc9ec3577a9931974908ac67be}
+      \strng{authorfullhash}{54f215dc9ec3577a9931974908ac67be}
+      \field{labelalpha}{SU13}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comm. Math. Phys.}
+      \field{number}{3}
+      \field{title}{An algorithm for the computation of eigenvalues, spectral zeta functions and zeta-determinants on hyperbolic surfaces}
+      \field{volume}{317}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{pages}{827\bibrangedash 869}
+      \range{pages}{43}
+    \endentry
+    \entry{Schall:arith}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1a080b1e70e2da53aff6b9ba4247520c}{%
+           family={Schaller},
+           familyi={S\bibinitperiod},
+           given={P.\bibnamedelimi S.},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=451e6a34b2084a01dadf813f630bd884}{%
+           family={Wolfart},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{daea32b9d726d31b4531c83bb5947faa}
+      \strng{fullhash}{daea32b9d726d31b4531c83bb5947faa}
+      \strng{bibnamehash}{daea32b9d726d31b4531c83bb5947faa}
+      \strng{authorbibnamehash}{daea32b9d726d31b4531c83bb5947faa}
+      \strng{authornamehash}{daea32b9d726d31b4531c83bb5947faa}
+      \strng{authorfullhash}{daea32b9d726d31b4531c83bb5947faa}
+      \field{labelalpha}{SW00}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0024-6107}
+      \field{journaltitle}{J. Lon. Math. Soc.}
+      \field{month}{02}
+      \field{number}{1}
+      \field{title}{Semi-arithmetic Fuchsian groups and Modular embeddings}
+      \field{volume}{61}
+      \field{year}{2000}
+      \true{nocite}
+      \field{pages}{13\bibrangedash 24}
+      \range{pages}{12}
+    \endentry
+    \entry{Take:arith}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5e1886c37236ea07bedb0a77feebd49a}{%
+           family={Takeuchi},
+           familyi={T\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{5e1886c37236ea07bedb0a77feebd49a}
+      \strng{fullhash}{5e1886c37236ea07bedb0a77feebd49a}
+      \strng{bibnamehash}{5e1886c37236ea07bedb0a77feebd49a}
+      \strng{authorbibnamehash}{5e1886c37236ea07bedb0a77feebd49a}
+      \strng{authornamehash}{5e1886c37236ea07bedb0a77feebd49a}
+      \strng{authorfullhash}{5e1886c37236ea07bedb0a77feebd49a}
+      \field{labelalpha}{Tak75}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Math. Soc. Japan}
+      \field{number}{4}
+      \field{title}{A characterization of arithmetic Fuchsian group}
+      \field{volume}{27}
+      \field{year}{1975}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{tao:site_simons_lec}{online}{}
+      \name{author}{1}{}{%
+        {{hash=4bc06d15f96ba9e18fdeb13bee70c0dc}{%
+           family={Tao},
+           familyi={T\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4bc06d15f96ba9e18fdeb13bee70c0dc}
+      \strng{fullhash}{4bc06d15f96ba9e18fdeb13bee70c0dc}
+      \strng{bibnamehash}{4bc06d15f96ba9e18fdeb13bee70c0dc}
+      \strng{authorbibnamehash}{4bc06d15f96ba9e18fdeb13bee70c0dc}
+      \strng{authornamehash}{4bc06d15f96ba9e18fdeb13bee70c0dc}
+      \strng{authorfullhash}{4bc06d15f96ba9e18fdeb13bee70c0dc}
+      \field{extraname}{1}
+      \field{labelalpha}{Tao07}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{Simons lecture I: Structure and randomness in Fourier analysis and number theory}
+      \field{year}{2007}
+      \verb{urlraw}
+      \verb http://terrytao.wordpress.com/2007/04/05/ simons-lecture-i-structure-and-randomness-in-fourier-analysis-and-number-theory/
+      \endverb
+      \verb{url}
+      \verb http://terrytao.wordpress.com/2007/04/05/%20simons-lecture-i-structure-and-randomness-in-fourier-analysis-and-number-theory/
+      \endverb
+    \endentry
+    \entry{tao:site}{online}{}
+      \name{author}{1}{}{%
+        {{hash=4bc06d15f96ba9e18fdeb13bee70c0dc}{%
+           family={Tao},
+           familyi={T\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4bc06d15f96ba9e18fdeb13bee70c0dc}
+      \strng{fullhash}{4bc06d15f96ba9e18fdeb13bee70c0dc}
+      \strng{bibnamehash}{4bc06d15f96ba9e18fdeb13bee70c0dc}
+      \strng{authorbibnamehash}{4bc06d15f96ba9e18fdeb13bee70c0dc}
+      \strng{authornamehash}{4bc06d15f96ba9e18fdeb13bee70c0dc}
+      \strng{authorfullhash}{4bc06d15f96ba9e18fdeb13bee70c0dc}
+      \field{extraname}{2}
+      \field{labelalpha}{Tao08}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{Hassell's proof of scarring for the Bunimovich stadium}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb http://terrytao.wordpress.com/2008/07/07/hassells-proof-of-scarring-for-the-bunimovich-stadium/
+      \endverb
+      \verb{url}
+      \verb http://terrytao.wordpress.com/2008/07/07/hassells-proof-of-scarring-for-the-bunimovich-stadium/
+      \endverb
+    \endentry
+    \entry{Then:article}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e57e7a7e2238327d1ab142a4d00ed3b0}{%
+           family={Then},
+           familyi={T\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e57e7a7e2238327d1ab142a4d00ed3b0}
+      \strng{fullhash}{e57e7a7e2238327d1ab142a4d00ed3b0}
+      \strng{bibnamehash}{e57e7a7e2238327d1ab142a4d00ed3b0}
+      \strng{authorbibnamehash}{e57e7a7e2238327d1ab142a4d00ed3b0}
+      \strng{authornamehash}{e57e7a7e2238327d1ab142a4d00ed3b0}
+      \strng{authorfullhash}{e57e7a7e2238327d1ab142a4d00ed3b0}
+      \field{labelalpha}{The05}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Math. Comput.}
+      \field{number}{249}
+      \field{title}{Maa{ß} cusp forms for large eigenvalues}
+      \field{volume}{74}
+      \field{year}{2005}
+      \field{pages}{363\bibrangedash 381}
+      \range{pages}{19}
+    \endentry
+    \entry{Bao:TriangAlgor}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=069876f6397acd9b0bdf13ea65202e95}{%
+           family={The\bibnamedelima Pham},
+           familyi={T\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Louisiana State University}%
+      }
+      \strng{namehash}{069876f6397acd9b0bdf13ea65202e95}
+      \strng{fullhash}{069876f6397acd9b0bdf13ea65202e95}
+      \strng{bibnamehash}{069876f6397acd9b0bdf13ea65202e95}
+      \strng{authorbibnamehash}{069876f6397acd9b0bdf13ea65202e95}
+      \strng{authornamehash}{069876f6397acd9b0bdf13ea65202e95}
+      \strng{authorfullhash}{069876f6397acd9b0bdf13ea65202e95}
+      \field{labelalpha}{The18}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{Algorithms Related to Triangle Groups}
+      \field{type}{PhD thesis in Mathematics}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://digitalcommons.lsu.edu/cgi/viewcontent.cgi?article=6705&context=gradschool_dissertations
+      \endverb
+      \verb{url}
+      \verb https://digitalcommons.lsu.edu/cgi/viewcontent.cgi?article=6705&context=gradschool_dissertations
+      \endverb
+    \endentry
+    \entry{Turaev:billiards_notes}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=0b280426b2c814972fe24baadc0f7e61}{%
+           family={Turaev},
+           familyi={T\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Uppsala University}%
+      }
+      \strng{namehash}{0b280426b2c814972fe24baadc0f7e61}
+      \strng{fullhash}{0b280426b2c814972fe24baadc0f7e61}
+      \strng{bibnamehash}{0b280426b2c814972fe24baadc0f7e61}
+      \strng{authorbibnamehash}{0b280426b2c814972fe24baadc0f7e61}
+      \strng{authornamehash}{0b280426b2c814972fe24baadc0f7e61}
+      \strng{authorfullhash}{0b280426b2c814972fe24baadc0f7e61}
+      \field{labelalpha}{Tur16}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Lecture notes}
+      \field{title}{Quantum Unique Ergodicity and Number Theory}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.diva-portal.org/smash/get/diva2:908119/FULLTEXT01.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.diva-portal.org/smash/get/diva2:908119/FULLTEXT01.pdf
+      \endverb
+    \endentry
+    \entry{Hove:noFunc}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1ba9395bfd57d93c561e7d92165ed0bb}{%
+           family={Van\bibnamedelima Hove},
+           familyi={V\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Acad. Roy. Belgique}%
+      }
+      \strng{namehash}{1ba9395bfd57d93c561e7d92165ed0bb}
+      \strng{fullhash}{1ba9395bfd57d93c561e7d92165ed0bb}
+      \strng{bibnamehash}{1ba9395bfd57d93c561e7d92165ed0bb}
+      \strng{authorbibnamehash}{1ba9395bfd57d93c561e7d92165ed0bb}
+      \strng{authornamehash}{1ba9395bfd57d93c561e7d92165ed0bb}
+      \strng{authorfullhash}{1ba9395bfd57d93c561e7d92165ed0bb}
+      \field{labelalpha}{Van51}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bull. Cl. Sci.}
+      \field{number}{37}
+      \field{title}{Sur le probleme des relations entre les transformations unitaires de la mecanique quantique et les transformations canoniques de la mecaniques classique}
+      \field{volume}{5}
+      \field{year}{1951}
+      \field{dateera}{ce}
+      \field{pages}{610\bibrangedash 620}
+      \range{pages}{11}
+    \endentry
+    \entry{Voight:triang}{article}{}
+      \name{author}{2}{}{%
+        {{hash=89a89ace5aa04eb433e1ea0baff2c818}{%
+           family={Voight},
+           familyi={V\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3d1a4f6a3653b5511a47b2ee157534cd}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={P.L.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{d7673171e63ef06822ff52870b3c7632}
+      \strng{fullhash}{d7673171e63ef06822ff52870b3c7632}
+      \strng{bibnamehash}{d7673171e63ef06822ff52870b3c7632}
+      \strng{authorbibnamehash}{d7673171e63ef06822ff52870b3c7632}
+      \strng{authornamehash}{d7673171e63ef06822ff52870b3c7632}
+      \strng{authorfullhash}{d7673171e63ef06822ff52870b3c7632}
+      \field{labelalpha}{VC19}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Trans. Amer. Math. Soc.}
+      \field{number}{1}
+      \field{title}{Algebraic curves uniformized by congruence subgroups of triangle groups}
+      \field{volume}{371}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{33\bibrangedash 82}
+      \range{pages}{50}
+    \endentry
+    \entry{Yingchun:article}{article}{}
+      \name{author}{1}{}{%
+        {{hash=27ed0021b63355f1d9f742efa5035719}{%
+           family={Yingchun},
+           familyi={Y\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{27ed0021b63355f1d9f742efa5035719}
+      \strng{fullhash}{27ed0021b63355f1d9f742efa5035719}
+      \strng{bibnamehash}{27ed0021b63355f1d9f742efa5035719}
+      \strng{authorbibnamehash}{27ed0021b63355f1d9f742efa5035719}
+      \strng{authornamehash}{27ed0021b63355f1d9f742efa5035719}
+      \strng{authorfullhash}{27ed0021b63355f1d9f742efa5035719}
+      \field{labelalpha}{Yin02}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal de Théorie des Nombres de Bordeaux}
+      \field{title}{Prime geodesic Theorem}
+      \field{volume}{14}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{59\bibrangedash 72}
+      \range{pages}{14}
+    \endentry
+    \entry{Zeld:article}{article}{}
+      \name{author}{1}{}{%
+        {{hash=03219a116aab3a84515bf6f215b40c24}{%
+           family={Zelditch},
+           familyi={Z\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{03219a116aab3a84515bf6f215b40c24}
+      \strng{fullhash}{03219a116aab3a84515bf6f215b40c24}
+      \strng{bibnamehash}{03219a116aab3a84515bf6f215b40c24}
+      \strng{authorbibnamehash}{03219a116aab3a84515bf6f215b40c24}
+      \strng{authornamehash}{03219a116aab3a84515bf6f215b40c24}
+      \strng{authorfullhash}{03219a116aab3a84515bf6f215b40c24}
+      \field{labelalpha}{Zel87}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Duke Math. J.}
+      \field{number}{4}
+      \field{title}{Uniform distribution of eigenfunctions on compact hyperbolic surfaces}
+      \field{volume}{55}
+      \field{year}{1987}
+      \field{dateera}{ce}
+      \field{pages}{919\bibrangedash 941}
+      \range{pages}{23}
+    \endentry
+    \entry{Zworski:semic}{book}{}
+      \name{author}{1}{}{%
+        {{hash=88095954f3c86c19f491d52570adfc45}{%
+           family={Zworski},
+           familyi={Z\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {AMS}%
+      }
+      \strng{namehash}{88095954f3c86c19f491d52570adfc45}
+      \strng{fullhash}{88095954f3c86c19f491d52570adfc45}
+      \strng{bibnamehash}{88095954f3c86c19f491d52570adfc45}
+      \strng{authorbibnamehash}{88095954f3c86c19f491d52570adfc45}
+      \strng{authornamehash}{88095954f3c86c19f491d52570adfc45}
+      \strng{authorfullhash}{88095954f3c86c19f491d52570adfc45}
+      \field{labelalpha}{Zwo12}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Graduate Studies in Mathematics}
+      \field{title}{Semiclassical Analysis}
+      \field{volume}{138}
+      \field{year}{2012}
+      \field{dateera}{ce}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
