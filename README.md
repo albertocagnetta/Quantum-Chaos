@@ -10,6 +10,4 @@ Inside the folder 'Codes' there are the Python and FreeFem++ programs:
     1. Billiards: 
     2. Quantum Euclidean Eigenfunctions: 
 
-`’‵′´
 
-`asdasd´
