@@ -37,6 +37,7 @@ class Draw_single(Scene):
         M = np.array([[1, 0], [0, 1], [0, 0]])
         "Variables for the Scene"
         velocity = 1  # velocity of the balls
+        speed = 6  # speed of animation
         num_col = 6
         num_animation = 6
         radius = 0.05  # radius of the balls
@@ -92,7 +93,7 @@ class Draw_single(Scene):
                     #    time(render1[i], render1[i - 1], 3 * velocity)),
                     MoveAlongPath(b1, Line(start=render1[i - 1], end=render1[i]),
                                   rate_func=linear).set_run_time(
-                        time(render1[i - 1], render1[i], 3 * velocity))
+                        time(render1[i - 1], render1[i], speed * velocity))
                 )
                 for i in range(1, num_animation + 1)
             ]
@@ -120,16 +121,17 @@ class Draw_multiple(Scene):
         There is an option below to plot trace behind the balls, recommendable not to use with more than 50 balls
         """
         M = np.array([[1, 0], [0, 1], [0, 0]])
-
+        self.camera.background_color = WHITE  # "#ece6e2"
         ########################
         "parameters"
-        velocity = 1  # velocity of the balls
-        Num_points = 10  # number of bouncing balls
-        num_col = 6
-        num_animation = 6
+        velocity = 1  # velocity of the balls DON'T CHANGE
+        speed = 6 # speed of animation
+        Num_points = 30  # number of bouncing balls
+        num_col = 4
+        num_animation = 4
         " Circle geometrical elements"
         center = np.array([0, 0])
-        Radius = 1.7
+        Radius = 3
         boundary_color = BLUE
         boundary_width = 5
         """
@@ -144,7 +146,7 @@ class Draw_multiple(Scene):
         radius = 0.05  # radius of the balls
         Max_val_binom = 20
         x_ray = 0.3
-        y_ray = 0.15
+        y_ray = 0.2
         x_rnd = np.random.binomial(Max_val_binom, 0.5, Num_points)
         x_rnd = ((x_rnd) / Max_val_binom - 0.5) * x_ray / 0.5
         y_rnd = np.random.binomial(Max_val_binom, 0.5, Num_points)
@@ -168,13 +170,14 @@ class Draw_multiple(Scene):
 
         # plotting the dots
         dots = VGroup(*[Dot(np.dot(M, p_list[i]), radius=radius) for i in range(Num_points)])
-        dots.set_color_by_gradient(PINK, BLUE, YELLOW)  # color by gradient
+        #dots.set_color_by_gradient(PINK, BLUE, YELLOW)  # color by gradient
+        dots.set_color_by_gradient(BLUE_C, PINK, RED_C)
         # dots.set_color(BLUE)
         self.add(dots)
         ##############################
         " traces behind the balls, uncomment to use it, not to use with more then 50 balls "
         traces = VGroup(*[
-            TracedPath(b.get_center, stroke_opacity=0.8, stroke_color=b.get_color(), stroke_width=2, dissipating_time=5)
+            TracedPath(b.get_center, stroke_opacity=0.4, stroke_color=b.get_color(), stroke_width=2, dissipating_time=5)
             for b in dots])
         self.add(traces)
         ##############################
@@ -188,7 +191,7 @@ class Draw_multiple(Scene):
                         # the runtime option is needed to make balls move according to the space traveled
                         MoveAlongPath(dots[l], Line(start=List[l][i - 1], end=List[l][i]),
                                       rate_func=linear).set_run_time(
-                            time(List[l][i], List[l][i - 1], 3 * velocity))
+                            time(List[l][i], List[l][i - 1], speed * velocity))
                         for i in range(1, num_animation + 1)
                     ]
                 )
