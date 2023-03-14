@@ -1,0 +1,239 @@
+﻿LICENSE:
+
+Copyright (C) Ville Uski and Alexander Strohmaier
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-------------------------------------------------------------------
+INSTALLATION:
+
+You should have a Fortran compiler and the blas/lapack libraries installed.
+The code is compiled using the Make utility, and there is a simple Makefile
+which requires a make.inc file. The latter file includes all the
+compiler-specific options.  After adjusting make.inc and Makefile a simple
+'make' should compile the program and the executable 'hypermodes' should be
+created in the directory.
+
+We have tested our program with the intel compiler ifort as well as with
+gfortran.
+
+For usage see below.
+
+The program can also be compiled to use quad precision arithmetics but
+is much slower in this case. This currently only works with ifort. 
+
+-------------------------------------------------------------------
+DESCRIPTION:
+
+This is a crude documentation of the FORTRAN 90 program hypermodes
+designed to compute eigenvalues of GENUS 2 hyperbolic surfaces with high
+accuracy. The program was designed for low eigenvalues (up to roughly
+2000) and for surfaces that are not close to the boundary of
+Teichmueller space. Usage away from this regime is possible but may
+require careful adjustment of parameters.  Eigenvalues up to 10000 may
+still be computed but at some point the solver for the differential
+equation becomes unreliable. Future versions are almost certain to
+correct this as this is just an issue of computing certain
+hypergeometric functions more effectively.
+
+The program is a non-rigorous and straightforward implementation of the
+algorithm described in "A Rigorous Algorithm for the Computation of
+Eigenvalues, Spectral Zeta Functions and Zeta-Determinants on Hyperbolic
+Surfaces", arXiv:1110.2150 by Ville Uski and Alexander Strohmaier
+
+The input is given in terms of the MW-Fenchel Nielsen parameters of the
+surface.
+
+The research and parts of the code of this program was funded by the
+Leverhulme grant F/00 261/Z.
+
+We are grateful to the developers of odepack as this progam makes use of
+it. As a matter of convenience the source code is contained in this
+distribution.
+--------------------------------------------------------------------
+
+USAGE:
+
+The program hypermodes reads the input file input.dat
+
+This file defines a Fortran namelist 'input' and has the following
+structure
+
+&input
+task = task number to perform (1 = search for eigenvalues, 2 = compute Fourier coefficients of eigenvectors, &
+       3 = refined a previously obtained list of eigenvalues, 4 = obtain error estimates for eigenvalues, &
+       5 = creates files containing the values of an ONB consisting of eigenfunctions on a rectangular grid for plotting) ,
+ell1 = length of the first closed geodesic (1st Fenchel Nielsen length parameter),
+ell2 = length of the second closed geodesic (2rd Fenchel Nielsen length parameter),
+ell3 = length of the third closed geodesic (3th Fenchel Nielsen length parameter),
+t1 = twisting parameter of the first closed geodesic ( -1 and 1 are full twist, 1st Fenchel Nielsen twist parameter),
+t2 = twisting parameter of the second closed geodesic ( -1 and 1 are full twist, 2nd Fenchel Nielsen twist parameter),
+t3 = twisting parameter of the third closed geodesic ( -1 and 1 are full twist, 3rd Fenchel Nielsen twist parameter),
+N = maximum N in the Fourier modes (for low eigenvalues 35 is normally sufficient, for higher ones choose 100 and more)
+lam0 = lower boundary of the search interval,
+lam1 = upper boundary of the search interval,
+dlam1 = minimal step size,
+dlam2 = step size factor,
+nb1 = Number of boundary points used on the shortest boundary segment (should be more than N/2, increase for task 4 to at least 2N),
+ouf  = 'output file for the singular value as function of lambda',
+ouf2 = 'output file for the result of the eigenvalue search (if task==1) or the input file for the other tasks. NB: If task=1, ouf2 is the basename of the output file whereas for the other tasks it's a exact 
+ name of the input file',
+nsig = number of singular values to be saved for each found eigenvalue (to determine multiplicities),
+nbi = number of bisections in eigenvalue search (usually 7 is a enough),
+bisec = true or false (perform bisection search)
+nr = number of internal points for interior normalization (important only for error computation in task 4, otherwise 4 is enough),
+sig0 = minimal value for the singular value to trigger eigenvalue search (usually around 0.1, but depends on the interval),
+tans = true or false (use tangential derivatives in the method, normally true is better for searching) ,
+dl  = grid length for task 5
+rtol= relative tolerance to be used in DLSODA (10E-14 for good accuracy),
+atol= absolute tolerance to be used in DLSODA (10E-14 for good accuracy)
+/
+
+for example eigenvalues up to 20 of the Bolza surface
+are computed using the input file
+
+&input
+task = 1,
+ell1 = 4.89690489535615158001061982727174,
+ell2 = 3.05714183896199632254491236958735,
+ell3 = 3.05714183896199632254491236958735,
+t1 = 0.5,
+t2 = 0.0,
+t3 = 0.0,
+N = 35,
+lam0 = 0,
+lam1 = 20,
+dlam1 =0.001,
+dlam2 = 0.5,
+nb1 = 30,
+ouf  = 'sig',
+ouf2 = 'eig',
+nsig = 5,
+nbi = 7,
+nr=10,
+sig0 = 0.1,
+bisec=.true.,
+tans=.true.,
+rtol=1.000000000000000E-14,
+atol=1.000000000000000E-14,
+/
+-----------------------------------------------------------------------------------------
+TASK:
+
+All tasks will generate files hexagon.dat and domain.dat which contain
+the data of the fundamental domain. (see source code) hexagon.dat
+contains the centers and radii of the circles in the upper half space
+that describe the hexagon used to construct the fundamental domain.
+
+****************************
+task=1 
+
+will need only the input file input.dat and produces the files sig.000.
+If bisection search is turned on it also produces the file eig.000.
+
+The format of both is as follows
+
+lambda mu_1 , mu2, ... , mu_nsig
+
+If the first mu_1, ..., mu_k are very small this means that are k
+eigenvalues in a small interval around lambda (e.g. when the
+multiplicity is k)
+
+From the data in eig.000 the eigenvalues and their multiplicities can be
+read off. k very small singular values indicate multiplicity k. Note
+that other small singular values can also be there because of near
+eigenvalues. The distinction can be made by increasing N and has to be
+made manually at the current stage. In the future there should be an
+automatic procedure for this.
+
+****************************
+task=2
+
+will read the input file eig (obtained from task1 for example by copying
+"cp eig.000 eig"
+
+and then it will produce the Fourier coefficients of the eigenvectors
+with respect to the basis used in the files v.0001 �.  These files will
+have the format
+
+m   value_1 values_2 ... value_k
+.      .      .          .
+.      .      .          .
+
+where value_k is the m-th Fourier coefficient of the k-th eigenfunction
+with the eigenvalue in eig.  All singular values below sig0 will be
+interpreted as eigenfunctions so that should be made small enough for
+this task.
+
+****************************
+task=3
+
+will read the input file eig.000 It assumed that the eigenvalues given
+have an accuracy of order roughly dlam1 from the input file.
+
+and will produce the file eig2.000 after refining the eigenvalues in
+eig. This is used after increasing N to obtain higher accuracy after a
+rough search with small N and maybe lower precision in DLSODA.
+
+****************************
+task=4
+
+will read the input file eig (obtained from task1 for example by copying
+"cp eig.000 eig"
+
+and will produce the file error_estimates which will contain the error
+estimates of the eigenvalues obtained directly from the eigenvectors
+using the error estimate.
+
+Note for this to be reliable nb1 and nr need to be chosen large enough
+(usually 4N is a good value).
+
+The estimate is very rough and in future versions this should be
+improved.  However it does give very good accuracy if enough basis
+functions are used.  The error estimate in this version does not include
+rounding errors.
+
+Note that the data in error_estimates can be used to compute the
+multiplicities and distinguish these from close lying eigenvalues.
+Currently this is done manually by mathematica programs. Future versions
+should do this automatically.
+
+****************************
+
+task =5
+
+was developed for plotting the eigenfunctions.  It will create the file
+psi-data that contains a list in an obvious format that maps
+eigenfunctions to eigenvalues.
+
+The files psi.0001, psi.0002, � contain ONB in each eigenspace as
+function values on a rectangular grid in the upper half space with
+length dl (in the input file).
+
+The format is
+
+x  y  value_1 value_2 ...
+.  .    .        .
+.  .    .        .
+
+where value_k is the k-th eigenvector evaluated at the point (x,y) in
+the upper half space. The value 0 is returned for points outside the
+fundamental domain.  
+
+If twist1 is not equal to zero the function will be discontinuous at the
+imaginary axis.  The data is suitable for import into Mathematica or
+Matlab where they can be used as interpolating functions for further
+use.
+
+*******************************
